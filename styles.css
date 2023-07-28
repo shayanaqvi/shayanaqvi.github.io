@@ -1,135 +1,91 @@
 body {
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #535353;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #ffffff, #dfdfdf);
-  color: #212121;
-  font-family: 'Inter', Arial, sans-serif;
-  border-top: 1px solid #737373;
-  /* Add a top border to the body to create a full-width divider */
+  background-color: #efefef;
 }
 
 .container {
-  max-width: 200px;
-  width: 100%;
-  margin: 50px auto 0;
-  /* Update the margin to add some space between the container and articles */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  /* Align container to the top of the page */
-  align-items: center;
+  width: 600px;
   height: 100vh;
-  border-bottom: 1px solid #737373;
-  /* Add a bottom border to create a horizontal divider below the heading and other content */
+  margin: 20px auto 0;
+  padding: 20px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.header {
-  position: relative;
-  /* Use relative positioning for the header */
-  margin-bottom: 20px;
-  /* Add margin at the bottom of the header */
-}
-
-.heading-subtitle {
+header {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  /* Left align the heading and subtitle */
-  margin-right: 400px;
-  /* Add 200px of right margin to create horizontal distance from the button */
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 70px;
+  flex-direction: row-reverse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'DM Serif Text', serif;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   margin: 0;
-  /* Remove the default margin to prevent extra spacing */
-  white-space: nowrap;
-  /* Prevent text from wrapping to multiple lines */
 }
 
-.subtitle {
-  font-size: 16px;
-  margin: 0;
-  /* Remove the default margin to prevent extra spacing */
-}
-
-.button-container {
-  /* ... Existing button container styles ... */
-  margin-right: 0;
-  /* Reset the right margin for the button container */
-  position: absolute;
-  /* Use absolute positioning for the button container */
-  top: 50%;
-  /* Position the button vertically at the middle of the container */
-  right: 0;
-  /* Align the button to the right */
-  transform: translateY(-50%);
-  /* Adjust the vertical position of the button */
-}
-
-.button {
-  /* ... Existing button styles ... */
-  background: linear-gradient(to bottom, #e3e3e3, #c9c9c9);
-  color: #212121;
+button {
+  height: 30px;
+  width: 100px;
+  background-image: linear-gradient(#3b89ff, #2f6bd4);
+  color: #efefef;
   border: none;
-  padding: 10px 20px;
+  font-size: 16px;
   border-radius: 3px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  position: relative;
 }
 
-.button:hover {
-  background: linear-gradient(to bottom, #0062ff, #0040ad);
-  color: #ffffff;
+button:hover {
+  background-image: linear-gradient(#0066ff, #0046b0);
+  color: #efefef;
 }
 
-/* Article list styles */
-
-.articles-container {
-  margin-top: 20px;
+button:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.1;
+  border-radius: 3px;
 }
 
-.articles {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.article-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  align-items: flex-start;
-}
-
-.article-list li {
-  margin-bottom: 30px;
-}
-
-.article-list h3 {
-  font-size: 18px;
-  margin: 0;
+.article-date {
   color: #737373;
 }
 
-.article-list .date,
-.article-list .preview,
-.article-list li h3 {
-  font-size: 14px;
-  margin: 0;
-  color: #737373;
-}
-
-.article-list .preview {
-  font-size: 14px;
-  margin: 0;
-  line-height: 1.2;
-}
-
-/* New class for the article heading when hovered */
-.article-list li:hover h3 {
-  background: linear-gradient(to bottom, #0062ff, #0040ad);
+h3:hover {
+  background-image: linear-gradient(#0066ff, #0046b0);
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.divider {
+  margin: 10px 0;
+  height: 1px;
+  background-color: #dfdfdf;
+  border: none;
 }

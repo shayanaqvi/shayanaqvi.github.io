@@ -1,5 +1,5 @@
 body {
-  font-family: monospace;
+  font-family: sans;
   font-size: 16px;
   color: #535353;
   margin: 0;
@@ -42,20 +42,17 @@ header {
   flex-direction: row-reverse;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: monospace;
+h1 {
+  font-size: 30px;
 }
 
-h1 {
+.container .page-name {
   font-size: 16px;
+  font-weight: bold;
   margin: 30px 0 10px 0;
   /* Add margin above and below the heading */
 }
+
 
 button {
   height: 30px;
@@ -135,7 +132,7 @@ ul {
 /* Add margin to the article list */
 .article-list {
   margin-bottom: 50px;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 a {

@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #dddfdd;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .container {
@@ -51,7 +52,7 @@ h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 16px;
   margin: 30px 0 10px 0;
   /* Add margin above and below the heading */
 }
@@ -135,6 +136,11 @@ ul {
 .article-list {
   margin-bottom: 50px;
   margin-top: 50px;
+}
+
+a {
+  color: #535353;
+  text-decoration: none;
 }
 
 /* Center align all p tags */

@@ -94,6 +94,7 @@ li a:hover {
   border-radius: 5px;
   margin-bottom: 50px;
   text-align: center;
+  font-style: italic;
 }
 
 /* ... (remaining CSS code) ... */

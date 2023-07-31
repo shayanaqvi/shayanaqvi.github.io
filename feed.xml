@@ -1,9 +1,15 @@
 <rss version="2.0">
 
 <channel>
-    <title>No-fuss Terminal Workspace</title>
-    <link>https://shayanaqvi.github.io/articles/terminalworkspace/terminalworkspace.html</link>
-    <description>Working in the terminal is something that I have been steadily warming up to over the past few months. I think its obvious that this kind of workflow isn’t for everyone, but it doesn’t hurt to try it out, does it?</description>
+    <title>shayanaqvi.github.io</title>
+    <link>https://shayanaqvi.github.io/</link>
+    <description>The Website of Shayan Naqvi</description>
+
+    <item>
+        <title>No-fuss Terminal Workspace</title>        
+        <link>https://shayanaqvi.github.io/articles/terminalworkspace/terminalworkspace.html</link>
+        <description>Working in the terminal is something that I have been steadily warming up to over the past few months. I think its obvious that this kind of workflow isn’t for everyone, but it doesn’t hurt to try it out, does it?</description>
+    </item>
 </channel>
   
 </rss>

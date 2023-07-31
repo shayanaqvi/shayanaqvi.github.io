@@ -136,6 +136,14 @@ button:hover::after {
   color: #737373;
   font-family: monospace;
   font-size: 14px;
+  margin-bottom: 50px;
+}
+
+.article-date-bottom {
+  color: #737373;
+  font-family: monospace;
+  font-size: 14px;
+  margin-bottom: -30px;
 }
 
 h3 {

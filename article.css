@@ -87,20 +87,28 @@ body {
 
 /* Page introduction/title */
 
-.page-introduction {
+.return {
   font-size: 16px;
   font-family: sans-serif;
   font-style: italic;
   color: var(--foreground-color);
+  background-color: var(--container-background-color);
   border-bottom: 1px solid var(--foreground-color);
   height: 48px;
-  padding: 5px 0px 15px 0px;
   margin-left: 150px;
+  padding: 5px 0px 15px 0px;
+  border-radius: 2px;
+  transition: filter ease-out 0.1s, padding ease-out 0.2s;
+}
+
+.return:hover {
+  filter: invert(100%);
+  padding-left: 20px;
 }
 
 /* Parent of each article listing */
 
-.article-list {
+.article-container {
   font-size: 16px;
   font-family: sans-serif;
   color: var(--foreground-color);
@@ -108,40 +116,40 @@ body {
   margin-left: 150px;
 }
 
-/* Article listings */
+.article-contents {
+  font-family: sans-serif;
+  font-size: 16px;
+}
 
-.article-listing {
+.article-contents h1,
+.article-contents h2,
+.article-contents h3,
+.article-contents h4,
+.article-contents h5,
+.article-contents h6 {
+  font-family: serif;
+}
+
+.article-contents a {
+  text-decoration: none;
   background-color: var(--container-background-color);
-  transition: padding ease-out 0.2s, filter ease-out 0.1s, width ease-out 0.1s;
-  padding: 20px;
+  color: var(--foreground-color);
   padding-left: 0px;
   border-radius: 2px;
+  transition: filter ease-out 0.1s, padding ease-out 0.2s;
 }
 
-.article-listing:hover {
+.article-contents a:hover {
   filter: invert(100%);
-  padding-left: 20px;
+  padding: 2px 5px;
 }
 
-.article-listing h1 {
-  font-family: serif;
-  font-size: 20px;
-  margin: 0px;
-  padding: 0px;
-}
-
-.article-listing h6 {
-  font-size: 12px;
-  margin: 5px 0px;
+.article-date {
   font-family: monospace;
+  font-size: 12px;
 }
 
-.article-listing p {
-  font-size: 16px;
-  margin: 5px 0px;
-}
 
-.article-listing a {
+a {
   text-decoration: none;
-  color: var(--foreground-color);
 }

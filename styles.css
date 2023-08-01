@@ -116,7 +116,7 @@ body {
   padding: 20px;
   padding-left: 0px;
   border-radius: 2px;
-  width: 105%;
+  width: 107.65%;
 }
 
 .article-listing:hover {
@@ -143,4 +143,9 @@ body {
 .article-listing p {
   font-size: 16px;
   margin: 5px 0px;
+}
+
+.article-listing a {
+  text-decoration: none;
+  color: var(--foreground-color);
 }

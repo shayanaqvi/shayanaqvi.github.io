@@ -1,11 +1,21 @@
-/* Define color variables */
+/* Colours */
+
 :root {
-  --main-background-color: #212121;
-  --container-background-color: #212121;
-  --foreground-color: #fff;
+  --main-background-color: #cccccc;
+  --container-background-color: #cccccc;
+  --foreground-color: #333333;
 }
 
-html,
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-background-color: #212121;
+    --container-background-color: #212121;
+    --foreground-color: #dedede;
+  }
+}
+
+/* Body */
+
 body {
   background-color: var(--main-background-color);
   margin: 0;
@@ -15,45 +25,122 @@ body {
   align-items: center;
 }
 
+/* Center Container */
+
 .container {
   background-color: var(--container-background-color);
-  width: 600px;
-  height: calc(100% - 10px);
+  width: 800px;
   display: flex;
-  border-right: 1px solid var(--foreground-color);
+  margin: 0 auto;
 }
+
+/* Navigation Bar */
 
 .navigation-bar {
   background-color: var(--container-background-color);
-  width: 100px;
+  width: 150px;
   height: 100vh;
   border-right: 1px solid var(--foreground-color);
-  font-family: serif;
-  font-size: 14px;
+  font-family: sans-serif;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  justify-content: center;
+  transition: filter ease-out 0.2s;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.navigation-bar:hover {
+  filter: invert(100%);
+  border-right: 1px solid var(--container-background-color);
+  transition: filter ease-out 0.2s;
+
 }
 
 .navigation-bar p {
   color: var(--foreground-color);
   margin: 0px;
   margin-left: auto;
+  transition: font-size ease-out 0.1s, font-weight ease-out 0.1s, margin ease-out 0.1s, padding ease-out 0.2s;
   padding-right: 20px;
 }
 
 .navigation-bar p:hover {
-  font-style: italic;
   font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 30px;
+  transition: font-size ease-out 0.1s, font-weight ease-out 0.1s, margin ease-out 0.1s, padding ease-out 0.2s;
 }
 
+/* Parent of .page-introduction and .article-list */
+
+.content-container {
+  width: 100%;
+  padding: 10px 20px;
+  width: calc(100% - 80px);
+  box-sizing: border-box;
+}
+
+/* Page introduction/title */
+
 .page-introduction {
-  margin-top: 20px;
-  padding-left: 20px;
   font-size: 16px;
-  font-family: serif;
+  font-family: sans-serif;
+  font-style: italic;
   color: var(--foreground-color);
   border-bottom: 1px solid var(--foreground-color);
-  width: calc(100% - 80px);
-  height: 46px;
+  height: 48px;
+  width: calc(100% - 70px);
+  margin-left: 150px;
+}
+
+/* Parent of each article listing */
+
+.article-list {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: var(--foreground-color);
+  padding-top: 10px;
+  margin-left: 150px;
+}
+
+/* Article listings */
+
+.article-listing {
+  background-color: var(--container-background-color);
+  transition: padding ease-out 0.2s, filter ease-out 0.1s, width ease-out 0.1s;
+  padding: 20px;
+  padding-left: 0px;
+  border-radius: 2px;
+  width: 105%;
+}
+
+.article-listing:hover {
+  filter: invert(100%);
+  padding: 20px;
+  transition: padding ease-out 0.2s, filter ease-out 0.1s, width ease-out 0.1s;
+  border-radius: 2px;
+  width: 107.65%;
+}
+
+.article-listing h1 {
+  font-family: serif;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.article-listing h6 {
+  font-size: 12px;
+  margin: 5px 0px;
+  font-family: monospace;
+}
+
+.article-listing p {
+  font-size: 16px;
+  margin: 5px 0px;
 }

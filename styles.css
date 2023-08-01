@@ -1,0 +1,59 @@
+/* Define color variables */
+:root {
+  --main-background-color: #212121;
+  --container-background-color: #212121;
+  --foreground-color: #fff;
+}
+
+html,
+body {
+  background-color: var(--main-background-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--container-background-color);
+  width: 600px;
+  height: calc(100% - 10px);
+  display: flex;
+  border-right: 1px solid var(--foreground-color);
+}
+
+.navigation-bar {
+  background-color: var(--container-background-color);
+  width: 100px;
+  height: 100vh;
+  border-right: 1px solid var(--foreground-color);
+  font-family: serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.navigation-bar p {
+  color: var(--foreground-color);
+  margin: 0px;
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+.navigation-bar p:hover {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.page-introduction {
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-family: serif;
+  color: var(--foreground-color);
+  border-bottom: 1px solid var(--foreground-color);
+  width: calc(100% - 80px);
+  height: 46px;
+}

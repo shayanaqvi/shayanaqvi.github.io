@@ -4,6 +4,11 @@
   --main-background-color: #cccccc;
   --container-background-color: #cccccc;
   --foreground-color: #333333;
+  --page-font: "EB Garamond";
+  --page-font-size-regular: 18px;
+  --page-font-size-small: 16px;
+  --page-font-size-heading: 22px;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,22 +46,22 @@ body {
   width: 150px;
   height: 100vh;
   border-right: 1px solid var(--foreground-color);
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: var(--page-font);
+  font-size: var(--page-font-size-regular);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: filter ease-out 0.2s;
+  transition: padding ease-out 0.2s;
   position: fixed;
   top: 0;
   bottom: 0;
 }
 
 .navigation-bar:hover {
-  filter: invert(100%);
-  border-right: 1px solid var(--container-background-color);
-  transition: filter ease-out 0.2s;
-
+  border-right: 1px solid var(--foreground-color);
+  border-left: 1px solid var(--foreground-color);
+  padding-left: 1px;
+  transition: padding ease-out 0.2s;
 }
 
 .navigation-bar p {
@@ -69,7 +74,7 @@ body {
 
 .navigation-bar p:hover {
   font-weight: bold;
-  font-size: 20px;
+  font-size: var(--page-font-size-heading);
   margin-top: 10px;
   margin-bottom: 10px;
   padding-right: 30px;
@@ -88,8 +93,8 @@ body {
 /* Page introduction/title */
 
 .return {
-  font-size: 16px;
-  font-family: sans-serif;
+  font-size: var(--page-font-size-regular);
+  font-family: var(--page-font);
   font-style: italic;
   color: var(--foreground-color);
   background-color: var(--container-background-color);
@@ -102,23 +107,23 @@ body {
 }
 
 .return:hover {
-  filter: invert(100%);
   padding-left: 20px;
+  border: 1px solid var(--foreground-color)
 }
 
 /* Parent of each article listing */
 
 .article-container {
-  font-size: 16px;
-  font-family: sans-serif;
+  font-size: var(--page-font-size-regular);
+  font-family: var(--page-font);
   color: var(--foreground-color);
   padding-top: 10px;
   margin-left: 150px;
 }
 
 .article-contents {
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: var(--page-font);
+  font-size: var(--page-font-size-regular);
 }
 
 .article-contents h1,
@@ -127,11 +132,16 @@ body {
 .article-contents h4,
 .article-contents h5,
 .article-contents h6 {
-  font-family: serif;
+  font-family: var(--page-font);
+  font-size: var(--page-font-size-heading)
+}
+
+.article-contents h1 {
+  font-size: calc(var(--page-font-size-heading) + 5px)
 }
 
 .article-contents a {
-  text-decoration: none;
+  text-decoration: underline;
   background-color: var(--container-background-color);
   color: var(--foreground-color);
   padding-left: 0px;
@@ -140,13 +150,15 @@ body {
 }
 
 .article-contents a:hover {
-  filter: invert(100%);
   padding: 2px 5px;
+  text-decoration: none;
+  border: 1px solid var(--foreground-color);
 }
 
 .article-date {
-  font-family: monospace;
-  font-size: 12px;
+  font-family: var(--page-font);
+  font-style: italic;
+  font-size: var(--page-font-size-small);
 }
 
 

@@ -64,6 +64,11 @@ body {
   transition: padding ease-out 0.2s;
 }
 
+.navigation-bar a {
+  text-decoration: none;
+  color: var(--foreground-color);
+}
+
 .navigation-bar p {
   color: var(--foreground-color);
   margin: 0px;
@@ -188,7 +193,6 @@ body {
   padding-left: 10px;
   opacity: 80%;
 }
-
 
 a {
   text-decoration: none;

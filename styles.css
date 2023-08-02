@@ -19,10 +19,28 @@
 
 /* get rid of the margin surrounding the container */
 body {
+  font-family: 'EB Garamond', serif;
   margin: 0px;
   height: 100vh;
   background: var(--background-color);
   color: var(--foreground-color);
+}
+
+/* general text styles */
+h1 {
+  font-size: var(--page-font-size-heading);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: calc(var(--page-font-size-heading) - 5px);
+}
+
+p {
+  font-size: var(--page-font-size-regular)
 }
 
 /* parent container of the navigation bar and content container */

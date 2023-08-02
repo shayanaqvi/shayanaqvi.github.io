@@ -140,13 +140,17 @@ body {
   font-size: calc(var(--page-font-size-heading) + 5px)
 }
 
+.article-contents li {
+  margin-bottom: 5px;
+}
+
 .article-contents a {
   text-decoration: underline;
   background-color: var(--container-background-color);
   color: var(--foreground-color);
   padding-left: 0px;
   border-radius: 2px;
-  transition: filter ease-out 0.1s, padding ease-out 0.2s;
+  transition: filter ease-out 0.1s, padding ease-out 0.2s, border ease-out 0.2s;
 }
 
 .article-contents a:hover {
@@ -159,6 +163,30 @@ body {
   font-family: var(--page-font);
   font-style: italic;
   font-size: var(--page-font-size-small);
+}
+
+.article-contents figure {
+  margin: 0px;
+  padding: 0px;
+}
+
+.article-contents img {
+  max-height: 400px;
+  transform: scale(0.99);
+  transition: box-shadow ease-out 0.2s, transform ease-out 0.1s;
+  border-radius: 2px;
+}
+
+.article-contents img:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.article-contents figcaption {
+  font-style: italic;
+  font-size: var(--page-font-size-small);
+  padding-left: 10px;
+  opacity: 80%;
 }
 
 

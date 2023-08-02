@@ -4,7 +4,7 @@
   --main-background-color: #cccccc;
   --container-background-color: #cccccc;
   --foreground-color: #333333;
-  --page-font: "EB Garamond";
+  --page-font: "EB Garamond", serif;
   --page-font-size-regular: 18px;
   --page-font-size-small: 16px;
   --page-font-size-heading: 22px;

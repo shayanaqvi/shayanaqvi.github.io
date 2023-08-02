@@ -134,7 +134,7 @@ body {
 
 .article-listing h1 {
   font-family: var(--page-font);
-  font-size: 22px;
+  font-size: var(--page-font-size-heading);
   margin: 0px;
   padding: 0px;
 }
@@ -183,7 +183,7 @@ body {
 }
 
 .article-contents h1 {
-  font-size: calc(var(--page-font-size-heading) + 5px)
+  font-size: var(--page-font-size-heading)
 }
 
 .article-contents li {

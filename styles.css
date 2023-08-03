@@ -1,106 +1,24 @@
-/* colours/fonts */
-:root {
-  --background-color: #cccccc;
-  --foreground-color: #333333;
-  --page-font: "EB Garamond", serif;
-  --page-font-size-regular: 18px;
-  --page-font-size-small: 16px;
-  --page-font-size-heading: 22px;
-
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #212121;
-    --foreground-color: #dedede;
-  }
-}
-
-
-/* get rid of the margin surrounding the container */
-body {
-  font-family: 'EB Garamond', serif;
-  margin: 0px;
-  height: 100vh;
-  background: var(--background-color);
-  color: var(--foreground-color);
-}
-
-/* general text styles */
-h1 {
-  font-size: var(--page-font-size-heading);
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: calc(var(--page-font-size-heading) - 5px);
-}
-
-p {
-  font-size: var(--page-font-size-regular)
-}
-
-/* parent container of the navigation bar and content container */
-.container {
+.parent-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background: var(--background-color);
-  width: 800px;
   margin: 0 auto;
 }
 
-/* navigation bar */
 .nav-bar {
-  position: fixed;
-  margin-right: 680px;
-  height: 100vh;
   display: flex;
-  width: 150px;
-  padding: 0px 20px;
-  flex-direction: column;
+  padding: 20px;
   justify-content: center;
-  align-items: flex-end;
-  align-self: stretch;
-
-  border-right: 1px solid var(--foreground-color);
-  background: var(--background-color);
-}
-
-.nav-bar p {
-  margin: 0px;
-}
-
-/* parent container of the page description and page contents */
-.content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
-  background: var(--background-color)
-}
-
-/* bar at the top of the page, it describes the page */
-.page-description {
-  display: flex;
-  width: 450px;
-  padding: 19px 20px;
   align-items: center;
-
-  border-bottom: 1px solid var(--foreground-color);
-  background: var(--background-color);
+  align-content: center;
+  align-self: stretch;
+  flex-wrap: wrap;
+  border-bottom: 1px solid;
 }
 
-/* actual contents of the page */
-.page-contents {
+.nav-bar-item {
   display: flex;
-  width: 450px;
-  padding: 19px 20px;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 10px;
-  flex-wrap: wrap;
+  padding: 0px 4px;
+  justify-content: center;
+  align-items: center;
 }

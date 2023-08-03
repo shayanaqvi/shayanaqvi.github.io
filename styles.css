@@ -1,0 +1,278 @@
+:root {
+  --background-color: #cccccc;
+  --foreground-color: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #212121;
+    --foreground-color: #dedede;
+  }
+}
+
+@media (max-width: 1141px) {
+  .parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1141px;
+  }
+
+  .nav-bar {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: stretch;
+    flex-wrap: wrap;
+    border-bottom: 1px solid;
+  }
+
+  .nav-bar-item {
+    display: flex;
+    padding: 0px 4px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-bar-item:hover {
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+
+  .page-title {
+    display: flex;
+    padding: 12px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-bottom: 1px solid;
+  }
+
+  .page-title * {
+    text-align: center;
+  }
+
+  .page-contents {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1142px) {
+  .parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .nav-bar {
+    position: fixed;
+    display: flex;
+    width: 150px;
+    padding: 0px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex-shrink: 0;
+    align-self: stretch;
+    height: 100vh;
+    margin-right: 992px;
+    border-right: 1px solid;
+  }
+
+  .nav-bar-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: stretch;
+  }
+
+  .nav-bar-item:hover {
+    padding-right: 10px;
+    padding-left: 20px;
+    font-weight: 700;
+    border-left: 1px solid;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    max-width: 800px;
+  }
+
+  .page-title {
+    display: flex;
+    padding: 12px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-bottom: 1px solid;
+  }
+
+  .page-title * {
+    align-self: stretch;
+  }
+
+  .page-contents {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+
+  .page-contents * {
+    align-self: stretch;
+  }
+}
+
+h1 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0px;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0px;
+  margin: 0px;
+}
+
+p {
+  padding: 5px 0px;
+  margin: 0px;
+}
+
+img {
+  width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+figure {
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+li {
+  list-style-type: circle;
+}
+
+li a {
+  padding-bottom: 5px;
+  padding-left: 5px;
+  transition: padding 0.2s ease-out;
+}
+
+li a:hover {
+  padding-left: 10px;
+  font-weight: 700;
+  border-left: 1px solid;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.inline {
+  transition: padding 0.2s ease-out;
+}
+
+.inline:hover {
+  padding: 0 5px;
+  border: 1px solid;
+  text-decoration: none;
+}
+
+.article-date {
+  margin: 0px;
+  padding: 10px 0;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.nav-bar-item {
+  transition: padding 0.2s ease-out;
+}
+
+* {
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.nav-bar-item a {
+  width: 100%;
+  text-align: right;
+  text-decoration: none;
+}
+
+.article-listing {
+  padding: 10px 0px;
+  transition: padding 0.2s ease-out;
+}
+
+.article-listing a {
+  text-decoration: none;
+}
+
+.article-listing:hover {
+  border-left: 1px solid;
+  padding: 10px 20px;
+}
+
+.small-gif {
+  width: min-content;
+}
+
+/*#f54245*/

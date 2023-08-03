@@ -241,7 +241,7 @@ body {
 }
 
 .nav-bar-item {
-  transition: padding 0.2s ease-out;
+  transition: padding 0.2s ease-out, margin 0.2s ease-out;
 }
 
 * {

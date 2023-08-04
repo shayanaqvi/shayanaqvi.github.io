@@ -1,12 +1,12 @@
 :root {
-  --background-color: #cccccc;
-  --foreground-color: #333333;
+  --background-color: #fff6e8;
+  --foreground-color: #262524;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #212121;
-    --foreground-color: #dedede;
+    --background-color: #262524;
+    --foreground-color: #fff6e8;
   }
 }
 
@@ -263,13 +263,13 @@ body {
   transition: padding 0.2s ease-out;
 }
 
-.article-listing a {
-  text-decoration: none;
-}
-
 .article-listing:hover {
   border-left: 1px solid;
   padding-left: 20px;
+}
+
+.article-listing p {
+  text-decoration: none;
 }
 
 .small-gif {

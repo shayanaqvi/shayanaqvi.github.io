@@ -244,13 +244,13 @@ img {
 figcaption {
   text-align: center;
   font-style: italic;
-  margin-top: 10px;
 }
 
 figure {
   margin: 0px;
   margin-bottom: 10px;
   padding: 10px;
+  padding-bottom: 5px;
   border: 1px solid;
 }
 

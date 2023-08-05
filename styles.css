@@ -62,6 +62,15 @@
     padding-right: 0px !important;
   }
 
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center !important;
+  }
+
 }
 
 @media (max-width: 1079px) {

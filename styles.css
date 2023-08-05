@@ -53,6 +53,15 @@
     text-align: center;
   }
 
+  .article-listing:hover {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-left: none !important;
+    padding: 10px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
 }
 
 @media (max-width: 1079px) {
@@ -334,6 +343,10 @@ body {
 }
 
 .article-listing h2 {
+  text-decoration: underline;
+}
+
+.article-listing h3 {
   text-decoration: underline;
 }
 

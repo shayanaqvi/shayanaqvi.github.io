@@ -63,7 +63,10 @@
   }
 
   h2,
-  h3 {
+  h3,
+  h4,
+  h5,
+  h6 {
     text-align: center;
   }
 
@@ -239,7 +242,7 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 30px;
   font-style: italic;
   font-weight: 400;
   line-height: normal;
@@ -249,7 +252,18 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0px;
+  margin: 0px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 24px;
   font-style: italic;
   font-weight: 400;
   line-height: normal;
@@ -301,8 +315,20 @@ body {
   padding: 0px;
 }
 
+code {
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.code-block {
+  background: #00000011;
+  padding: 10px;
+  padding-top: 5px;
+  border: 1px solid;
+}
+
 .inline {
-  transition: padding 0.2s ease-out;
+  transition: padding 0.2s ease-out, font-size 0.2s ease-out;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
@@ -311,6 +337,7 @@ body {
   padding: 0 5px;
   border: 1px solid;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .article-date {

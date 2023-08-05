@@ -353,6 +353,7 @@ body {
 }
 
 .article-listing h2 {
+  padding-top: 0px;
   text-decoration: underline;
 }
 

@@ -1,79 +1,19 @@
 :root {
-  --background-color: #F1F7ED;
-  --foreground-color: #335C67;
+  --background-color: #f3efe0;
+  --foreground-color: #5D576B;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #32292F;
-    --foreground-color: #EEE0CB;
+    --background-color: #163c3c;
+    --foreground-color: #e1bb80;
   }
 }
 
 @media (max-width: 500px) {
   .nav-bar {
-    display: flex;
-    padding: 20px;
-    justify-content: center;
-    align-items: left;
-    align-content: left;
-    align-self: stretch;
-    flex-wrap: wrap;
-    border-bottom: 1px solid;
+    padding-right: 60px !important;
   }
-
-  .nav-bar-item {
-    display: flex;
-    padding: 0px 4px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-bar-item:hover {
-    font-weight: 700;
-    margin: 0px !important;
-  }
-
-  .page-title {
-    display: flex;
-    padding: 12px 20px;
-    flex-direction: column !important;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    border-bottom: 1px solid;
-  }
-
-  .page-title * {
-    text-align: center !important;
-  }
-
-  .article-listing * {
-    text-align: center;
-  }
-
-  .article-listing:hover {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    border-left: none !important;
-    padding: 10px;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-align: center;
-  }
-
-  p {
-    text-align: center !important;
-  }
-
 }
 
 @media (max-width: 1079px) {
@@ -242,7 +182,7 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 28px;
   font-style: italic;
   font-weight: 400;
   line-height: normal;
@@ -252,7 +192,7 @@ h2 {
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 24px;
   font-style: italic;
   font-weight: 400;
   line-height: normal;
@@ -263,7 +203,7 @@ h3 {
 h4,
 h5,
 h6 {
-  font-size: 24px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 400;
   line-height: normal;
@@ -279,11 +219,13 @@ p {
 
 img {
   width: 100%;
+  padding-bottom: 5px;
 }
 
 figcaption {
   text-align: center;
   font-style: italic;
+  padding-bottom: 5px;
 }
 
 figure {
@@ -323,7 +265,6 @@ code {
 .code-block {
   background: #00000011;
   padding: 10px;
-  padding-top: 5px;
   border: 1px solid;
 }
 
@@ -337,7 +278,7 @@ code {
   padding: 0 5px;
   border: 1px solid;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .article-date {

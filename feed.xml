@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>MakeUseOf RSS Feed</title>
+<link>https://shayanaqvi.github.io</link>
+<description>Notes, rambles, making sense of things, whatever, really</description>
+
+<item>
+  <title>Tiling WM Quickstart</title>
+  <link>https://shayanaqvi.github.io/articles/tilingwmquickstart.html</link>  
+  <guid>https://shayanaqvi.github.io/articles/tilingwmquickstart.html?p=004</guid>
+  <description>I’ve spent about the past year using window managers on-and-off. I have, however, gained an amount of experience with i3 and Qtile. I shall attempt to make jumping on board the window manager train a bit easier here.</description>
+  <pubDate>Sat, 5 Aug 2023</pubDate>
+</item>
+
+<item>
+  <title>Qualms with Vim (or modal text editing)</title>
+  <link>https://shayanaqvi.github.io/articles/vimhelixproblems.html</link>  
+  <guid>https://shayanaqvi.github.io/articles/vimhelixproblems.html?p=003</guid>
+  <description>This article is not about the problems of Vim. It’s about the problem of the concept of Vim. Not just Vim, for that matter, but similar software, such as Helix and company.</description>
+  <pubDate>Tue, Aug 1 2023</pubDate>
+</item>
+
+<item>
+  <title>Avoiding the News</title>
+  <link>https://shayanaqvi.github.io/articles/nonews.html</link>  
+  <guid>https://shayanaqvi.github.io/articles/nonews.html?p=002</guid>
+  <description>I came across an article by Rolf Dobelli; it’s about avoiding the news. I don’t have much new to say about news in particular, not at this moment in time, but I just wanted to share some insights from this article that I found interesting. I don’t necessarily agree with all of these, but I found them interesting nonetheless.</description>
+  <pubDate>Mon, Jul 29 2023</pubDate>
+</item>
+
+<item>
+  <title>No-fuss Terminal Workspace</title>
+  <link>https://shayanaqvi.github.io/articles/terminalworkspace.html</link>  
+  <guid>https://shayanaqvi.github.io/articles/terminalworkspace.html?p=001</guid>
+  <description>Working in the terminal is something that I have been steadily warming up to over the past few months. I think its obvious that this kind of workflow isn’t for everyone, but it doesn’t hurt to try it out, does it? Here, I will share a few terminal apps that I found pretty easy to use.</description>
+  <pubDate>Sat, Jul 29 2023</pubDate>
+</item>
+
+</channel>
+</rss>

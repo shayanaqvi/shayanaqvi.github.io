@@ -14,6 +14,10 @@
   .nav-bar {
     padding-right: 80px !important;
   }
+
+  .nav-bar-item {
+    padding: 5px !important;
+  }
 }
 
 @media (max-width: 1079px) {

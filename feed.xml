@@ -6,6 +6,15 @@
 <description>Notes, rambles, making sense of things, whatever, really</description>
 
 <item>
+  <title>Creating a Colour Scheme</title>
+  <link>https://shayanaqvi.github.io/articles/creatingacolourscheme.html</link>  
+  <guid>https://shayanaqvi.github.io/articles/creatingacolourscheme.html?p=005</guid>
+  <description>I like this website’s (current) dark mode. So I had a go translating
+  this to a terminal colour scheme. It is somewhat reminiscent of the <em>Solarized</em> colour scheme.</description>
+  <pubDate>Tue, 8 Aug 2023</pubDate>
+</item>
+
+<item>
   <title>Tiling WM Quickstart</title>
   <link>https://shayanaqvi.github.io/articles/tilingwmquickstart.html</link>  
   <guid>https://shayanaqvi.github.io/articles/tilingwmquickstart.html?p=004</guid>

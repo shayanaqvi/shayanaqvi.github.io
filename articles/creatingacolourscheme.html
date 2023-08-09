@@ -28,29 +28,14 @@
         <h1>Creating a Colour Scheme</h1>
       </div>
       <div class="page-contents">
-        <p class="article-date">Created 08/08/2023</p>
+        <p class="article-date">Created 08/08/2023, Modified 09/08/2023</p>
         <p>I like this website’s (current) dark mode. So I had a go translating
           this to a terminal colour scheme. It is somewhat reminiscent of the <em>Solarized</em> colour scheme. Here are
           some screenshots:
         <figure>
-          <img src="./media/cs_terminal.png" alt="screenshot 1" />
-          <figcaption>neofetch</figcaption>
+          <img src="./media/cls_terminal.png" alt="screenshot 1" />
+          <figcaption>Zellij, Helix, Lazygit</figcaption>
         </figure>
-        <figure>
-          <img src="./media/cs_terminal2.png" alt="screenshot 2" />
-          <figcaption>"exa -l --icons"</figcaption>
-        </figure>
-        <figure>
-          <img src="./media/cs_terminal3.png" alt="screenshot 3" />
-          <figcaption>Helix</figcaption>
-        </figure>
-        <figure>
-          <img src="./media/cs_terminal4.png" alt="screenshot 4" />
-          <figcaption>lazygit</figcaption>
-        </figure>
-        <p>Not much thought has gone into the colours as of now. I tweaked the background to be a bit darker and
-          desaturated the foreground colour a bit. I think it's usable, but changes are most definately needed. If you
-          want it in its current form, here are the colours:</p>
         <ul>
           <li>Foreground/background:</li>
           <ul>
@@ -81,6 +66,22 @@
             </ul>
           </li>
         </ul>
+        <p>Here are some adaptations of this theme for some pieces of software.</p>
+        <h2>Helix</h2>
+        <p>Creating a theme for software like this is somewhat difficult since there are many things to theme and you
+          don't know what all of them are. That probably isn't the best approach to this either. So I grabbed the code
+          for a theme from <a class="inline" href="https://github.com/CptPotato/helix-themes" target="_blank">this
+            repository</a> and modified the colours and a few other things to make it work for me.</p>
+        <p>If you want to use this theme, go to Helix's configuration directory. Create a folder named 'themes'. Then,
+          curl or wget <a class="inline" href="./files/cls_helix.toml">this</a> file. Name it whatever you want.</p>
+        <h2>Zellij</h2>
+        <p>Open <a class="inline" href="./files/cls_zellij.kdl">this</a> file. Copy the contents and paste it into your
+          config.kdl. Change the default theme.
+        <h2>Alacritty</h2>
+        <p>Open <a class="inline" href="./files/cls_alacritty.yml">this</a> file. Copy the contents and paste it into
+          your config file.</p>
+        <p>Generate this colourscheme for other terminals <a href="https://terminal.sexy" class="inline"
+            target="_blank">here</a>.</p>
         <p>If you have any thoughts, feel free to leave them in a comment below.
           Have a nice day!</p>
         <h2 id="comments">Comments</h2>

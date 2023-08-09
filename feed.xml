@@ -6,6 +6,16 @@
 <description>Notes, rambles, making sense of things, whatever, really</description>
 
 <item>
+  <title>Youtube Through RSS</title>
+  <link>https://shayanaqvi.github.io/articles/youtubethroughrss.html</link>  
+  <guid>https://shayanaqvi.github.io/articles/youtubethroughrss.html?p=007</guid>
+  <description>Following Youtube channels through RSS is a great quality-of-life
+  improvement. I don’t expect this "feature" to last particularly long given where
+  Google is taking the site, but it works for now.</description>
+  <pubDate>Wed, 9 Aug 2023 09:54 GMT</pubDate>
+</item>
+
+<item>
   <title>Photoshop is not Graphic Design!</title>
   <link>https://shayanaqvi.github.io/articles/photoshopisnotgraphicdesign.html</link>  
   <guid>https://shayanaqvi.github.io/articles/photoshopisnotgraphicdesign.html?p=006</guid>

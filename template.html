@@ -3,7 +3,7 @@
 
 <head>
   <link rel="icon" type="image/x-icon" href="../favicon.svg">
-  <link rel="stylesheet" , href="../styles.css">
+  <link rel="stylesheet" , href="./styles.css">
   <link rel="preconnect" href="https://fonts.bunny.net">
   <link href="https://fonts.bunny.net/css?family=eb-garamond:400,400i,700,700i" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,29 +12,83 @@
 </head>
 
 <body>
-  <div class="parent-container">
-    <div class="nav-bar">
-      <div class="nav-bar-item"><a href="../index.html">home</a></div>
-      <div class="nav-bar-item"><a href="../about.html">about</a></div>
-      <div class="nav-bar-item"><a href="../now.html">now</a></div>
-      <div class="nav-bar-item"><a href="../contact.html">contact</a></div>
-      <div class="nav-bar-item"><a href="../blog.html">blog</a></div>
-      <div class="nav-bar-item"><a href="../works.html">works</a></div>
-      <div class="nav-bar-item"><a href="../links.html">links</a></div>
-      <div class="nav-bar-item"><a href="../rss.html">rss</a></div>
-    </div>
-    <div class="content-container">
-      <div class="page-title">
-        <h1>Page title here</h1>
+
+  <div id="container">
+    <div id="header">
+      <div class="header-item" id="home">
+        <p>home</p>
       </div>
-      <div class="page-contents">
-        page content here
-        <h2 id="comments">Comments</h2>
-        <div>
-          <script src="https://utteranc.es/client.js" repo="shayanaqvi/shayanaqvi.github.io" issue-term="pathname"
-            theme="preferred-color-scheme" crossorigin="anonymous" async>
-            </script>
+      <div class="header-item" id="spacer"></div>
+      <div class="header-item" id="about">
+        <p>about</p>
+      </div>
+      <div class="header-item" id="blog">
+        <p>blog</p>
+      </div>
+      <div class="header-item" id="works">
+        <p>works</p>
+      </div>
+    </div>
+    <div id="content-container">
+      <h1>Welcome!</h1>
+      <p>I'm Shayan Naqvi. This is where I write about things and share my work.</p>
+      <h2>About me, you, and this website</h2>
+      <p>See my about page</p>
+      <h2>What am I doing now?</h2>
+      <p>See my now page</p>
+      <h2>Works</h2>
+      <p>See my works page</p>
+      <h2>Recent Posts</h2>
+      <small>(see all)</small>
+
+      <div class="article-listing-container">
+        <div class="article-listing">
+          <h3>Title</h3>
+          <small>10/08/2023</small>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in nulla in nibh scelerisque vestibulum.
+            Etiam elit lorem, tristique et quam sit amet, vehicula rhoncus dolor. In et erat viverra, ullamcorper lectus
+            ac, volutpat felis. Pellentesque vel ullamcorper quam. Nunc dapibus ultrices libero, eget ullamcorper
+            turpis.
+            Nam in dignissim ipsum.</p>
         </div>
+
+        <div class="article-listing" id="middle">
+          <h3>Title</h3>
+          <small>10/08/2023</small>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in nulla in nibh scelerisque vestibulum.
+            Etiam elit lorem, tristique et quam sit amet, vehicula rhoncus dolor. In et erat viverra, ullamcorper lectus
+            ac, volutpat felis. Pellentesque vel ullamcorper quam. Nunc dapibus ultrices libero, eget ullamcorper
+            turpis.
+            Nam in dignissim ipsum.</p>
+        </div>
+
+        <div class="article-listing">
+          <h3>Title</h3>
+          <small>10/08/2023</small>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in nulla in nibh scelerisque vestibulum.
+            Etiam elit lorem, tristique et quam sit amet, vehicula rhoncus dolor. In et erat viverra, ullamcorper lectus
+            ac, volutpat felis. Pellentesque vel ullamcorper quam. Nunc dapibus ultrices libero, eget ullamcorper
+            turpis.
+            Nam in dignissim ipsum.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="footer-item" id="links">
+        <h3>Find me on the internet</h3>
+        <ul>
+          <li>Github</li>
+          <li>Behance</li>
+        </ul>
+      </div>
+      <div class="footer-item" id="contact">
+        <h3>Contact</h3>
+        <p>Feel free to introduce yourself or simply say hello! Send me an email here</p>
+      </div>
+      <div class="footer-item" id="rss">
+        <h3>Follow this website</h3>
+        <p>This website is followable through RSS.</p>
       </div>
     </div>
   </div>

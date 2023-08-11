@@ -109,6 +109,11 @@ h6 {
   font-weight: 200;
 }
 
+h1 {
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
 h3,
 h4,
 h5,
@@ -138,9 +143,32 @@ a {
 }
 
 
+figure {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid;
+}
+
+figcaption {
+  text-align: center;
+  font-variant: all-small-caps;
+}
+
+img {
+  width: 100%;
+}
+
+code {
+  font-family: monospace;
+  color: var(--accentr);
+  font-size: 14px;
+}
+
+
 /* ARTICLE LISTINGS */
 .article-listing {
   padding: 10px;
+  border-bottom: 1px solid;
 }
 
 .article-listing a {
@@ -149,11 +177,6 @@ a {
 
 .article-listing * {
   background: none;
-}
-
-#middle {
-  border-top: 1px solid;
-  border-bottom: 1px solid;
 }
 
 .article-listing h3 {
@@ -168,17 +191,10 @@ a {
 
 .article-listing-container {
   border: 1px solid;
+  border-bottom: none;
   margin-top: 10px;
 }
 
-.article-listing:hover,
-.article-listing:hover>a,
-.article-listing:hover>p,
-.article-listing:hover>h3,
-.article-listing:hover>small {
-  background: var(--accentg);
-  color: var(--background-color) !important;
-}
 
 /* FOOTER */
 #footer {
@@ -295,7 +311,18 @@ a {
   color: var(--background-color) !important;
 }
 
+.article-listing:hover,
+.article-listing:hover>a,
+.article-listing:hover>p,
+.article-listing:hover>h3,
+.article-listing:hover>small {
+  background: var(--accentg);
+  color: var(--background-color) !important;
+}
 
+.article-listing:hover {
+  border-bottom: 1px solid var(--foreground-color);
+}
 
 /* SVGs */
 svg {

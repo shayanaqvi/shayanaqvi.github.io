@@ -4,81 +4,145 @@
 <head>
   <link rel="icon" type="image/x-icon" href="../favicon.svg">
   <link rel="stylesheet" , href="../styles.css">
-  <link rel="preload" href="https://fonts.bunny.net">
-  <link href="https://fonts.bunny.net/css?family=eb-garamond:400,400i,700,700i" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=piazzolla:200,200i,400,400i" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="My problems with Vim, Helix or modal text editing in general, Shayan Naqvi">
-  <title>Qualms with Vim (or modal text editing) | Shayan Naqvi</title>
+  <meta name="description" content="This is a template file. PLEASE CHANGE THIS, Shayan Naqvi">
+  <title>Tab title here | Shayan Naqvi</title>
 </head>
 
 <body>
-  <div class="parent-container">
-    <div class="nav-bar">
-      <div class="nav-bar-item"><a href="../index.html">home</a></div>
-      <div class="nav-bar-item"><a href="../about.html">about</a></div>
-      <div class="nav-bar-item"><a href="../now.html">now</a></div>
-      <div class="nav-bar-item"><a href="../contact.html">contact</a></div>
-      <div class="nav-bar-item"><a href="../blog.html">blog</a></div>
-      <div class="nav-bar-item"><a href="../works.html">works</a></div>
-      <div class="nav-bar-item"><a href="../links.html">links</a></div>
-      <div class="nav-bar-item"><a href="../rss.html">rss</a></div>
-    </div>
-    <div class="content-container">
-      <div class="page-title">
-        <h1>Qualms with Vim (or modal text editing)</h1>
+
+  <div id="container">
+    <div id="header">
+      <div class="header-item" id="home">
+        <a href="../index.html">home</a>
       </div>
-      <div class="page-contents">
-        <p class="article-date">01/08/2023</p>
-        <p>This article is not about the problems <em>of</em> Vim. It’s about
-          the problem of the <em>concept</em> of Vim. Not just Vim, for that
-          matter, but similar software, such as Helix and company.</p>
-        <h2 id="preamble">Preamble</h2>
-        <p>For the sake of this article, I’m going to ignore any differences
-          between text editors such as Vim and Neovim and Kakoune and Helix and
-          the other millions of terminal text editors. To me, at least,
-          <em>the</em> benefit (or the <em>main</em> benefit) of these text
-          editors is not their performance or plugins or features or whatever.
-          It’s the modal text editing. That’s what keeps me hooked to these
-          amazing pieces of software.
-        </p>
-        <h2 id="the-problem">The Problem</h2>
-        <p>My problem with getting used to this kind of text editing is that you
-          become so accustomed to it, that it becomes genuinely difficult
-          adjusting to any plain ol’ non-modal text editor. Now, after about a
-          year of using modal text editing as a primary way of manipulating text,
-          I find it gruesome using non-modal text editing.</p>
-        <p>If you’re a Vim user, you have an <em>amount</em> of luck, in this regard.
-          There exist web extensions and VSCode extentions and Obsidian extentions
-          (and so on) that let you use Vim’s modal editing in their apps. This is
-          great, and while most of these are nowhere near perfect, they get you
-          <em>most</em> of the way. Then, it’s possible to use alternatives to Vim
-          while maintaining its modal editing.
-        </p>
-        <p>But if you use a more obscure text editor, like Helix or Kakoune,
-          then you’re pretty much out of options. <em>Some</em> apps offer
-          Kakoune’s modal editing, but very, very few offer Helix’s modal editing
-          (all I recall is a VSCode extension). This brings us to the problem: an
-          abundance of alternatives. Of this abundance of alternatives, very few
-          are available to you <em>if</em> you wish to retain your text editing
-          muscle memory.</p>
-        <p>Thing is, this is perfectly okay. I shouldn't expect major pieces of software to have extensions for niche
-          text editing apps. That expectation is not realistic, is it?</p>
-        <p>Of course, I could simply switch back to Vim, have my piece of cake
-          and eat it too, but honestly, I’d rather not (my, rather subjective
-          opinion, is that Helix’s modal editing is superior to Vim’s).</p>
-        <p>Regardless, if this is the case, I suppose I don’t have any right to complain.
-          Thus, I shall stop right here.</p>
-        <p>If you have any thoughts, feel free to leave a comment. Have a nice
-          day!</p>
-        <h2 id="comments">Comments</h2>
-        <div>
-          <script src="https://utteranc.es/client.js" repo="shayanaqvi/shayanaqvi.github.io" issue-term="pathname"
-            theme="preferred-color-scheme" crossorigin="anonymous" async>
-            </script>
-        </div>
+      <div class="header-item" id="spacer"></div>
+      <div class="header-item" id="about">
+        <a href="../about.html">about</a>
+      </div>
+      <div class="header-item" id="blog">
+        <a href="../blog.html">blog</a>
+      </div>
+      <div class="header-item" id="works">
+        <a href="../works.html">works</a>
       </div>
     </div>
-  </div>
+    <div id="content-container">
+      <h1>Qualms with Vim (or modal text editing)</h1>
+      <small>01/08/2023</small>
+      <p>This article is not about the problems <em>of</em> Vim. It’s about
+        the problem of the <em>concept</em> of Vim. Not just Vim, for that
+        matter, but similar software, such as Helix and company.</p>
+      <h2 id="preamble">Preamble</h2>
+      <p>For the sake of this article, I’m going to ignore any differences
+        between text editors such as Vim and Neovim and Kakoune and Helix and
+        the other millions of terminal text editors. To me, at least,
+        <em>the</em> benefit (or the <em>main</em> benefit) of these text
+        editors is not their performance or plugins or features or whatever.
+        It’s the modal text editing. That’s what keeps me hooked to these
+        amazing pieces of software.
+      </p>
+      <h2 id="the-problem">The Problem</h2>
+      <p>My problem with getting used to this kind of text editing is that you
+        become so accustomed to it, that it becomes genuinely difficult
+        adjusting to any plain ol’ non-modal text editor. Now, after about a
+        year of using modal text editing as a primary way of manipulating text,
+        I find it gruesome using non-modal text editing.</p>
+      <p>If you’re a Vim user, you have an <em>amount</em> of luck, in this regard.
+        There exist web extensions and VSCode extentions and Obsidian extentions
+        (and so on) that let you use Vim’s modal editing in their apps. This is
+        great, and while most of these are nowhere near perfect, they get you
+        <em>most</em> of the way. Then, it’s possible to use alternatives to Vim
+        while maintaining its modal editing.
+      </p>
+      <p>But if you use a more obscure text editor, like Helix or Kakoune,
+        then you’re pretty much out of options. <em>Some</em> apps offer
+        Kakoune’s modal editing, but very, very few offer Helix’s modal editing
+        (all I recall is a VSCode extension). This brings us to the problem: an
+        abundance of alternatives. Of this abundance of alternatives, very few
+        are available to you <em>if</em> you wish to retain your text editing
+        muscle memory.</p>
+      <p>Thing is, this is perfectly okay. I shouldn't expect major pieces of software to have extensions for niche
+        text editing apps. That expectation is not realistic, is it?</p>
+      <p>Of course, I could simply switch back to Vim, have my piece of cake
+        and eat it too, but honestly, I’d rather not (my, rather subjective
+        opinion, is that Helix’s modal editing is superior to Vim’s).</p>
+      <p>Regardless, if this is the case, I suppose I don’t have any right to complain.
+        Thus, I shall stop right here.</p>
+      <p>If you have any thoughts, feel free to leave a comment. Have a nice
+        day!</p>
+      <h2 id="comments">Comments</h2>
+      <div>
+        <script src="https://utteranc.es/client.js" repo="shayanaqvi/shayanaqvi.github.io" issue-term="pathname"
+          theme="preferred-color-scheme" crossorigin="anonymous" async>
+          </script>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="footer-item" id="links">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_18_3)">
+            <circle cx="49.641" cy="49.641" r="39" transform="rotate(30 49.641 49.641)" stroke="currentColor"
+              stroke-width="2" />
+            <circle cx="49.6413" cy="49.6411" r="39" transform="rotate(-45 49.6413 49.6411)" stroke="currentColor"
+              stroke-width="2" />
+            <path
+              d="M69.1409 15.866C74.7132 19.0831 77.8012 25.6876 78.0929 34.0199C78.3841 42.3356 75.8696 52.2115 70.4255 61.641C64.9814 71.0705 57.6858 78.186 50.3387 82.0917C42.9768 86.0052 35.7132 86.6331 30.1409 83.416C24.5686 80.1988 21.4806 73.5943 21.1888 65.262C20.8976 56.9464 23.4121 47.0705 28.8563 37.641C34.3004 28.2115 41.5959 21.0959 48.9431 17.1902C56.3049 13.2767 63.5686 12.6488 69.1409 15.866Z"
+              stroke="currentColor" stroke-width="2" />
+            <path
+              d="M22.0641 22.0637C22.6361 21.4917 23.8642 21.2251 26.0832 21.7955C28.2269 22.3464 30.9652 23.6014 34.1268 25.4984C40.4364 29.2841 48.2352 35.5068 56.0053 43.2769C63.7753 51.047 69.998 58.8458 73.7838 65.1554C75.6808 68.317 76.9357 71.0553 77.4867 73.199C78.057 75.418 77.7904 76.6461 77.2185 77.218C76.6465 77.79 75.4184 78.0566 73.1994 77.4863C71.0557 76.9353 68.3174 75.6803 65.1558 73.7834C58.8462 69.9976 51.0474 63.7749 43.2773 56.0048C35.5072 48.2348 29.2845 40.436 25.4988 34.1264C23.6018 30.9648 22.3468 28.2264 21.7959 26.0828C21.2256 23.8638 21.4922 22.6357 22.0641 22.0637Z"
+              stroke="currentColor" stroke-width="2" />
+          </g>
+          <defs>
+            <clipPath id="clip0_18_3">
+              <rect width="100" height="100" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <h3>Find me on the internet</h3>
+        <ul>
+          <li><a href="https://github.com/shayanaqvi/">Github</a></li>
+          <li><a href="https://www.behance.net/shayannaqvi">Behance</a></li>
+        </ul>
+      </div>
+      <div class="footer-item" id="contact">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 58.7331L7.91454 26L92.0855 26L50 58.7331Z" stroke="currentColor" stroke-width="2" />
+          <path d="M6 74L34 46" stroke="currentColor" stroke-width="2" />
+          <path d="M94 74L66 46" stroke="currentColor" stroke-width="2" />
+          <rect x="6" y="26" width="88" height="48" stroke="currentColor" stroke-width="2" />
+        </svg>
+
+        <h3>Contact</h3>
+        <p>Feel free to introduce yourself or simply say hello! Send me an email <a
+            href="mailto:shayan.web.naqvi@icloud.com">here</a>.</p>
+      </div>
+      <div class="footer-item" id="rss">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.4585 28.2771C27.4417 28.2771 42.7702 34.6264 54.072 45.9282C65.3738 57.23 71.7231 72.5586 71.7231 88.5417H88.5418C88.5418 78.419 86.548 68.3954 82.6742 59.0432C78.8004 49.691 73.1225 41.1934 65.9646 34.0356C58.8068 26.8777 50.3092 21.1998 40.957 17.326C31.6048 13.4522 21.5812 11.4584 11.4585 11.4584V28.2771Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path
+            d="M61.9127 88.5417H46.496C46.496 79.2492 42.8046 70.3372 36.2337 63.7664C29.6629 57.1956 20.751 53.5042 11.4585 53.5042V38.0875C18.0842 38.0875 24.6451 39.3926 30.7665 41.9281C36.8878 44.4637 42.4499 48.1801 47.135 52.8652C51.8201 57.5503 55.5365 63.1123 58.0721 69.2337C60.6076 75.3551 61.9127 81.916 61.9127 88.5417Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path
+            d="M21.3459 88.5417C26.8054 88.5417 31.2313 84.1159 31.2313 78.6563C31.2313 73.1967 26.8054 68.7709 21.3459 68.7709C15.8863 68.7709 11.4604 73.1967 11.4604 78.6563C11.4604 84.1159 15.8863 88.5417 21.3459 88.5417Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <h3>Follow this website</h3>
+        <p>This website is followable through <a href="./feed.xml">RSS</a>.</p>
+      </div>
+    </div>
+
+    <div id="sub-footer">
+      <p>Website by Shayan Naqvi. Code licensed under <a href="https://www.gnu.org/licenses/gpl-3.0-standalone.html">GNU
+          GPLv3</a>. Content licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC
+          BY-NC 4.0</a>.
+    </div>
   </div>
 
 </body>

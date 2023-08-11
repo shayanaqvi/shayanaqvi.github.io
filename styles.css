@@ -13,9 +13,6 @@
     --background-color: #163c3c;
     --foreground-color: #e1bb80;
     --svg-fg: invert(94%) sepia(12%) saturate(1803%) hue-rotate(320deg) brightness(89%) contrast(99%);
-    --accentr: #FF5757;
-    --accentg: #ECFF14;
-    --accentb: #4CBFFF;
   }
 }
 
@@ -45,6 +42,7 @@ body {
 #header {
   height: 50px;
   display: flex;
+  border-top: 1px solid;
 }
 
 .header-item {
@@ -219,7 +217,6 @@ code {
   border: 1px solid;
   border-top: none;
   padding: 20px;
-  margin-bottom: 20px;
 }
 
 

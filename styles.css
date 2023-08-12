@@ -29,6 +29,7 @@ body {
   font-family: "Piazzolla", serif;
   background: var(--background-color);
   color: var(--foreground-color);
+  font-size: 18px;
 }
 
 /* CONTAINER TO RULE THEM ALL */
@@ -110,6 +111,15 @@ h6 {
 h1 {
   padding-top: 0;
   padding-bottom: 10px;
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
 }
 
 h3,
@@ -117,6 +127,13 @@ h4,
 h5,
 h6 {
   font-style: italic;
+  font-size: 24px;
+}
+
+h4,
+h5,
+h6 {
+  font-variant: all-small-caps;
 }
 
 p {
@@ -180,6 +197,8 @@ code {
 .article-listing h3 {
   padding: 0;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  font-size: 22px;
 }
 
 .article-listing-anchor {

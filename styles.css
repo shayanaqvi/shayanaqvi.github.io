@@ -6,6 +6,7 @@
   --accentr: #DA4949;
   --accentg: #A5AE37;
   --accentb: #35A6E6;
+  --accento: #FF792E;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,6 +84,10 @@ body {
 
 #works a {
   color: var(--accentb);
+}
+
+#shelf a {
+  color: var(--accento);
 }
 
 
@@ -331,6 +336,11 @@ code {
 
 #works:hover a {
   background: var(--accentb);
+  color: var(--background-color) !important;
+}
+
+#shelf:hover a {
+  background: var(--accento);
   color: var(--background-color) !important;
 }
 

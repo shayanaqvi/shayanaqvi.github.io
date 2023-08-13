@@ -180,6 +180,13 @@ code {
 }
 
 
+.closing {
+  font-style: italic;
+  padding: 40px 0;
+  opacity: 70%;
+}
+
+
 /* ARTICLE LISTINGS */
 .article-listing {
   padding: 10px;

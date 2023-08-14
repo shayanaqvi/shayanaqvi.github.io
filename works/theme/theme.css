@@ -18,6 +18,14 @@ code {
   padding: 0 5px;
 }
 
+small {
+  font-size: 16px;
+}
+
+small a {
+  font-size: 16px;
+}
+
 #container {
   display: flex;
   padding: 20px;

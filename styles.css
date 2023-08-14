@@ -45,6 +45,9 @@ body {
   height: 50px;
   display: flex;
   border-top: 1px solid;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .header-item {
@@ -94,7 +97,7 @@ body {
 /* THE CONTAINER THAT CONTAINS THE PAGE CONTENT */
 #content-container {
   border: 1px solid;
-  margin: 0;
+  margin: 0 20px;
   padding: 20px;
 }
 
@@ -230,6 +233,7 @@ code {
   border: 1px solid;
   border-top: none;
   display: flex;
+  margin: 0 20px;
 }
 
 .footer-item {
@@ -248,6 +252,9 @@ code {
   border: 1px solid;
   border-top: none;
   padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px
 }
 
 
@@ -258,9 +265,14 @@ code {
     overflow: hidden;
   }
 
+  #content-container {
+    margin: 0;
+  }
+
   #header {
     height: auto;
     display: block;
+    margin: 0;
   }
 
   #spacer {
@@ -290,7 +302,7 @@ code {
 
   #footer {
     border: none;
-    margin-bottom: 20px;
+    margin: 0;
     display: block;
     height: auto
   }
@@ -313,7 +325,7 @@ code {
     border: none;
     border-top: 1px solid;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 0;
   }
 }
 

@@ -1,1 +1,435 @@
-/home/shayanaqvi/documents/html/website/works/website-theme/website-theme.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" , href="./website-theme.css">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=xanh-mono:400,400i" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A new theme for your terminal.">
+  <title>Website - a colour scheme for the terminal</title>
+</head>
+
+<body>
+  <div id="container">
+    <h1>website</h1>
+    <h3>a colour scheme for the terminal</h2>
+
+      <img src="./screenshot.png" alt="screenshot of the colour scheme">
+      <a href="#contribute-message">
+        <div class="contribute">
+          <p>contribute</p>
+        </div>
+      </a>
+
+      <h2>the colours</h2>
+      <div class="colours">
+
+        <div class="item">
+          <p>bg/fg</p>
+          <div id="bg"></div>
+          <div id="fg"></div>
+        </div>
+
+        <div class="item">
+          <p>red</p>
+          <div id="bred"></div>
+          <div id="nred"></div>
+        </div>
+
+        <div class="item">
+          <p>yellow</p>
+          <div id="byellow"></div>
+          <div id="nyellow"></div>
+        </div>
+
+        <div class="item">
+          <p>green</p>
+          <div id="bgreen"></div>
+          <div id="ngreen"></div>
+        </div>
+
+        <div class="item">
+          <p>cyan</p>
+          <div id="bcyan"></div>
+          <div id="ncyan"></div>
+        </div>
+
+        <div class="item">
+          <p>blue</p>
+          <div id="bblue"></div>
+          <div id="nblue"></div>
+        </div>
+
+        <div class="item">
+          <p>pink</p>
+          <div id="bpink"></div>
+          <div id="npink"></div>
+        </div>
+
+        <div class="item">
+          <p>black</p>
+          <div id="bblack"></div>
+          <div id="nblack"></div>
+        </div>
+
+        <div class="item">
+          <p>white</p>
+          <div id="bwhite"></div>
+          <div id="nwhite"></div>
+        </div>
+
+      </div>
+
+      <h2>the apps</h2>
+
+      <div id="buttons">
+        <a href="#alacritty">
+          <div class="button">alacritty</div>
+        </a>
+        <a href="#konsole">
+          <div class="button">konsole</div>
+        </a>
+        <a href="#xfce">
+          <div class="button">xfce4-terminal</div>
+        </a>
+        <a href="#xterm">
+          <div class="button">xterm</div>
+        </a>
+        <a href="#zellij">
+          <div class="button">zellij</div>
+        </a>
+        <a href="#helix">
+          <div class="button">helix</div>
+        </a>
+      </div>
+
+      <div class="code">
+        <h3 id="alacritty">alacritty</h3>
+        <p><em>Add this to your configuration file:</em></p>
+        <p class="code-block">
+
+          colors:<br>
+          # Default colors<br>
+          primary:<br>
+          background: '0x132f35'<br>
+          foreground: '0xd1b890'<br>
+
+          # Normal colors<br>
+          normal:<br>
+          black: '0x183c44'<br>
+          red: '0xda4949'<br>
+          green: '0xbcca15'<br>
+          yellow: '0xffb02e'<br>
+          blue: '0x35a6e6'<br>
+          magenta: '0xd343a2'<br>
+          cyan: '0x38c995'<br>
+          white: '0xffe8c1'<br>
+
+          # Bright colors<br>
+          bright:<br>
+          black: '0x235662'<br>
+          red: '0xff5757'<br>
+          green: '0xecff14'<br>
+          yellow: '0xffd694'<br>
+          blue: '0x4cbfff'<br>
+          magenta: '0xff4cc2'<br>
+          cyan: '0x35ffb6'<br>
+          white: '0xffd48f'<br>
+
+        </p>
+      </div>
+
+      <div class="code">
+        <h3 id="konsole">konsole</h3>
+        <p><em>Create a file named <code>website.colorscheme</code>. Copy the code below and insert it into the new
+            file.
+            Place it in the user Konsole directory (i.e. <code>/home/$USER/.local/share/konsole</code>)</em>.</p>
+        <p class="code-block">
+
+          # --- special colors ---<br>
+
+          [Background]<br>
+          Color=19,47,53<br>
+          [BackgroundIntense]<br>
+          Color=19,47,53<br>
+          [Foreground]<br>
+          Color=209,184,144<br>
+          [ForegroundIntense]<br>
+          Color=209,184,144<br>
+          Bold=true<br>
+
+          # --- standard colors ---<br>
+
+          [Color0]<br>
+          Color=24,60,68<br>
+          [Color0Intense]<br>
+          Color=35,86,98<br>
+          [Color1]<br>
+          Color=218,73,73<br>
+          [Color1Intense]<br>
+          Color=255,87,87<br>
+          [Color2]<br>
+          Color=188,202,21<br>
+          [Color2Intense]<br>
+          Color=236,255,20<br>
+          [Color3]<br>
+          Color=255,176,46<br>
+          [Color3Intense]<br>
+          Color=255,214,148<br>
+          [Color4]<br>
+          Color=53,166,230<br>
+          [Color4Intense]<br>
+          Color=76,191,255<br>
+          [Color5]<br>
+          Color=211,67,162<br>
+          [Color5Intense]<br>
+          Color=255,76,194<br>
+          [Color6]<br>
+          Color=56,201,149<br>
+          [Color6Intense]<br>
+          Color=53,255,182<br>
+          [Color7]<br>
+          Color=255,232,193<br>
+          [Color7Intense]<br>
+          Color=255,212,143<br>
+
+          # --- general options ---<br>
+
+          [General]<br>
+          Opacity=1
+
+
+        </p>
+      </div>
+
+      <div class="code">
+        <h3 id="xfce">xfce4-terminal</h3>
+        <p><em>Create a file named <code>website.theme</code>. Copy and paste the code below into the file. Place it in
+            <code>/home/$USER/.local/share/xfce4/terminal/colorschemes</code></em>.</p>
+        <p class="code-block">
+
+          [Configuration]<br>
+          ColorCursor=#d1d1b8b89090<br>
+          ColorForeground=#d1d1b8b89090<br>
+          ColorBackground=#13132f2f3535<br>
+          ColorPalette=#18183c3c4444;
+          #dada49494949;
+          #bcbccaca1515;
+          #ffffb0b02e2e;
+          #3535a6a6e6e6;
+          #d3d34343a2a2;
+          #3838c9c99595;
+          #ffffe8e8c1c1;
+          #232356566262;
+          #ffff57575757;
+          #ececffff1414;
+          #ffffd6d69494;
+          #4c4cbfbfffff;
+          #ffff4c4cc2c2;
+          #3535ffffb6b6;
+          #ffffd4d48f8f
+
+        </p>
+      </div>
+
+      <div class="code">
+        <h3 id="xterm">xterm</h3>
+        <p><em>Put the following in your <code>.Xresources</code> file. Run <code>xrdb -merge ~/.Xresources</code>.</em>
+        </p>
+        <p class="code-block">
+
+          ! special<br>
+          *.foreground: #d1b890<br>
+          *.background: #132f35<br>
+          *.cursorColor: #d1b890<br>
+
+          ! black<br>
+          *.color0: #183c44<br>
+          *.color8: #235662<br>
+
+          ! red<br>
+          *.color1: #da4949<br>
+          *.color9: #ff5757<br>
+
+          ! green<br>
+          *.color2: #bcca15<br>
+          *.color10: #ecff14<br>
+
+          ! yellow<br>
+          *.color3: #ffb02e<br>
+          *.color11: #ffd694<br>
+
+          ! blue<br>
+          *.color4: #35a6e6<br>
+          *.color12: #4cbfff<br>
+
+          ! magenta<br>
+          *.color5: #d343a2<br>
+          *.color13: #ff4cc2<br>
+
+          ! cyan<br>
+          *.color6: #38c995<br>
+          *.color14: #35ffb6<br>
+
+          ! white<br>
+          *.color7: #ffe8c1<br>
+          *.color15: #ffd48f
+
+        </p>
+      </div>
+
+      <div class="code">
+        <h3 id="zellij">zellij</h3>
+        <p><em>Put this in your <code>config.kdl</code> file.</em></p>
+        <p class="code-block">
+
+          themes {<br>
+          website {<br>
+          fg 209 184 143<br>
+          bg 19 47 53<br>
+          black 24 60 68<br>
+          red 218 73 73<br>
+          green 188 202 21<br>
+          yellow 255 176 46<br>
+          blue 53 166 230<br>
+          magenta 211 67 162<br>
+          cyan 56 201 149<br>
+          white 255 212 143<br>
+          orange 255 121 46<br>
+          }<br>
+          }
+
+        </p>
+      </div>
+
+      <div class="code">
+        <h3 id="helix">helix</h3>
+        <p><em>Create a directory called <code>themes</code> in <code>~/.config/helix/</code>. Create a file called
+            <code>website.toml</code> there. Copy and paste the code below into the file.</em></p>
+        <p class="code-block">
+
+          "type" = "yellow"<br>
+          "constant" = "purple" # TODO<br>
+          "constant.numeric" = "green"<br>
+          "constant.character.escape" = "cyan"<br>
+          "string" = "green"<br>
+          "string.regexp" = "orange"<br>
+          "comment" = "grey"<br>
+          "variable" = "fg"<br>
+          "variable.builtin" = "orange"<br>
+          "variable.parameter" = "fg"<br>
+          "variable.other.member" = "fg"<br>
+          "label" = "orange"<br>
+          "punctuation" = "grey"<br>
+          "punctuation.delimiter" = "grey"<br>
+          "punctuation.bracket" = "fg"<br>
+          "keyword" = "fg"<br>
+          "keyword.directive" = "cyan"<br>
+          "operator" = "red"<br>
+          "function" = "blue"<br>
+          "function.builtin" = "blue"<br>
+          "function.macro" = "cyan"<br>
+          "tag" = "yellow"<br>
+          "namespace" = "red"<br>
+          "attribute" = "cyan"<br>
+          "constructor" = "yellow"<br>
+          "module" = "red"<br>
+          "special" = "orange"<br>
+
+          "markup.heading.marker" = "grey"<br>
+          "markup.heading.1" = { fg = "purple", modifiers = ["bold"] }<br>
+          "markup.heading.2" = { fg = "red", modifiers = ["bold"] }<br>
+          "markup.heading.3" = { fg = "blue", modifiers = ["bold"] }<br>
+          "markup.heading.4" = { fg = "yellow", modifiers = ["bold"] }<br>
+          "markup.heading.5" = { fg = "green", modifiers = ["bold"] }<br>
+          "markup.heading.6" = { fg = "fg", modifiers = ["bold"] }<br>
+          "markup.list" = "red"<br>
+          "markup.bold" = { modifiers = ["bold"] }<br>
+          "markup.italic" = { modifiers = ["italic"] }<br>
+          "markup.link.url" = { fg = "green", modifiers = ["underlined"] }<br>
+          "markup.link.text" = "purple"<br>
+          "markup.quote" = "grey"<br>
+          "markup.raw" = "green"<br>
+
+          "diff.plus" = "green"<br>
+          "diff.delta" = "orange"<br>
+          "diff.minus" = "red"<br>
+
+          "ui.background" = { bg = "bg0" }<br>
+          "ui.background.separator" = "grey"<br>
+          "ui.cursor" = { fg = "bg0", bg = "red" }<br>
+          "ui.cursor.match" = { fg = "bg0", bg = "red" }<br>
+          "ui.cursor.insert" = { fg = "black", bg = "grey" }<br>
+          "ui.cursor.select" = { fg = "bg0", bg = "blue" }<br>
+          "ui.cursorline.primary" = { bg = "bg1" }<br>
+          "ui.cursorline.secondary" = { bg = "bg1" }<br>
+          "ui.selection" = { fg = "yellow", bg = "grey" }<br>
+          "ui.linenr" = "grey"<br>
+          "ui.linenr.selected" = "fg"<br>
+          "ui.statusline" = { fg = "bg0", bg = "green" }<br>
+          "ui.statusline.inactive" = { fg = "grey", bg = "green" }<br>
+          "ui.statusline.normal" = { fg = "green", bg = "bg0", modifiers = [""] }<br>
+          "ui.statusline.insert" = { fg = "green", bg = "bg0", modifiers = ["bold"] }<br>
+          "ui.statusline.select" = { fg = "green", bg = "bg0", modifiers = ["bold"] }<br>
+          "ui.bufferline" = { fg = "fg", bg = "bg0" }<br>
+          "ui.bufferline.active" = { fg = "bg0", bg = "green", modifiers = ["bold"] }<br>
+          "ui.popup" = { fg = "fg", bg = "bg0" }<br>
+          "ui.window" = { fg = "fg", bg = "bg0" }<br>
+          "ui.help" = { fg = "fg", bg = "bg0" }<br>
+          "ui.text" = "fg"<br>
+          "ui.text.focus" = "green"<br>
+          "ui.menu" = { fg = "bg0", bg = "green" }<br>
+          "ui.menu.selected" = { fg = "green", bg = "bg0" }<br>
+          "ui.virtual.whitespace" = { fg = "bg4" }<br>
+          "ui.virtual.indent-guide" = { fg = "grey" }<br>
+          "ui.virtual.ruler" = { bg = "bg2" }<br>
+
+          "hint" = "blue"<br>
+          "info" = "green"<br>
+          "warning" = "yellow"<br>
+          "error" = "red"<br>
+          "diagnostic" = { underline = { style = "line" } }<br>
+          "diagnostic.hint" = { underline = { color = "blue", style = "dotted" } }<br>
+          "diagnostic.info" = { underline = { color = "green", style = "dotted" } }<br>
+          "diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }<br>
+          "diagnostic.error" = { underline = { color = "red", style = "curl" } }<br>
+
+          [palette]<br>
+          black = "#0B1A1E"<br>
+          bg0 = "#132F35"<br>
+          bg1 = "#10282D"<br>
+          bg2 = "#0E2125"<br>
+          bg3 = "#0B1A1E"<br>
+          bg4 = "#0B1A1E"<br>
+          bg_grey = "#183C44"<br>
+          bg_red = "#8A3333"<br>
+          diff_red = "#FF5757"<br>
+          bg_green = "#5D6318"<br>
+          diff_green = "#ECFF14"<br>
+          bg_blue = "#25688D"<br>
+          diff_blue = "#4CBFFF"<br>
+          bg_purple = "#7F3465"<br>
+          diff_yellow = "#FFD694"<br>
+          fg = "#D1B890"<br>
+          red = "#DA4949"<br>
+          orange = "#e59b77"<br>
+          yellow = "#FFB02E"<br>
+          green = "#BCCA15"<br>
+          cyan = "#38C995"<br>
+          blue = "#35A6E6"<br>
+          purple = "#D343A2"<br>
+          grey = "#235662"<br>
+          grey_dim = "#183C44"
+
+        </p>
+      </div>
+      <h2>Contribute</h2>
+      <p id="contribute-message"><em>All contributions are welcome! To do that, shoot me an email with whatever you'd
+          like to contribute <a style="text-decoration: underline;"
+            href="mailto:shayan.web.naqvi@icloud.com">here</a>.</em></p>
+      <small>Theme & website by <a style="text-decoration: underline;" href="../../index.html">Shayan Naqvi</a></small>
+  </div>
+</body>
+
+</html>

@@ -21,6 +21,7 @@ body {
 
 svg {
   height: 30px;
+  color: #afafaf !important;
 }
 
 .container {
@@ -64,12 +65,14 @@ svg {
   width: 0 !important;
 }
 
-.item img:hover {
-  box-shadow: 0px 0px 50px 1px rgba(255, 255, 255, 0.5);
+.item img:hover {}
+
+.item:hover>p {
+  color: #fff;
 }
 
 .item p {
-  color: #FFF;
+  color: #afafaf;
   text-align: center;
   font-family: Cormorant Garamond;
   font-size: 25px;

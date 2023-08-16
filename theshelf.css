@@ -119,3 +119,8 @@ small a {
   justify-content: center;
   align-items: center;
 }
+
+.arrow {
+  height: 100%;
+  margin: auto 0;
+}

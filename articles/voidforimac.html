@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="../favicon.svg">
+  <link rel="stylesheet" , href="../styles.css">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=piazzolla:200,200i,400,400i" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Some of the things I have to do after installing Void Linux">
+  <title>Void Linux Post-Installation | Shayan Naqvi</title>
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="header">
+      <div class="header-item" id="home">
+        <a href="../index.html">home</a>
+      </div>
+      <div class="header-item" id="spacer"></div>
+      <div class="header-item" id="about">
+        <a href="../about.html">about</a>
+      </div>
+      <div class="header-item" id="blog">
+        <a href="../blog.html">blog</a>
+      </div>
+      <div class="header-item" id="works">
+        <a href="../works.html">works</a>
+      </div>
+    </div>
+    <div id="content-container">
+
+      <h1>Void Linux Post-Installation</h1>
+      <small>26/08/2023</small>
+      <p>Today I reinstalled Void Linux. Mostly just to start fresh and get rid of the cruft I had accumulated over the
+        past few months. There are certain things that don't work on my hardware, not specifically with Void, but Linux
+        in general.</p>
+      <p>For future reference, and for anyone who may find it useful, this article exists.</p>
+      <h2>The Kernel</h2>
+      <p>Any kernels above version 6 causes weird issues on my hardware. Such as being unable to adjust the volume of my
+        speakers or change the backlight. Kernel 5.15 works pretty much flawlessly, so that's what I install: <code>sudo
+          xbps-install linux5.15 linux5.15-headers</code>.</p>
+      <p>The kernel headers are important, because without them, other drivers tend not to work. Don't reboot yet. We'll
+        do that at the end.</p>
+      <h2>WiFi Drivers</h2>
+      <p>I have a BCM4331 WiFi card. This card requires proprietary drivers to function. Thus, we need to install the
+        non-free repository. This grants us access to proprietary
+        software and drivers. <code>sudo xbps-install void-repo-nonfree</code>. Then, run update the repositories:
+        <code>sudo xbps-install -Suv</code>.
+      </p>
+      <p>Now comes the driver. You can install it through <code>broadcom-wl-dkms</code>. I cannot tell you if this works
+        on all Broadcom cards (I <em>expect</em> it doesn't). That's it for Wifi!</p>
+      <h2>Nvidia Drivers</h2>
+      <p>I have a Nvidia graphics card. Nouveau drivers are usable, I have used that alone for a while, but proprietary
+        drivers tend to yeild better performance despite their problems. It is important that you know
+        which version of drivers you need. I happen to need version 390. Thus, I would install it as such: <code>sudo
+          xbps-install nvidia390 nvidia390-dkms</code> If you require verson 470, adjust the version as needed.You can
+        see all of the available drivers by querying for them: <code>xbps-query -Rs nvidia</code>.</p>
+      <figure>
+        <img src="./media/vl_nv.png" alt="available nvidia drivers">
+        <figcaption>available drivers</figcaption>
+      </figure>
+      <h2>Bluetooth</h2>
+      <p>We've got to install bluez to get bluetooth working. After that, we need to start the bluetoothd and dbus
+        services. In my experience, dbus tends to run out-of-the-box, but there's no harm in double checking. Because
+        we're
+        dealing with runit, <code>sudo ln -s /etc/sv/bluetoothd /var/service</code> (for bluetoothd); <code>sudo ln -s
+          /etc/sv/dbus /var/service</code> (for dbus).</p>
+      <p>We can interface through bluetoothctl. Or through blueman. Blueman is fine, and that's what I use mainly, but
+        for pairing devices, bluetoothctl is generally more reliable.</p>
+      <p>In a terminal, type <code>bluetoothctl</code>. Then, <code>scan on</code>. When you see your device,
+        <code>trust [address]</code>. You can tab-complete the address. Then, <code>pair [address]</code>. Finally,
+        <code>connect [address]</code>.
+      </p>
+      <p>From this point onwards, blueman works fine. Install it through <code>sudo xbps-install blueman</code></p>
+
+      <h2>Pipewire to Pulseaudio</h2>
+      <p>Pulseaudio works better on my iMac. Thus, install pulseaudio and remove pipewire.</p>
+      <p>If I connect a bluetooth speaker to this machine now, I'm not able to adjust its volume. It plays at either max
+        volume or zero volume. <a
+          href="https://unix.stackexchange.com/questions/686200/bluetooth-speaker-volume-control-doesnt-work-but-muting-does-work">This</a>
+        thread on the Unix Stack Exchange has our solution.</p>
+      <p>Open <code>/etc/pulse/default.pa</code>. Change the line <code>load-module module-bluetooth-discover</code> to
+        <code>load-module module-bluetooth-discover avrcp_absolute_volume=false</code>. Thus, our problem is solved.
+      </p>
+      <figure>
+        <img src="./media/vl_abs.png" alt="what needs to be edited in /etc/pulse/default.pa">
+      </figure>
+
+      <h2>Setting a default kernel</h2>
+      <p>We could do this through the command line, or we could install a package called grub-customizer: <code>sudo
+          xbps-install grub-customizer</code>. You'll need root privelages to run it, so if you happen to be running a
+        window manager without a polkit, run it as root from the command line. Go to the "General settings" tab. Under
+        the "default entry" heading, choose what you want. If you want to always boot the same kernel, choose that under
+        "predefined". Otherwise, select "previously booted entry". This will default the kernel to whatever you selected
+        in the previous session. Click save.</p>
+      <figure>
+        <img src="./media/vl_gc1.png" alt="screenshot #1 of grub customizer">
+      </figure>
+
+      <figure>
+        <img src="./media/vl_gc2.png" alt="screenshot #2 of grub customizer">
+      </figure>
+      <p>Now we may reboot. Select the proper kernel, and voila! Everything should be working now.</p>
+
+      <p class="closing">If you have any thoughts, feel free to send me an email with them. Have a nice day!</p>
+    </div>
+
+    <div id="footer">
+      <div class="footer-item" id="links">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_18_3)">
+            <circle cx="49.641" cy="49.641" r="39" transform="rotate(30 49.641 49.641)" stroke="currentColor"
+              stroke-width="2" />
+            <circle cx="49.6413" cy="49.6411" r="39" transform="rotate(-45 49.6413 49.6411)" stroke="currentColor"
+              stroke-width="2" />
+            <path
+              d="M69.1409 15.866C74.7132 19.0831 77.8012 25.6876 78.0929 34.0199C78.3841 42.3356 75.8696 52.2115 70.4255 61.641C64.9814 71.0705 57.6858 78.186 50.3387 82.0917C42.9768 86.0052 35.7132 86.6331 30.1409 83.416C24.5686 80.1988 21.4806 73.5943 21.1888 65.262C20.8976 56.9464 23.4121 47.0705 28.8563 37.641C34.3004 28.2115 41.5959 21.0959 48.9431 17.1902C56.3049 13.2767 63.5686 12.6488 69.1409 15.866Z"
+              stroke="currentColor" stroke-width="2" />
+            <path
+              d="M22.0641 22.0637C22.6361 21.4917 23.8642 21.2251 26.0832 21.7955C28.2269 22.3464 30.9652 23.6014 34.1268 25.4984C40.4364 29.2841 48.2352 35.5068 56.0053 43.2769C63.7753 51.047 69.998 58.8458 73.7838 65.1554C75.6808 68.317 76.9357 71.0553 77.4867 73.199C78.057 75.418 77.7904 76.6461 77.2185 77.218C76.6465 77.79 75.4184 78.0566 73.1994 77.4863C71.0557 76.9353 68.3174 75.6803 65.1558 73.7834C58.8462 69.9976 51.0474 63.7749 43.2773 56.0048C35.5072 48.2348 29.2845 40.436 25.4988 34.1264C23.6018 30.9648 22.3468 28.2264 21.7959 26.0828C21.2256 23.8638 21.4922 22.6357 22.0641 22.0637Z"
+              stroke="currentColor" stroke-width="2" />
+          </g>
+          <defs>
+            <clipPath id="clip0_18_3">
+              <rect width="100" height="100" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <h3>Find me on the internet</h3>
+        <ul>
+          <li><a href="https://github.com/shayanaqvi/">Github</a></li>
+          <li><a href="https://www.behance.net/shayannaqvi">Behance</a></li>
+        </ul>
+      </div>
+      <div class="footer-item" id="contact">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 58.7331L7.91454 26L92.0855 26L50 58.7331Z" stroke="currentColor" stroke-width="2" />
+          <path d="M6 74L34 46" stroke="currentColor" stroke-width="2" />
+          <path d="M94 74L66 46" stroke="currentColor" stroke-width="2" />
+          <rect x="6" y="26" width="88" height="48" stroke="currentColor" stroke-width="2" />
+        </svg>
+
+        <h3>Contact</h3>
+        <p>Feel free to introduce yourself or simply say hello! Send me an email <a
+            href="mailto:contact.shayanaqvi@icloud.com">here</a>.</p>
+      </div>
+      <div class="footer-item" id="rss">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.4585 28.2771C27.4417 28.2771 42.7702 34.6264 54.072 45.9282C65.3738 57.23 71.7231 72.5586 71.7231 88.5417H88.5418C88.5418 78.419 86.548 68.3954 82.6742 59.0432C78.8004 49.691 73.1225 41.1934 65.9646 34.0356C58.8068 26.8777 50.3092 21.1998 40.957 17.326C31.6048 13.4522 21.5812 11.4584 11.4585 11.4584V28.2771Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path
+            d="M61.9127 88.5417H46.496C46.496 79.2492 42.8046 70.3372 36.2337 63.7664C29.6629 57.1956 20.751 53.5042 11.4585 53.5042V38.0875C18.0842 38.0875 24.6451 39.3926 30.7665 41.9281C36.8878 44.4637 42.4499 48.1801 47.135 52.8652C51.8201 57.5503 55.5365 63.1123 58.0721 69.2337C60.6076 75.3551 61.9127 81.916 61.9127 88.5417Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path
+            d="M21.3459 88.5417C26.8054 88.5417 31.2313 84.1159 31.2313 78.6563C31.2313 73.1967 26.8054 68.7709 21.3459 68.7709C15.8863 68.7709 11.4604 73.1967 11.4604 78.6563C11.4604 84.1159 15.8863 88.5417 21.3459 88.5417Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <h3>Follow this website</h3>
+        <p>This website is followable through <a href="../feed.xml">RSS</a>.</p>
+      </div>
+    </div>
+
+    <div id="sub-footer">
+      <p>Website by Shayan Naqvi. Code licensed under <a href="https://www.gnu.org/licenses/gpl-3.0-standalone.html">GNU
+          GPLv3</a>. Content licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC
+          BY-NC 4.0</a>.
+    </div>
+  </div>
+
+</body>
+
+</html>

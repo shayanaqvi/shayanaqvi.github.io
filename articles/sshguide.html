@@ -31,7 +31,7 @@
     </div>
     <div id="content-container">
       <h1>SSH and Android (Guide)</h1>
-      <small>16/08/2023</small>
+      <small>16/08/2023, modified 29/08/2023</small>
       <p>SSH is a pretty nifty tool for my toolbox. I don't have any servers (yet) or anything of the sorts, but it's a
         neat
         way for me to access my computer from my phone. It makes transferring files and stuff much easier (easier than
@@ -63,9 +63,10 @@
       <p>The sequence of steps is as follows:</p>
       <ol>
         <li>Open <code>/etc/ssh/sshd_config</code> in a text editor. Change the port number to 2222.</li>
-        <li>Add your computer as a host (using the IP address we found above along with the new port number).</li>
+        <li>On your phone, add your computer as a host (using the IP address we found above along with the new port
+          number).</li>
         <li>Generate a pair of keys.</li>
-        <li>Export the key to your computer.</li>
+        <li>Export the keys to your computer.</li>
         <li>Open <code>/etc/ssh/sshd_config</code> in a text editor. Search for "PasswordAuthentication". Change the
           "yes"
           into a "no".</li>

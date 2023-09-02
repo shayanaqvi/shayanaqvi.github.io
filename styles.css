@@ -30,12 +30,12 @@ body {
   font-family: "Piazzolla", serif;
   background: var(--background-color);
   color: var(--foreground-color);
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* CONTAINER TO RULE THEM ALL */
 #container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -60,7 +60,7 @@ body {
 
 .header-item a {
   font-size: 18px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   height: 100%;
   text-decoration: none;
 }
@@ -110,59 +110,62 @@ h3,
 h4,
 h5,
 h6 {
-  padding: 0;
-  padding-top: 10px;
-  margin: 0;
+  margin: 0 0 30px 0;
   font-weight: 200;
+  border-bottom: 1px solid;
+  padding: 5px 0;
+  color: var(--foreground-color);
 }
 
 h1 {
-  padding-top: 0;
-  padding-bottom: 10px;
-  font-size: 32px;
+  font-size: 40px;
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 35px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
+h2,
 h3,
 h4,
 h5,
 h6 {
-  font-style: italic;
-  font-size: 24px;
+  margin-top: 30px;
 }
 
 h4,
 h5,
 h6 {
   font-variant: all-small-caps;
+  font-style: italic;
+  font-size: 25px;
 }
 
 p {
-  padding: 5px 0;
-  margin: 0;
+  margin: 0 0 10px 0;
   font-size: 20px;
   background: none;
 }
 
 small {
   font-variant: all-small-caps;
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 li {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 a {
   color: var(--accentg);
-  font-variant: all-small-caps;
+}
+
+a:hover {
+  text-decoration: 2px underline;
 }
 
 
@@ -175,6 +178,11 @@ figure {
 figcaption {
   text-align: center;
   font-variant: all-small-caps;
+  font-size: 18px;
+}
+
+figcaption a {
+  font-size: 18px;
 }
 
 img {
@@ -184,9 +192,8 @@ img {
 code {
   font-family: monospace;
   color: var(--accentr);
-  font-size: 14px;
+  font-size: 16px;
 }
-
 
 .closing {
   font-style: italic;
@@ -211,9 +218,11 @@ code {
 
 .article-listing h3 {
   padding: 0;
+  margin: 0;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   font-size: 22px;
+  border-bottom: none;
 }
 
 .article-listing-anchor {
@@ -239,6 +248,11 @@ code {
 .footer-item {
   width: 100%;
   padding: 20px;
+}
+
+.footer-item h3 {
+  padding-top: 0;
+  border-bottom: none;
 }
 
 #contact {
@@ -289,6 +303,7 @@ code {
   .header-item a {
     width: 100%;
     margin: 0;
+    text-decoration: none;
   }
 
   #home {
@@ -334,26 +349,25 @@ code {
 #home:hover a {
   background: var(--foreground-color);
   color: var(--background-color) !important;
+  text-decoration: none;
 }
 
 #about:hover a {
   background: var(--accentr);
   color: var(--background-color) !important;
+  text-decoration: none;
 }
 
 #blog:hover a {
   background: var(--accentg);
   color: var(--background-color) !important;
+  text-decoration: none;
 }
 
 #works:hover a {
   background: var(--accentb);
   color: var(--background-color) !important;
-}
-
-#shelf:hover a {
-  background: var(--accento);
-  color: var(--background-color) !important;
+  text-decoration: none;
 }
 
 .article-listing:hover,

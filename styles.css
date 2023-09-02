@@ -1,7 +1,7 @@
 /* COLOURS */
 :root {
-  --background-color: #f3efe0;
-  --foreground-color: #5D576B;
+  --background-color: #163c3c;
+  --foreground-color: #e1bb80;
   --svg-fg: invert(34%) sepia(14%) saturate(592%) hue-rotate(217deg) brightness(93%) contrast(85%);
   --accentr: #DA4949;
   --accentg: #909930;

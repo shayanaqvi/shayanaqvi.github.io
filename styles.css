@@ -251,7 +251,8 @@ code {
 }
 
 .footer-item h3 {
-  padding-top: 0;
+  padding: 0;
+  margin: 10px 0;
   border-bottom: none;
 }
 

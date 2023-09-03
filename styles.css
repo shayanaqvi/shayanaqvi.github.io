@@ -3,10 +3,9 @@
   --background-color: #163c3c;
   --foreground-color: #e1bb80;
   --svg-fg: invert(34%) sepia(14%) saturate(592%) hue-rotate(217deg) brightness(93%) contrast(85%);
-  --accentr: #DA4949;
-  --accentg: #909930;
-  --accentb: #35A6E6;
-  --accento: #FF792E;
+  --accentr: #f24f4f;
+  --accentg: #a3ad35;
+  --accentb: #37adf2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,7 +41,7 @@ body {
 
 /* HEADER/NAVIGATION BAR */
 #header {
-  height: 50px;
+  height: auto;
   display: flex;
   border-top: 1px solid;
   margin-top: 20px;
@@ -63,7 +62,7 @@ body {
   padding: 10px 30px;
   height: 100%;
   text-decoration: none;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 #home {
@@ -89,11 +88,6 @@ body {
 #works a {
   color: var(--accentb);
 }
-
-#shelf a {
-  color: var(--accento);
-}
-
 
 /* THE CONTAINER THAT CONTAINS THE PAGE CONTENT */
 #content-container {

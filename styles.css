@@ -397,12 +397,11 @@ table {
 table,
 th,
 td {
-  border: 1px solid var(--accentb);
+  border: 1px solid var(--foreground-color);
   border-collapse: collapse;
 }
 
 th,
 td {
   padding: 5px 10px;
-  color: var(--accentb);
 }

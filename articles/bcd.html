@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="../favicon.svg">
+  <link rel="stylesheet" , href="../styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About binary coded decimal values (BCD values)">
+  <title>BCD | Shayan Naqvi</title>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="header">
+      <p><a href="../index.html">Home</a> * <a href="../blog.html">Blog</a> * <a href="../works.html">Works</a></p>
+    </div>
+
+    <div id="content-container">
+      <h1>BCD</h1>
+      <p>The gist of coding decimal values in binary (Binary Coded Decimals) is to write each decimal value as an
+        individual
+        binary string. For example, 8 would become 1000. 10 would become 0001 and 0000 (1 and then 0). 15 would become
+        0001
+        and 0101 (1 and then 5). Recall this table:</p>
+      <code>
+        <table>
+          <tr>
+            <th>Binary</th>
+            <th>Denary</th>
+          </tr>
+          <tr>
+            <th>0000</th>
+            <th>0</th>
+          </tr>
+          <tr>
+            <th>0001</th>
+            <th>1</th>
+          </tr>
+          <tr>
+            <th>0010</th>
+            <th>2</th>
+          </tr>
+          <tr>
+            <th>0011</th>
+            <th>3</th>
+          </tr>
+          <tr>
+            <th>0100</th>
+            <th>4</th>
+          </tr>
+          <tr>
+            <th>0101</th>
+            <th>5</th>
+          </tr>
+          <tr>
+            <th>0110</th>
+            <th>6</th>
+          </tr>
+          <tr>
+            <th>0111</th>
+            <th>7</th>
+          </tr>
+          <tr>
+            <th>1000</th>
+            <th>8</th>
+          </tr>
+          <tr>
+            <th>1001</th>
+            <th>9</th>
+          </tr>
+        </table>
+      </code>
+      <p>Note that the maximum value of a BCD string is 9. Above that, you have to split the value into individual
+        values and
+        convert from there.</p>
+      <h2>Storing BCD values.</h2>
+      <ol>
+        <li>Each value goes in individual registers
+          <p>If we have 0001 and 0101 (15), we could store these values in individual bytes (or registers for that
+            matter (I'm
+            using bytes for simplicity's sake)). We end up with 0000001 and 00000101.</p>
+        </li>
+        <li>Two 4-bit codes are stored in one byte
+          <p>If we have a larger value, like 8503, this would be stored in 2 bytes. 8 and 5 goes in one, 0 and 3 go in
+            the
+            other. We would end up with 10000101 and 00000011.</p>
+        </li>
+      </ol>
+      <h2>BDC Addition and Subtraction</h2>
+      <p>This is the same as regular ol' binary addition. The difference in procedure here occurs when your sum is a
+        value
+        greater than 9.</p>
+      <p>Take 8 + 7, or 1000 plus 0111. Let's add these together: 1000 + 0111 = 1111 (15), but in regular binary. In
+        BCD, we
+        add a
+        correction factor of 6 to these sums. So now we do 1111 + 0110 to get 10101, or 00010101 in 8 bits. We can check
+        this
+        by converting 15 into BCD: 1 becomes 0001 and 5 becomes 0101. Put together, we get 00010101.</p>
+      <p class="closing">This article was written on 12/09/2023. If you have any thoughts, feel free to send me an email
+        with them. Have a nice day!</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

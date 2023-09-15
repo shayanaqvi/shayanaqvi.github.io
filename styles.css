@@ -15,6 +15,14 @@
   }
 }
 
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url('./LibertinusSerif-Regular.otf');
+  src: url('./LibertinusSerif-Regular.otf') format('opentype'),
+    url('./LibertinusSerif-Italic.otf') format('opentype'),
+    url('./LibertinusSerif-Bold.otf') format('opentype');
+}
+
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);

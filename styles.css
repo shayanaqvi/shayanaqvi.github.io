@@ -18,7 +18,7 @@
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  font-family: "Libertinus Serif";
+  font-family: "Libertinus Serif", serif;
 }
 
 #container {
@@ -45,7 +45,9 @@ img {
   width: 100%;
 }
 
-code {}
+code {
+  font-family: "Libertinus Mono", monospace;
+}
 
 a {
   color: var(--link);

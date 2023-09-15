@@ -1,7 +1,7 @@
 /* COLOURS */
 :root {
   --background-color: #f3efe0;
-  --foreground-color: #5D576B;
+  --foreground-color: #4a4555;
   --accent: rgba(93, 87, 107, 0.5);
   --link: #848c2c;
 }
@@ -9,7 +9,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #163c3c;
-    --foreground-color: #e1bb80;
+    --foreground-color: #f9cd8a;
     --accent: rgba(225, 187, 128, 0.5);
     --link: #c0cc3f;
   }

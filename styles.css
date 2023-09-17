@@ -61,6 +61,10 @@ a {
   color: var(--link);
 }
 
+a:hover {
+  font-weight: bold;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

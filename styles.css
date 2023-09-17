@@ -105,3 +105,7 @@ h6 {
   border-top: 1px solid var(--link);
   border-bottom: 1px solid var(--link);
 }
+
+#header p {
+  color: var(--link);
+}

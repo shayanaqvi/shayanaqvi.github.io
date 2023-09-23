@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="../favicon.svg">
+  <link rel="stylesheet" , href="../styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="some information about bitmaps and vectors">
+  <title>Bitmaps and Vectors | Shayan Naqvi</title>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="header">
+      <p><a href="../index.html">Home</a> - <a href="../blog.html">Blog</a> - <a href="../works.html">Works</a></p>
+    </div>
+
+    <div id="content-container">
+      <h1>Bitmaps and Vectors</h1>
+      <h2>Bitmaps</h2>
+      <p>These are also known as pixelmaps and raster images. These are images that are made of pixels (a
+        two-dimensional matrix), so your typical
+        PNGs and JPEGs are bitmaps. These pixels can be rectangular or cicular.</p>
+      <p>Colours are displayed by varying the intensity of red, green and blue in each pixel.</p>
+      <p>Some important terms:</p>
+      <ul>
+        <li>
+          <h3>Colour depth</h3>
+          <p>The number of bits used to represent the colours of one pixel.</p>
+        </li>
+        <li>
+          <h3>Bit depth</h3>
+          <p>The number of bits used to represent the intensity of red, green and blue (individually) in a pixel.</p>
+        </li>
+        <li>
+          <h3>Image resolution</h3>
+          <p>The product of the dimensions of the image (width * height).</p>
+        </li>
+        <li>
+          <h3>Screen resolution</h3>
+          <p>The product of the dimensions of the screen (width * height).</p>
+        </li>
+        <li>
+          <h3>Pixel density</h3>
+          <p>The number of pixels per square inch (PPI, if you're familiar with that terminology).</p>
+        </li>
+      </ul>
+      <p>A greater colour depth, bit depth, or image resolution will result in larger file sizes.</p>
+      <p>The reason why zooming into a bitmap image appears to reduce its quality is because the pixels of the image is
+        scaled as you zoom. The more you zoom, the larger the pixels become. Larger pixels reduce image quality, and can
+        make an image look blurry.</p>
+      <h3>Calculating the file size of a bitmap</h3>
+      <p>The procedure to remember is to multiply the image resolution with the colour depth. If the bit depth is
+        provided, then we sum those values to get our colour depth.</p>
+      <h3>File headers</h3>
+      <p>File headers are a set of bytes located at the beginning of a bitmap file. These bytes identify the file type
+        and the coding used.</p>
+      <h3>The drawbacks of a high image resolution</h3>
+      <p>Simply put, more bandwidth is required to access these images, since it would have a larger file size.
+        Uploading/downloading images takes longer and requires more bandwidth. Storing them requires more disk space. So
+        on and so forth.</p>
+      <h2>Vectors</h2>
+      <p>Vector graphics make use of coordinates and geometry (coordinate geometry) to define shapes.</p>
+      <p>Vector files include a "drawing list" in their file header. It contains:</p>
+      <ul>
+        <li>a command to produce each object in a vector graphic image</li>
+        <li>attributes that will define the properties of these objects</li>
+        <li>the positions of each object relative to each other</li>
+      </ul>
+      <h3>Displaying vectors</h3>
+      <p>Vector images are produced on-demand, through the information present in the drawing list. Calculations are
+        made to produce each object, the attributes are applied, and they are positioned appropriately at a suitable
+        scale. If the scale changes, then these calculations are performed again.</p>
+      <h2>Comparing the two</h2>
+      <table>
+        <tr>
+          <th>Vector graphics</th>
+          <th>Bitmap images</th>
+        </tr>
+        <tr>
+          <td>composed of geometric shapes</td>
+          <td>composed of pixels</td>
+        </tr>
+        <tr>
+          <td>changes are made to the shapes when edited, which may affect the properties of others</td>
+          <td>changes can be made to individual pixels only</td>
+        </tr>
+        <tr>
+          <td>smaller in size, since the image is produced on the basis of math</td>
+          <td>larger size, since pixels require an amount of bits to store</td>
+        </tr>
+        <tr>
+          <td>not suitable for realistic imagery</td>
+          <td>suitable for realisitc imagery</td>
+        </tr>
+        <tr>
+          <td>file formats include .svg, .cgm, .odg</td>
+          <td>file formats include .jpg, .png, .bmp</td>
+        </tr>
+      </table>
+      <h2>Suitability</h2>
+      <p>The choice of using either type of image depends on the kind of work you want done.</p>
+      <p>For images where scalability is important, vectors may prove superior. If realism is a priority, then bitmaps
+        have an advantage. If there are restrictions on file size, vectors. You get the point.</p>
+
+      <p class="closing">This article was written on 23/09/2023. If you have any thoughts, feel free to send me an email
+        with them. Have a nice day!</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

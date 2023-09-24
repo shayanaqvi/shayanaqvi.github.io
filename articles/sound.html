@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="icon" type="image/x-icon" href="../favicon.svg">
+	<link rel="stylesheet" , href="../styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="some information about sound with context to computers">
+	<title>Sound | Shayan Naqvi</title>
+</head>
+
+<body>
+
+	<div id="container">
+
+		<div id="header">
+			<p><a href="../index.html">Home</a> - <a href="../blog.html">Blog</a> - <a href="../works.html">Works</a></p>
+		</div>
+
+		<div id="content-container">
+			<h1>Sound</h1>
+			<h2>Storing sound</h2>
+			<p>A sound wave is input into a sound encoder. A sound encoder is composed of the following components:</p>
+			<ol>
+				<li>
+					<h3>Band-limiting filter</h3>
+					<p>A band-limiting filter is used to remove high-frequency parts of a sound that cannot be heard by humans.
+					</p>
+				</li>
+				<li>
+					<h3>Analogue-to-digital converter</h3>
+					<p>This converts analogue data into digital data. In the case of sound, it converts sound waves into a digital
+						format, so that it can be processed by a computer.</p>
+				</li>
+			</ol>
+			<h2>Sampling</h2>
+			<p>This refers to measuring the amplitude of a sound at regular time intervals.</p>
+			<h3>Sampling resolution</h3>
+			<p>The resolution of a sample is the number of bits used to store it. A larger resolution will make more values
+				available for storage, and will improve the accuracy and reduce the distortion of the, now digitised, sound.</p>
+			<h3>Sampling rate</h3>
+			<p>Sampling rate is the rate at which sounds are sampled; an amount of samples per second. More samples per second
+				will result in better accuracy of the sound.</p>
+			<h3>Nyquist's theorem</h3>
+			<p>Sampling should be done at a frequency at least twice the highest frequency of the sound in the sample.</p>
+			<h3>The pros and cons of using a higher sampling rate and resolution</h3>
+			<table>
+				<tr>
+					<th>Pros</th>
+					<th>Cons</th>
+				</tr>
+				<tr>
+					<td>greater dynamic range</td>
+					<td>larger file size</td>
+				</tr>
+				<tr>
+					<td>superior sound quality</td>
+					<td>more bandwidth required for access</td>
+				</tr>
+				<tr>
+					<td>less sound distortion</td>
+					<td>greater processing power required</td>
+				</tr>
+			</table>
+
+			<p class="closing">This article was written on 23/09/2023. If you have any thoughts, feel free to send me an email
+				with them. Have a nice day!</p>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="../favicon.svg">
+  <link rel="stylesheet" , href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+    integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+    integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="notes on errors and uncertainties">
+  <title>Errors and Uncertainties | Shayan Naqvi</title>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="header">
+      <p><a href="../index.html">Home</a> - <a href="../blog.html">Blog</a> - <a href="../works.html">Works</a></p>
+    </div>
+
+    <div id="content-container">
+      <h1>Errors and Uncertainties</h1>
+
+      <h2>Types of Errors</h2>
+
+      <h3>Random Errors</h3>
+      <p>These kinds of errors are unpredictable. They mostly cannot be accounted for in advance, since they are caused
+        by factors outside the control of the person conducting the experiment, such as environmental conditions.</p>
+      <p>The way to mitigate, not solve or remove, these errors is to repeat the same experiment multiple time and
+        calculate averages for all readings.</p>
+
+      <h3>Systematic Errors</h3>
+      <p>Systematic errors are the result of faulty instruments or errors in the method of experimentation.</p>
+      <p>In the case of faulty instruments, the instrument needs to be replaced for the problem to be solved. It cannot
+        be mitigated by averages.</p>
+      <p>Improper calibration is also a possible error; the solution in that case is to recalibrate the instrument.</p>
+      <p>In the case of flaws in the method of experimentation, the practitioner needs to revise and correct their
+        methodology. This could include things like avoiding parallax or zero errors.</p>
+
+      <h4>Zero Errors</h4>
+      <p>These errors are the result of reading a measurement a distance in front of or behind the zero. For example,
+        measuring the length of something, but not accounting for the position of the zero on the scale.</p>
+      <p>There are two kinds of zero errors: positive zero errors and negative zero errors. Positive zero errors occur
+        when the reading starts a distance in front of the zero of the scale. They are solved by subtracting that
+        difference from the final reading. Negative zero errors are the opposite: they occur a distance behind the zero
+        of the scale, and are solved by adding the difference.</p>
+
+      <h2>Precision</h2>
+      <p>Precision refers to how close successive readings are to one another (readings of the same instrument).</p>
+
+      <h2>Accuracy</h2>
+      <p>Accuracy refers to how close each reading is to the true value.</p>
+
+      <h2>Precision and Accuracy</h2>
+      <p>Precision and accuracy do not have to be directly proportional. Assume that a true reading of something lies at
+        10.00, but the three readings you took fall at 6.20, 6.30 and 6.10. Then your instrument is precise, but not
+        accurate.</p>
+      <p>Similarly, assume that another instrument takes readings at 8.50, 9.60, 11.40 and 12.00. The true reading is
+        still 10.00. In this case, the readings are accurate, but not precise.</p>
+      <p>Of course, the specifics will change. The definition of accuracy in a particular measurement is variable. The
+        definition of precision differs too. The examples are something generalized.</p>
+
+      <h2>Calculations of Uncertainties</h2>
+      <p>Uncertainties can be represented 3 ways:</p>
+      <ol>
+        <li>as a fixed quantity (absolute uncertainty)</li>
+        <li>as a fraction of the measurement (fractional uncertainty)</li>
+        <li>as a percentage of the measurement (percentage uncertainty)</li>
+      </ol>
+
+      <h3>Addition of Uncertainties</h3>
+
+      <h4>Addition/Subtraction</h4>
+      <p>Absolute uncertainties are added.</p>
+
+      <h4>Multiplication/Division</h4>
+      <p>Percentage uncertainties are added.</p>
+
+      <h5>Calculating Percentage Uncertainties</h5>
+      <p>The error is read as a fraction of the total measurement. If your error is \(\pm0.5\), but your original
+        reading is \(2\), then your percentage error is calculated as \(\frac{0.5}{2}\times100 \rightarrow 25\%\). In
+        more general terms, \(\frac{\Delta n}{n}\times100\), where \(n\) is your measurement, and \(\Delta n\)
+        represents the margin of error.</p>
+      <p>If you want to go backwards, and calculate the absolute uncertainty of a measurement from its percentage
+        uncertainty, then simply multiply the percentage uncertainty with the original measurement. Your product will be
+        \(\pm x\) of the orignial measurement.</p>
+
+      <h4>Exponents</h4>
+      <p>Multiply the exponent's value with the fractional or percentage form of the uncertainty, i.e. \(x \times
+        \frac{\Delta n}{n}\), where \(x\) is the value of your exponent, \(\Delta n\) is the margin of error, and \(n\)
+        is the
+        measurement.</p>
+
+      <p class="closing">This article was written on 24/09/2023. If you have any thoughts, feel free to send me an email
+        with them. Have a nice day!</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

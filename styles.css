@@ -15,6 +15,21 @@
   }
 }
 
+@media (max-width: 500px) {
+  li {
+    margin: 10px 0;
+  }
+
+  a {
+    color: var(--background-color) !important;
+    background: var(--link);
+    border: 1px solid var(--link);
+    margin: 2px;
+    padding: 2px;
+    border-radius: 2px;
+  }
+}
+
 @font-face {
   font-family: "Libertinus Serif";
   src: url('./LibertinusSerif-Regular.otf');
@@ -48,6 +63,10 @@ figcaption {
   padding: 10px;
 }
 
+a {
+  color: var(--link);
+}
+
 img {
   max-width: 800px;
   width: 100%;
@@ -55,10 +74,6 @@ img {
 
 code {
   font-family: "Libertinus Mono", monospace;
-}
-
-a {
-  color: var(--link);
 }
 
 a:hover {

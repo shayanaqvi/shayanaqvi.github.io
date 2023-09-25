@@ -80,7 +80,8 @@ td {
 .closing {
   font-style: italic;
   color: var(--accent);
-  padding: 10px 0;
+  padding: 10px;
+  border: 1px solid var(--accent);
 }
 
 h1 {
@@ -119,6 +120,7 @@ h6 {
 #header p {
   color: var(--link);
   text-align: center;
+  font-size: large;
 }
 
 .kb-club a {

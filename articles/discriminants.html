@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="../favicon.svg">
+  <link rel="stylesheet" , href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+    integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+    integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="a bit about discriminants">
+  <title>Discriminants | Shayan Naqvi</title>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="header">
+      <p><a href="../index.html">Home</a> - <a href="../blog.html">Blog</a> - <a href="../notes.html">Notes</a> - <a
+          href="../works.html">Works</a></p>
+    </div>
+
+    <div id="content-container">
+      <h1>Discriminants</h1>
+      <p>Putting the fancy name aside, a discriminant is the \(b^2-4ac\) in \(\frac{-b\pm\sqrt{b^2-4ac}}{2a}\) (i.e. the
+        quadratic equation).</p>
+      <p>It turns out that the value of this expression can tell us about the number of intersections a quadratic
+        equation will have with a straight line on a graph.</p>
+      <ul>
+        <li>if the discriminant > 0, then there are 2 intersections (or solutions, if you will)</li>
+        <li>if the discriminant = 0, then there there is 1 solution (i.e. the straight line is a tangent to the curve)
+        </li>
+        <li>if the discriminant < 0, then there is no solution</li>
+      </ul>
+      <p>If, for whatever reason, we feel the urge to know how many intersections the line \(y=3x^2-7x+9\) will have
+        with \(y=0\) (the \(x\) axis), then we can simply calculate the value of its discriminant.</p>
+      <p>if \(a=3, b=-7, c=9\), then the discriminant is \((-7)^2-4(3)(9)\) which yields -59. Looking at the rules
+        above, we can satisfy our urge to know the number of intersections this line has with \(y=0\): zero.</p>
+      <p>Similarly, we can use this information to find any missing values, or a possible value, in a quadratic if we
+        know the number of intersections. Take \(5x^2-3x+k=0\), which supposedly has a tangent that is the \(x\) axis.
+        We need the value of \(k\).
+      </p>
+      <p>We know that for a tangent to exist, our discriminant has to be 0. Hence,</p>
+      <p>\((-3)^2-4(5)(k)=0\)</p>
+      <p>Solve as normal,</p>
+      <p>\(k=\frac{9}{20}\)</p>
+      <p>Now, let's find the value of \(k\) if \(x^2+y^2=50\) and \(x=2y+k\) have two points of intersection.</p>
+      <p>\(x\) is already the subject in the second equation, so let's put that into the first and solve from there.</p>
+      <p>\((2y+k)^2+y^2=50\)</p>
+      <p>\(4y^2+4ky+k^2+y^2=50\)</p>
+      <p>\(5y^2+4ky+k^2-50=0\) (relate this to \(ax^2+bx+c=0\))</p>
+      <p>Now let's work on the discriminant. We know it's greater than zero, since there are two solutions. Hence, we'll
+        start working with inequalities.</p>
+      <p>\((4k)^2-4(5)(k^2-50)>0\)</p>
+      <p>\(16k^2-20k^2+1000>0\)</p>
+      <p>\(-4k^2>-1000\)</p>
+      <p>\(k^2\gt250\)</p>
+      <p>Let \(k^2=250\)</p>
+      <p>\(k=\pm5\sqrt{10}\)</p>
+      <p>This tells us that \(k\) lies somewhere in between \(-5\sqrt{10}\lt k\lt5\sqrt{10}\).</p>
+      <p>That's enough.</p>
+
+      <p class="closing">This article was written on 27/09/2023. If you have any thoughts, feel free to send me an
+        email
+        with them. Have a nice day!</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

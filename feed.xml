@@ -6,7 +6,14 @@
 <description>Notes, rambles, making sense of things, whatever, really</description>
 
 <item>
-  <title>Poetry</title>
+  <title>Taking Notes in HTML</title>
+  <link>https://shayanaqvi.github.io/articles/htmlnotes.html</link>  
+  <guid>https://shayanaqvi.github.io/articles/htmlnotes.html?p=045</guid>
+  <pubDate>Fri, 29 Sep 2023 12:43 PKT</pubDate>
+</item>
+
+<item>
+  <title>Networking</title>
   <link>https://shayanaqvi.github.io/articles/networking.html</link>  
   <guid>https://shayanaqvi.github.io/articles/networking.html?p=044</guid>
   <pubDate>Fri, 29 Sep 2023 12:22 PKT</pubDate>

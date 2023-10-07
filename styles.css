@@ -80,12 +80,17 @@ td {
 .closing {
   font-style: italic;
   color: var(--accent);
-  padding: 10px;
-  border: 1px solid var(--accent);
+  padding: 20px 0;
+  margin: 20px 0 0 0;
+  border-top: 1px solid;
 }
 
 h1 {
   text-align: center;
+  margin: 0;
+  padding: 50px 0;
+  border-bottom: 1px solid;
+  color: var(--link);
 }
 
 h1,

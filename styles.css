@@ -26,7 +26,7 @@
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  font-family: "Libertinus Serif", serif;
+  font-family: "Libertinus Sans", serif;
 }
 
 #container {
@@ -101,6 +101,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
+  font-family: "Libertinus Serif";
 }
 
 h2,

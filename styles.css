@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "Libertinus Serif";
-  src: url('./LibertinusSerif-Regular.otf');
+  src: url('./LibertinusSerif-Regular.otf') format('opentype');
   src: url('./LibertinusSans-Regular.otf') format('opentype'),
     url('./LibertinusSans-Italic.otf') format('opentype'),
     url('./LibertinusSans-Bold.otf') format('opentype');

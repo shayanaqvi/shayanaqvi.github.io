@@ -6,7 +6,7 @@
   --link: #848c2c;*/
   --background-color: #000;
   --foreground-color: #fff;
-  --accent: rgba(225, 187, 128, 0.5);
+  --accent: #fff;
   --link: #00ff00;
 }
 
@@ -20,7 +20,7 @@
     */
     --background-color: #000;
     --foreground-color: #fff;
-    --accent: rgba(225, 187, 128, 0.5);
+    --accent: #fff;
     --link: #00ff00;
   }
 }

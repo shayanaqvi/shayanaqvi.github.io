@@ -1,17 +1,27 @@
 /* COLOURS */
 :root {
-  --background-color: #f3efe0;
+  /*--background-color: #e2dfd3;
   --foreground-color: #4a4555;
   --accent: rgba(93, 87, 107, 0.5);
-  --link: #848c2c;
+  --link: #848c2c;*/
+  --background-color: #000;
+  --foreground-color: #fff;
+  --accent: rgba(225, 187, 128, 0.5);
+  --link: #00ff00;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /*
     --background-color: #163c3c;
     --foreground-color: #f9cd8a;
     --accent: rgba(225, 187, 128, 0.5);
     --link: #c0cc3f;
+    */
+    --background-color: #000;
+    --foreground-color: #fff;
+    --accent: rgba(225, 187, 128, 0.5);
+    --link: #00ff00;
   }
 }
 
@@ -26,11 +36,11 @@
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  font-family: "Libertinus Serif", serif;
+  font-family: monospace;
 }
 
 #container {
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
   border: 1px solid;
   padding: 0 10px;

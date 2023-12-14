@@ -4,24 +4,18 @@
   --foreground-color: #4a4555;
   --accent: rgba(93, 87, 107, 0.5);
   --link: #848c2c;*/
-  --background-color: #000;
-  --foreground-color: #fff;
-  --accent: #fff;
-  --link: #00ff00;
+  --background-color: #163c3c;
+  --foreground-color: #f9cd8a;
+  --accent: rgba(225, 187, 128, 0.5);
+  --link: #c0cc3f;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /*
     --background-color: #163c3c;
     --foreground-color: #f9cd8a;
     --accent: rgba(225, 187, 128, 0.5);
     --link: #c0cc3f;
-    */
-    --background-color: #000;
-    --foreground-color: #fff;
-    --accent: #fff;
-    --link: #00ff00;
   }
 }
 
@@ -36,7 +30,7 @@
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  font-family: monospace;
+  font-family: "Libertinus Serif", serif;
 }
 
 #container {

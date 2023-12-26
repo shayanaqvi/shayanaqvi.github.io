@@ -82,8 +82,8 @@ a:hover {
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
+  margin: 0 20px;
 }
 
 th,
@@ -131,6 +131,10 @@ h6 {
   font-style: italic;
 }
 
+ul {
+  padding: 0 40px;
+}
+
 #header {
   border-bottom: 1px solid var(--link);
 }
@@ -139,6 +143,10 @@ h6 {
   color: var(--link);
   text-align: center;
   font-size: large;
+}
+
+.kb-club {
+  padding: 0 20px;
 }
 
 .kb-club a {
@@ -168,4 +176,8 @@ h6 {
 
 .landing-page-links {
   padding: 0 20px;
+}
+
+.small-gif {
+  padding: 0px 20px;
 }

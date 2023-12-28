@@ -42,7 +42,7 @@ padding: 10px;
   margin: 0 auto;
   border: 1px solid;
   padding-bottom: 10px;
-  box-shadow: 0px 50px 100px 0px #0f2828;
+  box-shadow: 0px 50px 100px 0px rgba(0, 0, 0, 0.2);
 }
 
 figure {
@@ -136,13 +136,20 @@ ul {
 }
 
 #header {
-  border-bottom: 1px solid var(--link);
+  border-bottom: 1px solid;
 }
 
 #header p {
-  color: var(--link);
+  color: var(--background-color);
   text-align: center;
   font-size: large;
+  background: var(--foreground-color);
+  margin: 0;
+  padding: 20px;
+}
+
+#header a {
+  color: var(--background-color);
 }
 
 .kb-club {
@@ -180,4 +187,9 @@ ul {
 
 .small-gif {
   padding: 0px 20px;
+}
+
+small {
+  padding: 0 20px;
+  font-style: italic;
 }

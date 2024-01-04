@@ -140,16 +140,14 @@ ul {
 }
 
 #header p {
-  color: var(--background-color);
+  color: var(--link);
   text-align: center;
   font-size: large;
-  background: var(--foreground-color);
   margin: 0;
   padding: 20px;
 }
 
 #header a {
-  color: var(--background-color);
 }
 
 .kb-club {

@@ -4,15 +4,15 @@
   --foreground-color: #4a4555;
   --accent: rgba(93, 87, 107, 0.5);
   --link: #848c2c;*/
-  --background-color: #dfdfdf;
-  --foreground-color: #212121;
-  --accent: #212121;
-  --link: #212121;
+  --background-color: #000000;
+  --foreground-color: #dfdfdf;
+  --accent: #dfdfdf;
+  --link: #dfdfdf;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #212121;
+    --background-color: #000000;
     --foreground-color: #dfdfdf;
     --accent: #dfdfdf;
     --link: #dfdfdf;
@@ -25,41 +25,34 @@
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  font-family: "DM Sans", sans-serif;
-  padding: 10px;
+  font-family: serif;
 }
 
 #container {
   background-color: var(--background-color);
-  max-width: 600px;
-  margin: 0 auto;
-  border: 1px solid;
-  padding-bottom: 10px;
 }
 
 figure {
-  padding: 20px;
   margin: 20px 20px;
   max-width: 560px;
   width: fit-content;
-  border: 1px solid;
 }
 
 figcaption {
   font-style: italic;
   text-align: left;
   color: var(--accent);
-  padding: 10px 0;
+  padding: 10px 0px;
   padding-bottom: 0;
+  opacity: 0.75;
 }
 
 p {
-  padding: 0 20px;
+  padding: 0 0px;
 }
 
 a {
   color: var(--link);
-  transition: opacity 0.125s;
 }
 
 a:hover {
@@ -71,7 +64,7 @@ img {
 }
 
 code {
-  font-family: "Libertinus Mono", monospace;
+  font-family: monospace;
 }
 
 table {
@@ -95,11 +88,10 @@ td {
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
   margin: 0;
-  padding: 50px 20px;
-  border-bottom: 1px solid;
-  font-weight: 500;
+  padding: 50px 0px;
+  border-bottom: 10px solid;
 }
 
 h1,
@@ -108,8 +100,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
-  font-family: "DM Serif Display", serif;
+  font-family: serif;
 }
 
 h2,
@@ -118,7 +109,7 @@ h4,
 h5,
 h6 {
   border-bottom: 1px solid;
-  padding: 5px 20px;
+  padding: 5px 0px;
 }
 
 h4,
@@ -137,9 +128,9 @@ ul {
 
 #header p {
   color: var(--link);
-  text-align: center;
+  text-align: left;
   margin: 0;
-  padding: 20px;
+  padding: 0px 0px 10px 0px;
 }
 
 .kb-club {

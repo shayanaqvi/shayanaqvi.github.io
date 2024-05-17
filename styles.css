@@ -1,32 +1,35 @@
+
+@import url(https://fonts.bunny.net/css?family=eb-garamond:500,500i,700,700i);
+
 /* COLOURS */
 :root {
   /*--background-color: #e2dfd3;
   --foreground-color: #4a4555;
   --accent: rgba(93, 87, 107, 0.5);
   --link: #848c2c;*/
-  --background-color: #ffeed8;
-  --foreground-color: #251400;
-  --accent: #251400;
-  --link: #003879;
+  --background-color: #dddddd;
+  --foreground-color: #131313;
+  --accent: #131313;
+  --link: #131313;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #251400;
-    --foreground-color: #ffeed8;
-    --accent: #ffeed8;
-    --link: #ffcd9e;
+    --background-color: #131313;
+    --foreground-color: #dddddd;
+    --accent: #dddddd;
+    --link: #dddddd;
   }
 }
+
 
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  font-family: monospace !important;
   max-width: 800px;
   margin: 0 auto;
   padding: 10px;
-  border-right: 1px solid;
+  font-family: 'EB Garamond', sans-serif;
 }
 
 #container {
@@ -95,38 +98,23 @@ td {
 }
 
 h1 {
-  text-align: left; 
   margin: 0;
-  padding: 20px 0px 10px 0px;
-  font-family: serif;
-  font-size: large;
-  font-style: italic;
+  padding: 40px 0px 40px 0px;
 }
 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  padding: 0px 10px;
-  margin: 5px 0;
-  border-left: 1px solid;
-  font-family: serif;
-}
-
-h2 {
-  font-size:medium;
-}
-
-h3 {
-  font-size:small;
+  border-bottom: 1px solid;
 }
 
 h4,
 h5,
 h6 {
   font-style: italic;
-  font-size: smaller;
 }
 
 ul {
@@ -135,30 +123,25 @@ ul {
 
 #header {
   border-bottom: 1px solid;
-  border-left: 1px solid;
+  border-top: 1px solid;
 }
 
 #header p {
   color: var(--link);
-  text-align: right;
-  margin: 0;
-  padding: 0px 0px 4px 0px;
+  text-align: center;
+  margin: 15px;
+  height: 100%;
 }
 
 #header a {
-  background: var(--foreground-color);
-  color: var(--background-color);
-  padding: 5px 10px;
+  padding: 0px 10px;
 }
 
 #header a:hover {
   background: var(--background-color);
   color: var(--foreground-color);
-  opacity: 100%;
-  border: 1px solid;
-  border-bottom: none;
-  text-decoration: none;
-  padding: 4px 9px;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .kb-club {

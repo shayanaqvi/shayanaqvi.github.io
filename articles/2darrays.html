@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="../favicon.svg">
+  <link rel="stylesheet" , href="../styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A bit about 2-dimensional arrays">
+  <title>2-Dimensional Arrays | Shayan Naqvi</title>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="header">
+      <p><a href="../index.html">Home</a> - <a href="../blog.html">Blog</a> - <a href="../notes.html">Notes</a> - <a
+          href="../works.html">Works</a></p>
+    </div>
+
+    <div id="content-container">
+        <h1>2-Dimensional Arrays</h1>
+
+        <p>All explanations I’ve heard from teachers AND from the few textbooks
+        I’ve read have such a convoluted explanation of this data structure.</p>
+        <p>To put it simply, a 2-Dimensional array is nothing more than a single
+        array that contains multiple other arrays. That’s it!</p>
+        <pre><code>2d_array = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]</code></pre>
+        <p>When you arrange it like this, you see the tabular structure everyone
+        talks about.</p>
+        <p>The other thing to know is how to loop through such an array. You’ll
+        need exactly 2 loops for this.</p>
+        <p>One loop will loop through the array that contains the other arrays
+        as you would regularly.</p>
+        <pre><code>array1 = [1, 2, 3, 4, 5]
+
+for array in array1:
+    print(array)</code></pre>
+        <p>When you loop through this sort of array, you loop through each
+        individual element, right?</p>
+        <p>If we let:</p>
+        <pre><code>a = [1, 2, 3]
+b = [4, 5, 6]
+c = [7, 8, 9]</code></pre>
+        <p>Then looping through an array with these arrays is no different:</p>
+        <pre><code>array2 = [a, b, c]
+
+for array in array2:
+    print(array)</code></pre>
+        <p>At any given moment, our loop variable (<code>array</code>) will hold
+        either <code>a</code>, <code>b</code>, or <code>c</code>.</p>
+        <p>This is when you require your second loop, to loop through the
+        currently selected array.</p>
+        <pre><code>array2 = [a, b, c]
+
+for array in array2: #loop through array2
+    for item in array: #loop through the currently selected array
+        print(item)</code></pre>
+        <p>When you look at a 2D array with such a definition, it becomes a lot
+        easier to scale up to however many dimensions you need.</p>
+
+      <p class="closing">This article was written on 19/05/2024. If you have any thoughts, feel free to send me an email
+        with them. Have a nice day!</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+

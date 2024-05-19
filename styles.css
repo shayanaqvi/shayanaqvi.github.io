@@ -73,8 +73,6 @@ img {
 
 code {
   font-family: monospace;
-  background: var(--foreground-color);
-  color: var(--background-color);
 }
 
 table {

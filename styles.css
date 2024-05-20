@@ -1,16 +1,10 @@
 
-@import url(https://fonts.bunny.net/css?family=eb-garamond:500,500i,700,700i);
-
 /* COLOURS */
 :root {
-  /*--background-color: #e2dfd3;
-  --foreground-color: #4a4555;
-  --accent: rgba(93, 87, 107, 0.5);
-  --link: #848c2c;*/
   --background-color: #dddddd;
   --foreground-color: #131313;
   --accent: #131313;
-  --link: #131313;
+  --link: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,7 +12,7 @@
     --background-color: #131313;
     --foreground-color: #dddddd;
     --accent: #dddddd;
-    --link: #dddddd;
+    --link: #ffffff;
   }
 }
 
@@ -29,7 +23,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 10px;
-  font-family: 'EB Garamond', sans-serif;
+  font-family: serif;
 }
 
 #container {
@@ -62,8 +56,7 @@ a {
 }
 
 a:hover {
-  background-color: var(--foreground-color);
-  color: var(--background-color);
+  font-style: italic;
 }
 
 img {
@@ -122,12 +115,12 @@ ul {
 #header {
   border-bottom: 1px solid;
   border-top: 1px solid;
+  padding: 0px;
 }
 
 #header p {
   color: var(--link);
-  text-align: center;
-  margin: 15px;
+  text-align: left;
   height: 100%;
 }
 
@@ -136,47 +129,12 @@ ul {
 }
 
 #header a:hover {
-  background: var(--background-color);
-  color: var(--foreground-color);
   font-weight: bold;
   font-style: italic;
 }
 
-.kb-club {
-  padding: 0 20px;
-}
-
-.kb-club a {
-  text-decoration: none;
-  color: #212121;
-  font-weight: bold;
-  padding: .25rem 0;
-  transition: .4s;
-  margin: 100px 0;
-}
-
-.kb-club a:hover {
-  background: #BBDEFB;
-}
-
-.kb-club-bg,
-.kb-club-no-bg {
-  border: 2px solid #64B5F6;
-  padding: .25rem .5rem;
-  background: white;
-}
-
-.kb-club-bg {
-  background: #64B5F6;
-  color: #212121;
-}
-
-.landing-page-links {
-  padding: 0 20px;
-}
-
 .small-gif {
-  padding: 0px 20px;
+  border: none;
 }
 
 small {

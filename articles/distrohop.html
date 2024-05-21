@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="../favicon.svg">
+  <link rel="stylesheet" , href="../styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is a template file. PLEASE CHANGE THIS, Shayan Naqvi">
+  <title>Tab title here | Shayan Naqvi</title>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="header">
+      <p><a href="../index.html">Home</a> - <a href="../blog.html">Blog</a> - <a href="../notes.html">Notes</a> - <a
+          href="../works.html">Works</a></p>
+    </div>
+
+    <div id="content-container">
+      <h1>Change your Linux distribution and keep your data!</h1>
+      <p>You can, of course copy your data to an external drive and restore from there. You can also not do that and
+        keep your data on your internal disk.</p>
+      <p>The deal is such: you can do this only if you've partitioned your drive a certain way. The configuration I'm
+        familiar with and use is 4 separate partitions, but as far as I know this can work on as few as 2. I'll go over
+        the configuration with 4.</p>
+      <p>The 4 paritions you'll need are as such:</p>
+      <ul>
+        <li>Swap partition
+          <p>Some research required to fit your own specifications! Suggestions are all over the place, but generally if
+            you have little RAM then about double that should be the size of your swap partition. If you have plenty,
+            then perhaps the same amount or even double.</p>
+        </li>
+        <li>Boot partition
+          <p>You're going to have to do some of your own research to determine if you actually need one. I'm not very
+            familiar with the differences between UEFI and EFI systems, but there's something to do with that.</p>
+          <p>If you do need to make one, then this'll be FAT32, about half a gig, and mounted at /boot/efi.</p>
+        </li>
+        <li>Root partition
+          <p>The minimum size I recall seeing for this was about 20 gigs, but I have heard of people having issues with
+            that sort of size. Generally, about 50 gigs should be minimum. The format, if you don't know much about
+            filesystems (like me), is EXT4. Mount this at / (the root, as it's called).</p>
+        </li>
+        <li>Home partition
+          <p>The bulk of your drive should be taken up by this partition, it's where you'll store all of your files.
+            This is also EXT4, and mounted at /home.</p>
+        </li>
+      </ul>
+      <p>Assuming your disk is set up as such, whenever you change your distribution of Linux, you can do the following:
+      </p>
+      <ul>
+        <li>Format your boot partition</li>
+        <li>Format your swap partition</li>
+        <li>Format your root partition</li>
+        <li><strong>NOT</strong> format your home partition</li>
+      </ul>
+      <h3>Also! When you set up your new user account, keep your username the same as before!</h3>
+      <p>I have noticed that deleting most of your dotfiles before doing this tends to help the situation after
+        installing a new image. Keep the ones you know you want, but boot the rest. Some things might look weird or act
+        weird on your new installation otherwise.</p>
+      <p>Mandatory to say, back up your data before doing this! You can never be too safe.</p>
+
+      <p class="closing">This article was written on 21/05/2024. If you have any thoughts, feel free to send me an email
+        with them. Have a nice day!</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

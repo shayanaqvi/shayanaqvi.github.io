@@ -1,16 +1,16 @@
 /* COLOURS */
 :root {
-  --background-color: #dddddd;
-  --foreground-color: #131313;
-  --accent: #131313;
+  --background-color: #cfcfcf;
+  --foreground-color: #111111;
+  --accent: #111111;
   --link: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #131313;
-    --foreground-color: #dddddd;
-    --accent: #dddddd;
+    --background-color: #111111;
+    --foreground-color: #cfcfcf;
+    --accent: #cfcfcf;
     --link: #ffffff;
   }
 }
@@ -40,8 +40,7 @@ figcaption {
   font-style: italic;
   text-align: left;
   color: var(--accent);
-  padding: 10px 0px;
-  padding-bottom: 10px;
+  padding-top: 10px;
   opacity: 0.75;
 }
 

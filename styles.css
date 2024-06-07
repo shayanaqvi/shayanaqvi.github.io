@@ -1,19 +1,19 @@
 /* COLOURS */
 :root {
-  --background-color: #cfcfcf;
+  --background-color: #ffffff;
   --foreground-color: #111111;
   --accent: #111111;
-  --link: #000000;
+  /* --link: #000000; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #111111;
-    --foreground-color: #cfcfcf;
-    --accent: #cfcfcf;
-    --link: #ffffff;
-  }
-}
+/* @media (prefers-color-scheme: dark) { */
+/* :root { */
+/* --background-color: #111111; */
+/* --foreground-color: #cfcfcf; */
+/* --accent: #cfcfcf; */
+/* --link: #ffffff; */
+/* } */
+/* } */
 
 body {
   background-color: var(--background-color);
@@ -48,10 +48,6 @@ p {
   padding: 0 0px;
 }
 
-a {
-  color: var(--link);
-}
-
 a:hover {
   font-weight: bold;
 }
@@ -77,6 +73,13 @@ td {
   text-align: left;
 }
 
+.shout {
+  border-left: 1px solid;
+  background: #fcf3de;
+  padding: 10px;
+  font-style: italic;
+}
+
 .closing {
   font-style: italic;
   color: var(--accent);
@@ -92,6 +95,15 @@ h1 {
   border-top: 1px solid;
   border-bottom: 1px solid;
   font-variant: all-small-caps;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sans-serif;
 }
 
 h4,

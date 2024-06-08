@@ -1,6 +1,6 @@
 /* COLOURS */
 :root {
-  --background-color: #ffffff;
+  --background-color: #efefef;
   --foreground-color: #111111;
   --accent: #111111;
   /* --link: #000000; */
@@ -19,21 +19,21 @@ body {
   background-color: var(--background-color);
   color: var(--foreground-color);
   max-width: 600px;
-  margin: 0 auto;
   padding: 0px 10px;
   font-family: serif;
+  margin: 0 auto;
 }
 
 #container {
   background-color: var(--background-color);
+  margin-top: auto;
+  padding: 10px;
+  padding-top: 1px;
 }
 
 figure {
   margin: 20px 0px;
-  padding-left: 20px;
-  padding-right: 20px;
   width: fit-content;
-  border-left: 1px solid;
 }
 
 figcaption {
@@ -46,10 +46,6 @@ figcaption {
 
 p {
   padding: 0 0px;
-}
-
-a:hover {
-  font-weight: bold;
 }
 
 img {
@@ -75,7 +71,7 @@ td {
 
 .shout {
   border-left: 1px solid;
-  background: #fcf3de;
+  background: #ffffff;
   padding: 10px;
   font-style: italic;
 }
@@ -120,6 +116,7 @@ ul {
   color: var(--link);
   text-align: center;
   height: 100%;
+  font-variant: all-small-caps;
 }
 
 #header a {

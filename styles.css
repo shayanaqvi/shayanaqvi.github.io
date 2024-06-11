@@ -1,26 +1,16 @@
-/* COLOURS */
 :root {
-  --background-color: #efefef;
-  --foreground-color: #111111;
-  --accent: #111111;
-  /* --link: #000000; */
+  --background-color: #0e2626;
+  --foreground-color: #f9d6a2;
+  --accent: rgba(225, 187, 128, 1);
+  --link: #dbe855;
 }
-
-/* @media (prefers-color-scheme: dark) { */
-/* :root { */
-/* --background-color: #111111; */
-/* --foreground-color: #cfcfcf; */
-/* --accent: #cfcfcf; */
-/* --link: #ffffff; */
-/* } */
-/* } */
 
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
   max-width: 600px;
   padding: 0px 10px;
-  font-family: serif;
+  font-family: system-ui;
   margin: 0 auto;
 }
 
@@ -42,10 +32,6 @@ figcaption {
   color: var(--accent);
   padding-top: 10px;
   opacity: 0.75;
-}
-
-p {
-  padding: 0 0px;
 }
 
 img {
@@ -71,7 +57,7 @@ td {
 
 .shout {
   border-left: 1px solid;
-  background: #ffffff;
+  background: #123333;
   padding: 10px;
   font-style: italic;
 }
@@ -99,7 +85,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: sans-serif;
+  font-family: serif;
 }
 
 h4,
@@ -121,6 +107,10 @@ ul {
 
 #header a {
   padding: 0px 10px;
+}
+
+a {
+  color: var(--link);
 }
 
 .small-gif {

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="../favicon.svg">
+  <link rel="stylesheet" , href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+    integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+    integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Working through a cool math question">
+  <title>Cool Math Question | Shayan Naqvi</title>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="header">
+      <p><a href="../index.html">Home</a> - <a href="../blog.html">Blog</a> - <a href="../works.html">Works</a></p>
+    </div>
+
+    <div id="content-container">
+      <h1>Cool Math Question</h1>
+      <p>This is from the SAT. It gave me a bit of a pause but was fun to work through.</p>
+      <div class="shout">
+        <p>In the given figure, BC is the diameter of the circle. If the length BC is equal to 132 and the length AB is
+          equal to \(\sqrt{363}\), what is the value of \(\frac{BC}{BD}\)?</p>
+        <figure>
+          <img src="./media/cm.png">
+        </figure>
+      </div>
+      <p>The first thing to realize is that \(\triangle ACB\) is a right angle. If you have two chords intersecting at a
+        point that lies on the circumference of a circle, they meet at right angles.</p>
+      <p>The second thing to realize is that if we can figure out the length of the line \(AD\), we can use Pythagoras'
+        to figure out the length of \(BD\).</p>
+      <p>We can figure out the length of \(AD\) if we can get \(\angle ABC\). We'll use the sine of that angle.</p>
+      <p>And, finally, we can get \(\angle ABC\) through some regular ol' trigonometry. We know two sides of this right
+        angle triangle (\(\triangle ABC\)). For this, we'll get \(\angle ACB\), which turns out to be
+        \(\arcsin(\frac{\sqrt{363}}{132})\)
+        . Now, we'll subtract that value from 90 to get \(\angle ABC\). We'll keep this value exact; it's
+        \(90 - \arcsin(\frac{\sqrt{363}}{132})\).</p>
+      <p>We'll plonk this angle into an equation with sine. \(\sin(90 - \arcsin(\frac{\sqrt{363}}{132})) =
+        \frac{AD}{\sqrt{363}}\). Solve for AD and you get around about 18.85, but we won't round off. We'll call this
+        value "A".</p>
+      <p>Now, we'll use Pythagoras' to solve for BD. \(\sqrt{(\sqrt{363})^2 - A^2}\) comes to exactly \(\frac{11}{4}\).
+        This is the length of BD.</p>
+      <p>Hence, \(\frac{BC}{BD}\) comes to \(\frac{132}{\frac{11}{4}}\) which simplifies to 48 exactly. Wow!</p>
+      <p>There are probably simpler approaches, but this worked for me!</p>
+      <p class="closing">This article was written on 28/06/2024. If you have any thoughts, feel free to send me an email
+        with them. Have a nice day!</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

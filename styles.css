@@ -1,14 +1,14 @@
 :root {
-  --background-color: #0e2626;
-  --foreground-color: #f9d6a2;
+  --background-color: #000000;
+  --foreground-color: #D0D0D0;
   --accent: rgba(225, 187, 128, 1);
-  --link: #dbe855;
+  --link: #6a9fb5;
 }
 
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  max-width: 600px;
+  max-width: 800px;
   padding: 0px 10px;
   font-family: system-ui;
   margin: 0 auto;
@@ -29,14 +29,13 @@ figure {
 figcaption {
   font-style: italic;
   text-align: left;
-  color: var(--accent);
   padding-top: 10px;
   opacity: 0.75;
 }
 
 img {
-  width: 100%;
   border: 1px solid;
+  width: 100%;
 }
 
 code {
@@ -57,14 +56,13 @@ td {
 
 .shout {
   border-left: 1px solid;
-  background: #123333;
+  background: #222222;
   padding: 10px;
   font-style: italic;
 }
 
 .closing {
   font-style: italic;
-  color: var(--accent);
   opacity: 0.5;
   border-top: 1px solid;
   padding-top: 10px;
@@ -72,45 +70,65 @@ td {
 
 h1 {
   margin: 0;
-  padding: 40px 0px 40px 0px;
-  text-align: center;
-  border-top: 1px solid;
+  padding: 30px 0px 40px 0px;
   border-bottom: 1px solid;
-  font-variant: all-small-caps;
+  font-family: serif;
+  font-style: italic;
 }
 
-h1,
+h2 {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  padding: 10px 0px;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: serif;
-}
-
-h4,
-h5,
-h6 {
   font-style: italic;
+  color: #f4bf75;
 }
 
 ul {
   padding: 0 40px;
 }
 
-#header p {
+#header {
+  padding: 0px 10px;
+  background: var(--link);
   color: var(--link);
-  text-align: center;
+  margin-top: 20px;
+}
+
+#header p {
   height: 100%;
   font-variant: all-small-caps;
 }
 
 #header a {
-  padding: 0px 10px;
+  padding: 5px 10px;
+  border: 1px solid;
+  text-decoration: none;
+  background: var(--background-color);
+  color: var(--link);
+}
+
+#header a:hover {
+  background: var(--link);
+  color: var(--background-color);
+  border: 1px solid var(--link);
 }
 
 a {
   color: var(--link);
+}
+
+a:hover {
+  background: var(--link);
+  color: var(--background-color);
 }
 
 .small-gif {

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="../favicon.svg">
+  <link rel="stylesheet" , href="../styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Setting up Obsidian with Syncthing">
+  <title>Setting up Obsidian with Syncthing | Shayan Naqvi</title>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="header">
+      <p><a href="../index.html">Home</a> - <a href="../blog.html">Blog</a> - <a href="../works.html">Works</a></p>
+    </div>
+
+    <div id="content-container">
+      <h1>Setting up Obsidian with Syncthing</h1>
+      <p>I've known of this tool for a while but I got around to setting it up a few days ago.</p>
+      <p>Keep in mind that my usage of Obsidian is very simple; nothing more than tasks and a calendar. I've heard of
+        conflict issues with larger note collections, but there is a bit in this article about mitigating that issue.
+        I'm not aware of how well it works for those larger note collections.</p>
+
+      <h2>Setting up Syncthing</h2>
+      <p>I'm not going to write another getting started guide for this. There are already plenty. The official <a
+          href="https://docs.syncthing.net/intro/getting-started.html">getting started</a> guide is great!</p>
+
+      <h2>The <code>.obsidian</code> folder</h2>
+      <p>I definitely do not want this folder to sync. I'm using different themes/configurations on my phone and
+        computer. The official Syncthing documentation has a bit on <a
+          href="https://docs.syncthing.net/users/ignoring.html">ignoring files</a>.</p>
+      <p>For our purposes, simply create a <code>.stignore</code> file. In that, put <code>.obsidian</code>. That's it!
+        Do the same on your phone. That'll keep both configurations separate.</p>
+
+      <h2>Mitigating Conflicts</h2>
+      <p>You're going to have to do this on both devices, but the procedure is the same for both. The only difference is
+        opening the web GUI on the phone. There's a thing for that in the menu.</p>
+      <figure>
+        <img src="./media/st4.png" style="width: 200px;">
+      </figure>
+      <p>Now, in the web GUI, go to Actions>Advanced.</p>
+      <figure>
+        <img src="./media/st1.png">
+      </figure>
+      <p>From here, select your Obsidian folder from the folders tab.</p>
+      <figure>
+        <img src="./media/st2.png">
+      </figure>
+      <p>Search for an option named "Max Conflicts". Set that value to 0. From my understanding, this option syncs only
+        the version of any file with the latest modification, and <em>should</em> mitigate any potential conflicts.</p>
+      <p>That's it!</p>
+
+      <p class="closing">This article was written on 07/07/2024. If you have any thoughts, feel free to send me an email
+        with them. Have a nice day!</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

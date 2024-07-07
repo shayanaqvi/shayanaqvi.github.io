@@ -1,8 +1,8 @@
 :root {
   --background-color: #000000;
   --foreground-color: #D0D0D0;
-  --accent: rgba(225, 187, 128, 1);
-  --link: #6a9fb5;
+  --link: #f4bf75;
+  --accent1: #D0D0D0;
 }
 
 body {
@@ -89,7 +89,7 @@ h5,
 h6 {
   font-family: serif;
   font-style: italic;
-  color: #f4bf75;
+  color: var(--accent1);
 }
 
 ul {
@@ -106,6 +106,7 @@ ul {
 #header p {
   height: 100%;
   font-variant: all-small-caps;
+  text-align: right;
 }
 
 #header a {
@@ -138,4 +139,15 @@ a:hover {
 small {
   padding: 0 20px;
   font-style: italic;
+}
+
+#blog-content-container h2 {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+#blog-content-container div {
+  border: 1px solid var(--accent1);
+  padding: 10px;
+  padding-top: 0;
 }

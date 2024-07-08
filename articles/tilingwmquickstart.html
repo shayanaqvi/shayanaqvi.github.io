@@ -14,7 +14,7 @@
   <div id="container">
 
     <div id="header">
-      <p><a href="../index.html">Home</a> - <a href="../blog.html">Blog</a> - <a href="../works.html">Works</a></p>
+      <p><a href="../index.html">Home</a><a href="../blog.html">Blog</a><a href="../works.html">Works</a></p>
     </div>
 
     <div id="content-container">
@@ -83,14 +83,22 @@
         group as such: <code>usermod -aG video $USER</code>.
       </p>
       <p>Next, let’s bind the appropriate keys.</p>
-      <code> bindsym XF86MonBrightnessUp exec brightnessctl set +1<br>
-        bindsym XF86MonBrightnessDown exec brightnessctl set 1-</code>
+
+      <div class="shout">
+        <code>bindsym XF86MonBrightnessUp exec brightnessctl set +1</code>
+        <code>bindsym XF86MonBrightnessDown exec brightnessctl set 1-</code>
+      </div>
+
       <p>You can change the increment amount by changing the integer at the
         end of the respective lines.</p>
       <h4 id="volume-keys">Volume keys</h4>
-      <code>bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%<br>
-        bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%<br>
-        bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle</code>
+
+      <div class="shout">
+        <code>bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%</code>
+        <code>bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%</code>
+        <code>bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle</code>
+      </div>
+
       <p>I am not aware if this works with pipewire or pulseaudio
         specifically, unfortunately.</p>
       <h4 id="media-keys">Media keys</h4>

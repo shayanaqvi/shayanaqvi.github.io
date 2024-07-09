@@ -1,50 +1,56 @@
 :root {
   --background-color: #ffffff;
+  --background-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23959595' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   --foreground-color: #092934;
   --link: #092934;
-  --accent1: #092934;
+  --accent1: #931F1D;
 }
 
 @media(prefers-color-scheme: dark) {
   :root {
-    --background-color: #092934;
+    --background-color: #000000;
+    --background-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ababab' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     --foreground-color: #ffffff;
     --link: #ffffff;
-    --accent1: #ffffff;
+    --accent1: #aad922;
   }
 }
 
 body {
   background-color: var(--background-color);
+  background-image: var(--background-pattern);
   color: var(--foreground-color);
   max-width: 800px;
   padding: 0px 10px;
-  font-family: system-ui;
+  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, "Noto Serif", serif;
   margin: 0 auto;
 }
 
 #container {
-  background-color: var(--background-color);
   margin-top: auto;
-  padding: 10px;
-  padding-top: 1px;
 }
 
 figure {
   margin: 20px 0px;
   width: fit-content;
+  border: 1px solid;
+  transition: box-shadow 0.1s ease-out;
+}
+
+figure:hover {
+  box-shadow: 5px 5px var(--accent1);
 }
 
 figcaption {
   font-style: italic;
-  text-align: left;
-  padding-top: 10px;
-  opacity: 0.75;
+  margin-top: 0;
+  padding: 10px;
+  border-top: 1px solid;
 }
 
 img {
-  border: 1px solid;
   width: 100%;
+  vertical-align: middle;
 }
 
 code {
@@ -64,44 +70,67 @@ td {
 
 .shout {
   border-left: 1px solid var(--link);
-  padding: 10px;
+  padding: 0px 10px;
   font-style: italic;
   transition: border 0.1s ease-out;
 }
 
 .shout:hover {
-  border-left: 5px solid var(--link);
+  border-left: 5px solid var(--accent1);
+}
+
+.shout:hover h3,
+.shout:hover h4,
+.shout:hover h5,
+.shout:hover h6 {
+  font-weight: bold;
 }
 
 .closing {
   font-style: italic;
   opacity: 0.5;
-  border-top: 1px solid;
-  padding-top: 10px;
+  border: 1px solid;
+  padding: 10px;
+  transition: box-shadow 0.1s ease-out, opacity 0.1s ease-out;
+}
+
+.closing:hover {
+  opacity: 1.0;
+  box-shadow: 5px 5px var(--accent1);
 }
 
 h1 {
   margin: 0;
-  padding: 20px 0px 40px 0px;
-  border-bottom: 1px solid;
-  font-family: serif;
-  font-style: italic;
+  padding: 40px 20px 40px 20px;
+  border: 1px solid;
+  border-top: none;
+  transition: box-shadow 0.1s ease-out;
+  font-weight: lighter;
+}
+
+h1:hover {
+  box-shadow: 5px 5px var(--accent1);
 }
 
 h2 {
   border-bottom: 1px solid;
-  border-top: 1px solid;
-  padding: 10px 0px;
+  padding-bottom: 5px;
+  padding-top: 0px;
+  transition: box-shadow 0.1s ease-out, font-weight 0.1s ease-out;
+  font-weight: lighter;
 }
 
-h2,
+h2:hover {
+  box-shadow: 0px -2px 0px 0px inset;
+  font-weight: bold;
+}
+
 h3,
 h4,
 h5,
 h6 {
-  font-family: serif;
-  font-style: italic;
   color: var(--accent1);
+  font-weight: lighter;
 }
 
 ul {
@@ -111,6 +140,8 @@ ul {
 #header {
   color: var(--link);
   margin-top: 20px;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
 }
 
 #header p {
@@ -122,29 +153,35 @@ ul {
 
 #header a {
   padding: 5px 10px;
-  margin-left: 10px;
+  margin-left: -1px;
   border: 1px solid;
   background: var(--background-color);
+  background-image: var(--background-pattern);
   color: var(--link);
-  transition: background 0.05s ease-out, border 0.3s ease-out;
+  transition: box-shadow 0.05s ease-out, background 0.05s ease-out;
   text-decoration: none;
 }
 
 #header a:hover {
   background: var(--link);
   color: var(--background-color);
-  padding: 4px 9px;
-  margin-left: 12px;
+  box-shadow: 0px 5px var(--accent1);
+  border: 1px solid var(--foreground-color);
 }
 
 a {
   color: var(--link);
-  transition: background 0.1s ease-out;
+  transition: background 0.05s ease-out, box-shadow 0.05s ease-out;
+  padding: 2px;
 }
 
 a:hover {
-  background: var(--link);
+  background: var(--foreground-color);
+  box-shadow: 3px 3px var(--accent1);
+  border: 1px solid;
+  padding: 1px;
   color: var(--background-color);
+  text-decoration: none;
 }
 
 .small-gif {
@@ -161,7 +198,6 @@ small {
 }
 
 #blog-content-container div {
-  /* border: 1px solid var(--accent1); */
-  padding: 10px;
+  /* padding: 10px; */
   padding-top: 0;
 }

@@ -33,19 +33,23 @@ body {
 figure {
   margin: 20px 0px;
   width: fit-content;
-  border: 1px solid;
+  border: 1px solid var(--background-color);
+  box-shadow: 0px 0px var(--foreground-color);
   transition: box-shadow 0.1s ease-out;
 }
 
 figure:hover {
-  box-shadow: 5px 5px var(--accent1);
+  box-shadow: 5px 5px var(--foreground-color);
 }
 
 figcaption {
   font-style: italic;
   margin-top: 0;
   padding: 10px;
-  border-top: 1px solid;
+  /* border-top: 1px solid; */
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
 }
 
 img {
@@ -75,6 +79,13 @@ td {
   transition: border 0.1s ease-out;
 }
 
+.shout h3,
+.shout h4,
+.shout h5,
+.shout h6 {
+  transition: font-weight 0.1s ease-out;
+}
+
 .shout:hover {
   border-left: 5px solid var(--accent1);
 }
@@ -88,15 +99,14 @@ td {
 
 .closing {
   font-style: italic;
-  opacity: 0.5;
   border: 1px solid;
   padding: 10px;
   transition: box-shadow 0.1s ease-out, opacity 0.1s ease-out;
+  box-shadow: 0px 0px var(--foreground-color);
 }
 
 .closing:hover {
-  opacity: 1.0;
-  box-shadow: 5px 5px var(--accent1);
+  box-shadow: 5px 5px var(--foreground-color);
 }
 
 h1 {
@@ -106,10 +116,11 @@ h1 {
   border-top: none;
   transition: box-shadow 0.1s ease-out;
   font-weight: lighter;
+  box-shadow: 5px 5px var(--foreground-color);
 }
 
 h1:hover {
-  box-shadow: 5px 5px var(--accent1);
+  box-shadow: 0px 0px var(--foreground-color);
 }
 
 h2 {
@@ -130,36 +141,32 @@ ul {
   padding: 0 40px;
 }
 
-#header {
-  color: var(--link);
-  margin-top: 20px;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
-}
-
 #header p {
   font-variant: all-small-caps;
   text-align: right;
-  height: 1px;
-  background: var(--foreground-color);
+  border: 1px solid;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  height: 30px;
+  line-height: 30px;
 }
 
 #header a {
-  padding: 5px 10px;
   margin-left: -1px;
-  border: 1px solid;
-  background: var(--background-color);
-  background-image: var(--background-pattern);
+  height: 30px;
+  padding: 6px 20px;
+  border-left: 1px solid;
   color: var(--link);
   transition: box-shadow 0.05s ease-out, background 0.05s ease-out;
   text-decoration: none;
 }
 
 #header a:hover {
-  background: var(--link);
+  background: var(--accent1);
   color: var(--background-color);
-  box-shadow: 0px 5px var(--accent1);
-  border: 1px solid var(--foreground-color);
+  box-shadow: none;
+  border: none;
+  border-left: 1px solid var(--foreground-color);
 }
 
 a {
@@ -169,10 +176,8 @@ a {
 }
 
 a:hover {
-  background: var(--foreground-color);
-  box-shadow: 3px 3px var(--accent1);
-  border: 1px solid;
-  padding: 1px;
+  background: var(--accent1);
+  padding: 3px 2px;
   color: var(--background-color);
   text-decoration: none;
 }

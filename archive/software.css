@@ -1,0 +1,120 @@
+:root {
+  --fg: black;
+  --bg: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: black;
+    --fg: white;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 70px !important;
+  }
+
+  h2 {
+    font-size: 50px !important;
+  }
+
+  p {
+    font-size: 20px !important;
+  }
+
+  li a {
+    font-size: 20px !important;
+  }
+
+  .item p,
+  .item .spacer {
+    transition: none !important;
+    padding-left: 10px !important;
+  }
+}
+
+body {
+  margin: 50px;
+}
+
+* {
+  font-family: "Work Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 70px;
+  margin: 50px 0;
+  font-weight: 200;
+}
+
+a {
+  text-decoration: none;
+}
+
+.item:hover>p,
+.item:hover>.spacer {
+  background: var(--fg);
+  color: var(--bg);
+  padding-left: 30px;
+}
+
+.item p {
+  padding: 10px;
+}
+
+.item p,
+.item .spacer {
+  transition: background 0.1s ease-out, color 0.1s ease-out, padding 0.2s ease-out;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border-bottom: 1px dashed;
+}
+
+.spacer {
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.license {
+  text-align: right;
+}
+
+#link-to-contribute,
+#mailto {
+  border-bottom: 1px dashed
+}
+
+ul a {
+  border-bottom: 1px dashed;
+}
+
+li {
+  margin: 5px 0;
+}
+
+small,
+small a {
+  font-size: 15px;
+  margin: 50px 0;
+}

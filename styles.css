@@ -179,3 +179,7 @@ a:hover {
 .small-gif {
   border: none;
 }
+
+.small-gif-link:hover {
+  background: none;
+}

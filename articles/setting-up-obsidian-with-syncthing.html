@@ -19,8 +19,8 @@
 
     <div id="content-container">
       <h1>Setting up Obsidian with Syncthing</h1>
-      <p>I've known of this tool for a while but I got around to setting it up a few days ago.</p>
-      <p>Keep in mind that my usage of Obsidian is very simple; nothing more than tasks and a calendar. I've heard of
+      <p>I've known of Syncthing for a while but I got around to setting it up a few days ago.</p>
+      <p>Note that my usage of Obsidian is very simple; nothing more than tasks and a calendar. I've heard of
         conflict issues with larger note collections, but there is a bit in this article about mitigating that issue.
         I'm not aware of how well it works for those larger note collections.</p>
 
@@ -39,15 +39,15 @@
       <p>You're going to have to do this on both devices, but the procedure is the same for both. The only difference is
         opening the web GUI on the phone. There's a thing for that in the menu.</p>
       <figure>
-        <img src="./media/st4.png" style="width: 200px;">
+        <img src="./media/st4.png" style="width: 200px;" alt="a screenshot showing the location of the Web GUI option in the Syncthing app on Android">
       </figure>
       <p>Now, in the web GUI, go to Actions>Advanced.</p>
       <figure>
-        <img src="./media/st1.png">
+        <img src="./media/st1.png" alt="a screenshot of the location of the relevant menu">
       </figure>
       <p>From here, select your Obsidian folder from the folders tab.</p>
       <figure>
-        <img src="./media/st2.png">
+        <img src="./media/st2.png" alt="a screenshot showing the folder whose settings we need to change">
       </figure>
       <p>Search for an option named "Max Conflicts". Set that value to 0. From my understanding, this option syncs only
         the version of any file with the latest modification, and <em>should</em> mitigate any potential conflicts.</p>

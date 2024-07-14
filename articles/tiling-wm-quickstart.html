@@ -84,43 +84,43 @@
       </p>
       <p>Next, let’s bind the appropriate keys.</p>
 
-      <div class="shout">
-        <code>bindsym XF86MonBrightnessUp exec brightnessctl set +1</code>
-        <code>bindsym XF86MonBrightnessDown exec brightnessctl set 1-</code>
-      </div>
+        <pre><code>bindsym XF86MonBrightnessUp exec brightnessctl set +1
+bindsym XF86MonBrightnessDown exec brightnessctl set 1-</code></pre>
 
       <p>You can change the increment amount by changing the integer at the
         end of the respective lines.</p>
       <h4 id="volume-keys">Volume keys</h4>
 
-      <div class="shout">
-        <code>bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%</code>
-        <code>bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%</code>
-        <code>bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle</code>
-      </div>
+        <pre><code>bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle</code></pre>
 
       <p>I am not aware if this works with pipewire or pulseaudio
         specifically, unfortunately.</p>
+        
       <h4 id="media-keys">Media keys</h4>
       <p>Install a utility called <code>playerctl</code>. The basic commands
         we are going to use here are <code>playerctl play-pause</code>,
         <code>playerctl next</code> and <code>playerctl previous</code>.
       </p>
-      <code> bindsym XF86AudioPlay exec playerctl play-pause<br>
-        bindsym XF86AudioNext exec playerctl next<br>
-        bindsym XF86AudioPrev exec playerctl previous</code>
+      
+      <pre><code>bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous</code></pre>
+        
       <p>If you are a user of MPD, then install <code>mpc</code>.</p>
-      <code> bindsym XF86AudioPlay exec mpc toggle<br>
-        bindsym XF86AudioNext exec mpc next<br>
-        bindsym XF86AudioPrev exec mpc prev</code>
+      
+      <pre><code>bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev</code></pre>
+        
       <h3 id="modifier-keys">Modifier keys</h3>
       <p>There are 5 <code>mod</code> keys. The ones to be aware of in this
-        context are:
+        context are:</p>
       <ul>
         <li><code>mod1</code> (left alt key)</li>
-        <li><code>mod4</code></li>
+        <li><code>mod4</code> (meta/super/command/windows key)</li>
       </ul>
-      (meta/super/command/windows key)</p>
       <h3 id="creating-keybindings">Creating keybindings</h3>
       <p>The syntax for creating a keybinding is as such:
         <code>bindsym [key-combination] exec [action]</code>. For example, to
@@ -143,6 +143,7 @@
         However, i3 does come with some pretty strange default keybindings, so I
         would recommend changing those. The i3 documentation is excellent. Have
         a go through that for guidance.</p>
+        
       <h2 id="qtile">Qtile</h2>
       <p>Firstly, install Qtile. It’ll probably be available in your
         distribution’s repositories; if not you <em>can</em> build
@@ -158,37 +159,42 @@
           href="https://docs.qtile.org/en/stable/manual/config/default.html#default-config">here</a>
         and paste it into <code>config.py</code>.
       </p>
+      
       <h3 id="keybindings">Keybindings</h3>
       <p>Keybindings are defined in the <code>keys</code> array towards the
         top of the file. They follow this syntax:
         <code>Key([modifer-keys], "key", action)</code>.
       </p>
+      
       <h3 id="function-keys">Function keys!</h3>
       <p>Function keys probably won’t work out of the box. Let’s configure
         them.</p>
+        
       <h4 id="brightness-keys-1">Brightness keys</h4>
       <p>Install <code>brightnessctl</code>. Make sure there are no issues
         with permissions, as detailed above.</p>
-      <code> Key([], &quot;XF86MonBrightnessUp&quot;, lazy.spawn(&quot;brightnessctl set
-        +1&quot;)),<br>
-        Key([], &quot;XF86MonBrightnessDown&quot;, lazy.spawn(&quot;brightnessctl set 1-&quot;)),</code>
+        
+      <pre><code>Key([], &quot;XF86MonBrightnessUp&quot;, lazy.spawn(&quot;brightnessctl set +1&quot;)),
+Key([], &quot;XF86MonBrightnessDown&quot;, lazy.spawn(&quot;brightnessctl set 1-&quot;)),</code></pre>
+        
       <h4 id="volume-keys-1">Volume keys</h4>
-      <code> Key([], &quot;XF86AudioRaiseVolume&quot;, lazy.spawn(&quot;pactl set-sink-volume
-        @DEFAULT_SINK@
-        +2%&quot;)),<br>
-        Key([], &quot;XF86AudioLowerVolume&quot;, lazy.spawn(&quot;pactl set-sink-volume @DEFAULT_SINK@
-        -2%&quot;)),<br>
-        Key([], &quot;XF86AudioMute&quot;, lazy.spawn(&quot;pactl set-sink-mute @DEFAULT_SINK@
-        toggle&quot;)),</code>
+      
+      <pre><code>Key([], &quot;XF86AudioRaiseVolume&quot;, lazy.spawn(&quot;pactl set-sink-volume @DEFAULT_SINK@ +2%&quot;)),
+Key([], &quot;XF86AudioLowerVolume&quot;, lazy.spawn(&quot;pactl set-sink-volume @DEFAULT_SINK@ -2%&quot;)),
+Key([], &quot;XF86AudioMute&quot;, lazy.spawn(&quot;pactl set-sink-mute @DEFAULT_SINK@ toggle&quot;)),</code></pre>
+        
       <h4 id="media-keys-1">Media keys</h4>
       <p>Install <code>playerctl</code>.</p>
-      <code> Key([], &quot;XF86AudioPlay&quot;, lazy.spawn(&quot;playerctl play-pause&quot;)),<br>
-        Key([], &quot;XF86AudioNext&quot;, lazy.spawn(&quot;playerctl next&quot;)),<br>
-        Key([], &quot;XF86AudioPrev&quot;, lazy.spawn(&quot;playerctl previous&quot;)),</code>
+      
+      <pre><code>Key([], &quot;XF86AudioPlay&quot;, lazy.spawn(&quot;playerctl play-pause&quot;)),
+Key([], &quot;XF86AudioNext&quot;, lazy.spawn(&quot;playerctl next&quot;)),
+Key([], &quot;XF86AudioPrev&quot;, lazy.spawn(&quot;playerctl previous&quot;)),</code></pre>
+        
       <p>If you are a user of MPD,</p>
-      <code> Key([], &quot;XF86AudioPlay&quot;, lazy.spawn(&quot;mpc toggle&quot;)),<br>
-        Key([], &quot;XF86AudioNext&quot;, lazy.spawn(&quot;mpc next&quot;)),<br>
-        Key([], &quot;XF86AudioPrev&quot;, lazy.spawn(&quot;mpc prev&quot;)),</code>
+      
+      <pre><code>Key([], &quot;XF86AudioPlay&quot;, lazy.spawn(&quot;mpc toggle&quot;)),
+Key([], &quot;XF86AudioNext&quot;, lazy.spawn(&quot;mpc next&quot;)),
+Key([], &quot;XF86AudioPrev&quot;, lazy.spawn(&quot;mpc prev&quot;)),</code></pre>
       <h3 id="layouts">Layouts</h3>
       <p>Absolutely take the time to go through the <a target="_blank" class="inline"
           href="https://docs.qtile.org/en/stable/manual/ref/layouts.html">layouts</a>
@@ -220,8 +226,6 @@
         the Gnome or KDE ecosystem through your distribution’s package manager,
         try doing those from Flathub instead. Most apps from the lxqt, XFCE and
         Mate desktop environments have pretty minimal dependencies.</p>
-      <p class="closing">This article was written on 05/08/2023. If you have any thoughts, feel free to send me an email
-        with them. Have a nice day!</p>
       <h2 id="links">Links</h2>
       <ul>
         <li><a href="https://i3wm.org/">i3</a></li>
@@ -231,6 +235,8 @@
         <li><a href="https://docs.qtile.org/en/stable/index.html">Qtile
             documentation</a></li>
       </ul>
+      <p class="closing">This article was written on 05/08/2023. If you have any thoughts, feel free to send me an email
+        with them. Have a nice day!</p>
     </div>
 
   </div>

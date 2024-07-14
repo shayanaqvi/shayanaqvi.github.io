@@ -105,17 +105,17 @@
         that opens up by default. Change it to whatever your preferred terminal emulator is. I have it set as
         <code>xfce4-terminal</code>.
       </p>
-      <figure>
-        <img src="./media/dwm2-1.png">
-      </figure>
+      
+      <pre><code>static const char *termcmd[] = { "xfce4-terminal", NULL };</code></pre>
+      
       <p>You could, if you wanted to, throw any extra commands in there that you'd like to run whenever you open your
         terminal. We'll get to writing these kinds of commands in a bit.</p>
       <p>While we're here, we might as well change the default modifier key. Out of the box, it's the alt key, which may
         interfere with other apps. We'll change that to the Windows/command key.</p>
       <p>Still in <code>config.h</code>, search for <code>MODKEY</code>.</p>
-      <figure>
-        <img src="./media/dwm2-2.png">
-      </figure>
+      
+      <pre><code>#define MODKEY Mod4Mask</code></pre>
+      
       <p>Change whatever's in there to <code>Mod4Mask</code>. No need to patch or anything.</p>
 
       <h2 id="first-run">First run</h2>
@@ -128,9 +128,6 @@
       <p>At the top of <code>config.h</code>, add this line:
         <code>#include &lt;X11/XF86keysym.h&gt;</code>
       </p>
-      <figure>
-        <img src="./media/dwm2-3.png">
-      </figure>
       <p>The main function keys I need are for brightness, volume and media control. We'll set that up now.</p>
       <p>Keybindings in DWM work as such: you have to define a command first (this happens separately), then you bind
         that command to a key.</p>
@@ -140,38 +137,41 @@
         add your current user to the <code>video</code> group. We'll do that as such: <code>usermod -aG video
           $USER</code>. Use root privilages if needed. You may need to reboot.</p>
       <p>Pop these two lines into your <code>config.h</code>.</p>
-      <figure>
-        <img src="./media/dwm2-4.png">
-      </figure>
+
+      <pre><code>static const char *brighter[] = { "brightnessctl", "set", "10%+", NULL, };
+static const char *dimmer[] = { "brightnessctl", "set", "10%-", NULL, };</code></pre>
+      
       <p>You can change the name of the commands if you'd like.</p>
       <p>Now we'll bind the relevant keys to these commands. You'll find a section in your configuration file like this:
       </p>
       <figure>
-        <img src="./media/dwm2-6.png">
+        <img src="./media/dwm2-6.png" alt="screenshot of the relevant section of the configuration file">
       </figure>
       <p>We'll define our own keybindings at the bottom of this list, underneath this area:</p>
       <figure>
-        <img src="./media/dwm2-7.png">
+        <img src="./media/dwm2-7.png" alt="screenshot of the area where we'll add keybindings">
       </figure>
       <p>Pop these two lines down:</p>
-      <figure>
-        <img src="./media/dwm2-5.png">
-        <figcaption>The leading <code>0</code> is present so that we don't need a modifier key to run these commands.
-        </figcaption>
-        <figcaption>Make sure you don't forget the comma at the end!</figcaption>
-      </figure>
+      
+      <pre><code>{ 0, XF86XK_MonBrightnessDown, spawn, { .v = dimmer } },
+{ 0, XF86XK_MonBrightnessUp, spawn, {.v = brighter} },</code></pre>
+
+      <p>The leading <code>0</code> is present so that we don't need a modifier key to run these commands. Make sure you don't forget the comma at the end!</p>
 
       <h3 id="volume">Volume</h3>
       <p>I can't say for sure if this works with Pipewire. I happen to use Pulseaudio on my machine, and I do know that
         these commands work here. Under the commands section of your configuration file:</p>
-      <figure>
-        <img src="./media/dwm2-8.png">
-      </figure>
+        
+      <pre><code>static const char *up_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK", "+5%", NULL };
+static const char *down_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
+static const char *mute_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "toggle", NULL };</code></pre>
+      
       <p>Then, wherever your keybindings are:</p>
-      <figure>
-        <img src="./media/dwm2-9.png">
-      </figure>
-
+      
+      <pre><code>{ 0, XF86XK_AudioMute, spawn, { .v = mute_vol } },
+{ 0, XF86XK_AudioLowerVolume, spawn, { .v = down_vol } },
+{ 0, XF86XK_AudioRaiseVolume, spawn, { .v = up_vol } },</code></pre>
+      
       <h3 id="media">Media keys</h3>
       <p>There are a few ways you could go about this.</p>
       <h4 id="mpd">Are you a user of MPD?</h4>
@@ -185,20 +185,18 @@
         <li><code>mpc next</code></li>
         <li><code>mpc prev</code></li>
       </ul>
-      <figure>
-        <img src="./media/dwm2-10.png">
-      </figure>
+      
+      <pre><code>static const char *playpause[] = { "mpc", "toggle", NULL };
+static const char *nextsong[] = { "mpc", "next", NULL };
+static const char *prevsong[] = { "mpc", "prev", NULL };</code></pre>
+      
       <p>Then:</p>
-      <figure>
-        <img src="./media/dwm2-11.png">
-      </figure>
-      <p class="shout">Alternatively, if you'd like to be able to control all of
-        your
-        media
-        through the media keys, including MPD, then you'll need a
-        package generally named something along the lines of <code>mpDris</code>. Install that, then we'll set it up
-        in
-        the next section.</p>
+      
+      <pre id="media-keys"><code>{ 0, XF86XK_AudioPlay, spawn, { .v = playpause } },
+{ 0, XF86XK_AudioPrev, spawn, { .v = prevsong } },
+{ 0, XF86XK_AudioNext, spawn, { .v = nextsong } },</code></pre>
+
+      <p class="shout">Alternatively, if you'd like to be able to control all of your media through the media keys, including MPD, then you'll need a package generally named something along the lines of <code>mpDris</code>. Install that, then we'll set it up in the next section.</p>
 
       <h4 id="non-mpd">Are you not a user of MPD?</h4>
       <p>Install a package, generally named <code>playerctl</code>. We'll use the following commands:</p>
@@ -207,13 +205,13 @@
         <li><code>playerctl next</code></li>
         <li><code>playerctl previous</code></li>
       </ul>
-      <figure>
-        <img src="./media/dwm2-12.png">
-      </figure>
-      <p>Then:</p>
-      <figure>
-        <img src="./media/dwm2-11.png">
-      </figure>
+      
+	  <pre><code>static const char *playpause[] = { "playerctl", "play-pause", NULL };
+static const char *nextsong[] = { "playerctl", "next", NULL };
+static const char *prevsong[] = { "playerctl", "previous", NULL };</code></pre>
+      
+      <p>Then bind these commands to the appropriate keys, as shown <a href="#media-keys">here</a>.<p>
+
       <p>That's function keys set up.</p>
       <p>If you want a list of the names of all of the function keys, <a
           href="https://wiki.linuxquestions.org/wiki/XF86_keyboard_symbols" , target="_blank">XF86 keyboard
@@ -222,17 +220,17 @@
         check the output. You're going to have to do some digging to find the name of the currently pressed key in the
         output.</p>
       <figure>
-        <img src="./media/dwm2-13.png">
+        <img src="./media/dwm2-13.png" alt="screenshot of output of the xev program">
       </figure>
       <p>Be careful though! Moving your mouse is also going to register in this program.</p>
 
       <h3 id="chain">Chaining commands to a single key</h3>
       <p>If you want to chain multiple commands to a single key, you can simply define individual commands for the
         things you'd like to do, then bind both of those commands to the same key. Here's an example:</p>
-      <figure>
-        <img src="./media/dwm2-14.png">
-        <figcaption>This will lock the screen and set the backlight to zero</figcaption>
-      </figure>
+        
+      <pre><code>{ 0, XF86XK_Eject, spawn, { .v = zero_brightness } },
+{ 0, XF86XK_Eject, spawn, { .v = lock } },</code></pre>
+	  <p>The code above will lock the screen <em>and</em> set the backlight to zero</p>
 
       <h2 id="autostart">Autostart</h2>
       <h3 id="disp-1">Do you use a display manager?</h3>
@@ -242,27 +240,33 @@
       <div class="shout">
         <h3 style="padding: 0; margin: 0;">Plopping your startup instructions</h3>
         <p>It's the same procedure for both. You can literally just list a bunch of shell commands. Here's mine:</p>
-        <figure>
-          <img src="./media/dwm2-15.png">
-        </figure>
+
+        <pre><code># Autostart Section
+sct 5500
+/usr/bin/setxkbpmap -option "ctrl:swapcaps"
+nitrogen --restore</code></pre>
+
         <p style="margin: 0;">Ensure your <code>.xprofile</code> or <code>.xinitrc</code> is executable!</p>
       </div>
 
       <h2 id="starting">Starting DWM</h2>
       <h3 id="disp-2">Do you use a display manager?</h3>
       <p>You'll need to create a file. Let's call it <code>dwm.desktop</code>. Put the following content in it:</p>
-      <code>[Desktop Entry]</code><br>
-      <code>Encoding=UTF-8</code><br>
-      <code>Name=DWM</code><br>
-      <code>Comment=Dynamic Window Manager</code><br>
-      <code>Exec=/usr/local/bin/dwm</code><br>
-      <code>Icon=dwm</code><br>
-      <code>Type=XSession</code>
+      
+      <pre><code>[Desktop Entry]
+Encoding=UTF-8
+Name=DWM
+Comment=Dynamic Window Manager
+Exec=/usr/locla/bin/dwm
+Type=XSession</code></pre>
+
       <p>Place this file in <code>/usr/share/xsessions</code>. Then select DWM from your display manager.</p>
 
       <h3 id="non-disp-2">Do you not use a display manager?</h3>
       <p>We'll put this in <code>~/.xinitrc</code>:</p>
-      <code>exec /usr/local/bin/dwm</code>
+      
+      <pre><code>exec /usr/local/bin/dwm</code></pre>
+      
       <p>Then, whenever you login to your TTY, simply type <code>startx</code>. Beware that commands placed after this
         line will <strong>not</strong> run, think of this as the EOF of your <code>.xinitrc</code>.</p>
 
@@ -271,7 +275,9 @@
         there's probably something to do with DBUS.</p>
       <p>I had this issue, and this is how I solved it. Since I don't use a display manager, I just put the following
         into <code>~/.xinitrc</code>:</p>
-      <code>exec dbus-launch --exit-with-session /usr/local/bin/dwm</code>
+        
+      <pre><code>exec dbus-launch --exit-with-session /usr/local/bin/dwm</code></pre>
+      
       <p>I suspect you could do the same in your <code>dwm.desktop</code> file, but I am not sure.</p>
 
 
@@ -280,17 +286,15 @@
         you: no you don't! Use the built-in status bar! It can go a long way with some creative formatting.</p>
       <p>Firstly, install <code>xsetroot</code>.</p>
       <p>We'll set up a loop in your <code>.xinitrc</code> or <code>.xprofile</code>. This is my loop as of now:</p>
-      <figure>
-        <img src="./media/dwm2-16.png">
-      </figure>
-      <div class="shout">
-        <p style="padding: 0; margin: 0;">Edit 07/07/2024: A better command to show the currently playing song:</p>
-        <code>playerctl metadata --format '{{ artist }} - {{ album }} - {{ title }}'</code>
-      </div>
+
+      <pre><code>while true; do
+	xsetroot -name "$( playerctl metadata --format '{{ artist }} - {{ album }} - {{ title }} | $( date + '%F %R:%S' )"
+done &</code></pre>
+      
       <p>As you can see, this is just a bunch of shell commands, with some manual formatting. This code produces a
         status bar as such:</p>
       <figure>
-        <img src="./media/dwm2-17.png">
+        <img src="./media/dwm2-17.png" alt="screenshot of my status bar">
       </figure>
       <p>Essentially, you'll be using <code>xsetroot -name</code> and then insert your commands inside a single string.
         Wrap each command with <code>$()</code>. For example, <code>$(date)</code>. String together multiple commands
@@ -324,7 +328,7 @@
         be missing things. The internet is your best friend! The ArchWiki too!</p>
       <p>Another nice guide to using DWM: <a href="https://ratfactor.com/dwm">Dave's Visual Guide to DWM</a>.</p>
       <figure>
-        <img src="./media/dwm2-18.png">
+        <img src="./media/dwm2-18.png" alt="screenshot of my DWM desktop">
         <figcaption>Enjoy!</figcaption>
       </figure>
 

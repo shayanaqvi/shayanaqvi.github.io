@@ -145,11 +145,11 @@ static const char *dimmer[] = { "brightnessctl", "set", "10%-", NULL, };</code><
       <p>Now we'll bind the relevant keys to these commands. You'll find a section in your configuration file like this:
       </p>
       <figure>
-        <img src="./media/dwm2-6.png" alt="screenshot of the relevant section of the configuration file">
+        <img src="../images/setting-up-dwm/dwm2-6.png" alt="screenshot of the relevant section of the configuration file">
       </figure>
       <p>We'll define our own keybindings at the bottom of this list, underneath this area:</p>
       <figure>
-        <img src="./media/dwm2-7.png" alt="screenshot of the area where we'll add keybindings">
+        <img src="../images/setting-up-dwm/dwm2-7.png" alt="screenshot of the area where we'll add keybindings">
       </figure>
       <p>Pop these two lines down:</p>
       
@@ -220,7 +220,7 @@ static const char *prevsong[] = { "playerctl", "previous", NULL };</code></pre>
         check the output. You're going to have to do some digging to find the name of the currently pressed key in the
         output.</p>
       <figure>
-        <img src="./media/dwm2-13.png" alt="screenshot of output of the xev program">
+        <img src="../images/setting-up-dwm/dwm2-13.png" alt="screenshot of output of the xev program">
       </figure>
       <p>Be careful though! Moving your mouse is also going to register in this program.</p>
 
@@ -294,7 +294,7 @@ done &</code></pre>
       <p>As you can see, this is just a bunch of shell commands, with some manual formatting. This code produces a
         status bar as such:</p>
       <figure>
-        <img src="./media/dwm2-17.png" alt="screenshot of my status bar">
+        <img src="../images/setting-up-dwm/dwm2-17.png" alt="screenshot of my status bar">
       </figure>
       <p>Essentially, you'll be using <code>xsetroot -name</code> and then insert your commands inside a single string.
         Wrap each command with <code>$()</code>. For example, <code>$(date)</code>. String together multiple commands
@@ -328,7 +328,7 @@ done &</code></pre>
         be missing things. The internet is your best friend! The ArchWiki too!</p>
       <p>Another nice guide to using DWM: <a href="https://ratfactor.com/dwm">Dave's Visual Guide to DWM</a>.</p>
       <figure>
-        <img src="./media/dwm2-18.png" alt="screenshot of my DWM desktop">
+        <img src="../images/setting-up-dwm/dwm2-18.png" alt="screenshot of my DWM desktop">
         <figcaption>Enjoy!</figcaption>
       </figure>
 

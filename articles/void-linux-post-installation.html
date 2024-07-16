@@ -45,7 +45,7 @@
           xbps-install nvidia390 nvidia390-dkms</code> If you require verson 470, adjust the version as needed.You can
         see all of the available drivers by querying for them: <code>xbps-query -Rs nvidia</code>.</p>
       <figure>
-        <img src="./media/vl_nv.png" alt="available nvidia drivers">
+        <img src="../images/void-linux-post-install/vl_nv.png" alt="available nvidia drivers">
         <figcaption>available drivers</figcaption>
       </figure>
       <h2>Bluetooth</h2>
@@ -72,7 +72,7 @@
         <code>load-module module-bluetooth-discover avrcp_absolute_volume=false</code>. Thus, our problem is solved.
       </p>
       <figure>
-        <img src="./media/vl_abs.png" alt="what needs to be edited in /etc/pulse/default.pa">
+        <img src="../images/void-linux-post-install/vl_abs.png" alt="what needs to be edited in /etc/pulse/default.pa">
       </figure>
 
       <h2>Setting a default kernel</h2>
@@ -83,11 +83,11 @@
         "predefined". Otherwise, select "previously booted entry". This will default the kernel to whatever you selected
         in the previous session. Click save.</p>
       <figure>
-        <img src="./media/vl_gc1.png" alt="screenshot #1 of grub customizer">
+        <img src="../images/void-linux-post-install/vl_gc1.png" alt="screenshot #1 of grub customizer">
       </figure>
 
       <figure>
-        <img src="./media/vl_gc2.png" alt="screenshot #2 of grub customizer">
+        <img src="../images/void-linux-post-install/vl_gc2.png" alt="screenshot #2 of grub customizer">
       </figure>
       <p>Now we may reboot. Select the proper kernel, and voila! Everything should be working now.</p>
 

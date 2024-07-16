@@ -206,6 +206,13 @@ a:hover {
   text-decoration: none;
 }
 
+@media (pointer: coarse) {
+	ol li, ul li {
+		padding: 5px 0;
+	}
+
+}
+
 .small-gif {
   border: none;
 }

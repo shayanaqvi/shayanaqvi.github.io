@@ -6,6 +6,15 @@
   --accent1: #931F1D;
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+	  --background-color: #092934;
+	  --foreground-color: #ffffff;
+	  --link: #ffffff;
+	  --accent1: #ffff00;
+	}
+}
+
 html {
   padding: 20px;
   padding-top: 10px;

@@ -26,11 +26,9 @@ html {
 
 body {
   background-color: var(--background-color);
-  background-image: var(--background-pattern);
   color: var(--foreground-color);
   max-width: 800px;
-  /* font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, "Noto Serif", serif; */
-  font-family: "Libertinus Mono";
+  font-family: "Libertinus Mono", serif;
   margin: 0 auto;
 }
 
@@ -81,6 +79,7 @@ pre:hover code {
 
 table {
   border-collapse: collapse;
+  width: 100%;
 }
 
 th,
@@ -129,7 +128,7 @@ td {
 
 h1 {
   margin: 0;
-  padding: 40px 20px 40px 20px;
+  padding: 20px;
   border: 1px solid;
   border-top: none;
   transition: box-shadow 0.1s ease-out;

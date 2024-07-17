@@ -1,6 +1,5 @@
 :root {
   --background-color: #ffffff;
-  --background-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23959595' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   --foreground-color: #092934;
   --link: #092934;
   --accent1: #931F1D;
@@ -8,11 +7,16 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-	  --background-color: #092934;
+	  --background-color: #000000;
 	  --foreground-color: #ffffff;
 	  --link: #ffffff;
 	  --accent1: #ffff00;
 	}
+}
+
+@font-face {
+  font-family: "Libertinus Mono";
+  src: url(fonts/LibertinusMono-Regular.woff2);
 }
 
 html {
@@ -25,7 +29,8 @@ body {
   background-image: var(--background-pattern);
   color: var(--foreground-color);
   max-width: 800px;
-  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, "Noto Serif", serif;
+  /* font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, "Noto Serif", serif; */
+  font-family: "Libertinus Mono";
   margin: 0 auto;
 }
 
@@ -129,11 +134,11 @@ h1 {
   border-top: none;
   transition: box-shadow 0.1s ease-out;
   font-weight: lighter;
-  box-shadow: 5px 5px var(--foreground-color);
+  box-shadow: 0px 0px var(--foreground-color);
 }
 
 h1:hover {
-  box-shadow: 0px 0px var(--foreground-color);
+  box-shadow: 5px 5px var(--foreground-color);
 }
 
 h2 {

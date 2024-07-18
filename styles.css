@@ -5,14 +5,14 @@
   --accent1: #931F1D;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-	  --background-color: #000000;
-	  --foreground-color: #ffffff;
-	  --link: #ffffff;
-	  --accent1: #ffff00;
-	}
-}
+/* @media (prefers-color-scheme: dark) { */
+	/* :root { */
+	  /* --background-color: #000000; */
+	  /* --foreground-color: #ffffff; */
+	  /* --link: #ffffff; */
+	  /* --accent1: #ffff00; */
+	/* } */
+/* } */
 
 @font-face {
   font-family: "Libertinus Mono";
@@ -20,8 +20,7 @@
 }
 
 html {
-  padding: 20px;
-  padding-top: 10px;
+  padding: 30px;
 }
 
 body {
@@ -41,7 +40,7 @@ figure {
 }
 
 figure:hover {
-  box-shadow: 5px 5px var(--foreground-color);
+  box-shadow: 4px 4px var(--foreground-color);
 }
 
 figcaption {
@@ -54,6 +53,11 @@ figcaption {
 img {
   width: 100%;
   vertical-align: middle;
+}
+
+code {
+  font-family: "Libertinus Mono", monospace;
+  font-size: 16px;
 }
 
 pre code {
@@ -73,7 +77,7 @@ pre code {
 }
 
 pre:hover code {
-  border-left: 5px solid var(--accent1);
+  border-left: 4px solid var(--accent1);
 }
 
 
@@ -85,7 +89,7 @@ table {
 th,
 td {
   border: 1px solid;
-  padding: 5px;
+  padding: 4px;
   text-align: left;
 }
 
@@ -104,7 +108,7 @@ td {
 }
 
 .shout:hover {
-  border-left: 5px solid var(--accent1);
+  border-left: 4px solid var(--accent1);
 }
 
 .shout:hover h3,
@@ -123,26 +127,28 @@ td {
 }
 
 .closing:hover {
-  box-shadow: 5px 5px var(--foreground-color);
+  box-shadow: 4px 4px var(--foreground-color);
 }
 
 h1 {
-  margin: 0;
+  margin-top: 20px;
   padding: 20px;
   border: 1px solid;
-  border-top: none;
   transition: box-shadow 0.1s ease-out;
   font-weight: lighter;
   box-shadow: 0px 0px var(--foreground-color);
+  text-align: center;
 }
 
 h1:hover {
-  box-shadow: 5px 5px var(--foreground-color);
+  box-shadow: 4px 4px var(--foreground-color);
 }
 
 h2 {
   border-bottom: 1px solid;
-  padding: 10px 0;
+  padding: 4px 0;
+  margin: 0;
+  margin-bottom: -7px;
   font-weight: lighter;
 }
 
@@ -158,55 +164,15 @@ ul {
   padding: 0 40px;
 }
 
-#content-container {
-  transition: opacity 0.1s ease-out;
-}
-
-#header p {
-  font-variant: all-small-caps;
-  text-align: right;
-  border: 1px solid;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  height: 30px;
-  line-height: 30px;
-}
-
-#header a {
-  margin-left: -1px;
-  height: 30px;
-  padding: 6px 20px;
-  border-left: 1px solid;
-  color: var(--link);
-  transition: box-shadow 0.05s ease-out, background 0.05s ease-out;
-  text-decoration: none;
-}
-
-#header:hover~#content-container h1 {
-  box-shadow: none;
-}
-
-#header:hover~#content-container {
-  opacity: 0.65;
-}
-
-#header a:hover {
-  background: var(--accent1);
-  color: var(--background-color);
-  box-shadow: none;
-  border: none;
-  border-left: 1px solid var(--foreground-color);
-}
-
 a {
   color: var(--link);
   transition: background 0.05s ease-out, box-shadow 0.05s ease-out;
-  padding: 2px;
+  padding: 1px;
 }
 
 a:hover {
   background: var(--accent1);
-  padding: 3px 2px;
+  padding: 4px 1px;
   color: var(--background-color);
   text-decoration: none;
 }
@@ -222,3 +188,79 @@ li {
 .small-gif-link:hover {
   background: none;
 }
+
+.embed {
+  border: 1px solid;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  transition: box-shadow 0.1s ease-out;
+}
+
+.embed:hover {
+  box-shadow: 4px 4px var(--foreground-color);
+}
+
+#header {
+  display: flex;
+  border-right: 1px solid;
+  transition: box-shadow 0.1s ease-out;
+}
+
+#header:hover {
+  box-shadow: 4px 4px var(--foreground-color);
+}
+
+#header button {
+  font-family: "Libertinus Mono", serif;
+  font-size: 16px;
+  color: var(--foreground-color);
+  flex-basis: 100%;
+  background: none;
+  padding: 4px;
+  border: none;
+  border: 1px solid;
+  border-right: none;
+}
+
+#header button:hover {
+  background: var(--accent1);
+  color: var(--background-color);
+  transition: box-shadow 0.05s ease-out, background 0.05s ease-out;
+  border: 1px solid var(--foreground-color);
+  border-right: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #header {
+    display: block;
+    border-bottom: 1px solid;
+  }
+
+  #header button {
+    width: 100%;
+    border-bottom: none;
+    padding: 7px;
+  }
+
+  #header button:hover {
+    border: 1px solid var(--foreground-color);
+    border-bottom: none;
+  }
+
+  h1 {
+    padding: 50px;
+  }
+}
+
+#content-container {
+  transition: opacity 0.1s ease-out;
+}
+
+#header:hover~#content-container h1 {
+  box-shadow: none;
+}
+
+#header:hover~#content-container {
+  opacity: 0.65;
+}
+

@@ -20,8 +20,7 @@
 
     <div id="content-container">
       <h1>Going Back to DWM</h1>
-      <p>It's such a comfy window manager. I have my own build of DWM - I don't recall if I patched it at all (if I
-        have, then only 1 or 2 (or maybe 3)).</p>
+      <p class="shout">I've replaced this article with <a href="./24-setting-up-dwm.html">Setting up DWM</a>. Check that out instead.</p>
       <h2>Dependencies</h2>
       <p>Let's get dependencies sorted out. On Void Linux, <code>sudo xbps-install base-devel libX11-devel libXft-devel
           libXinerama-devel freetype-devel fontconfig-devel</code>.</p>
@@ -29,8 +28,10 @@
       <p>Create a directory where you'll clone the source code. Generally, it seems like DWM, Dmenu and ST are installed
         together. I don't need ST, so I won't install that. I'll keep on using the good ol' xfce4-terminal.</p>
       <p><code>cd</code> into this new directory. Then,</p>
-      <code>git clone https://git.suckless.org/dwm</code><br>
-      <code>git clone https://git.suckless.org/dmenu</code>
+
+      <pre><code>git clone https://git.suckless.org/dwm
+git clone https://git.suckless.org/dmenu</code></pre>
+
       <h2>Building</h2>
       <p>Now, let's build DWM first. Change directory to wherever the DWM source code is. Then, run <code>make</code>
         followed by <code>sudo make clean install</code>.</p>
@@ -40,13 +41,15 @@
         startx, then <code>startx /usr/local/bin/dwm</code>. This could be automated; I don't have that know-how.</p>
       <p>If you use a display manager, then we'll need to create a <code>.desktop</code> file.</p>
       <p><code>touch dwm.desktop</code>. We'll put the following content in it:</p>
-      <code>[Desktop Entry]</code><br>
-      <code>Encoding=UTF-8</code><br>
-      <code>Name=DWM</code><br>
-      <code>Comment=Dynamic Window Manager</code><br>
-      <code>Exec=/usr/local/bin/dwm</code><br>
-      <code>Icon=dwm</code><br>
-      <code>Type=XSession</code>
+
+      <pre><code>[Desktop Entry]
+Encoding=UTF-8
+Name=DWM
+Comment=Dynamic Window Manager
+Exec=/usr/local/bin/dwm
+Icon=dwm
+Type=XSession</code></pre>
+
       <p>This file goes in <code>/usr/share/xsessions</code>. DWM should now be selectable from your display manager.
       </p>
       <h2>Utilities</h2>

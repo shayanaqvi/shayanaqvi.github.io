@@ -55,11 +55,11 @@ def construct_html(date, article_title, article_description):
         with tag('body'):
             with tag('div'):
                 doc.attr(id="header")
-                with tag('button'):
-                    doc.attr(onclick="location.href='../index.html'", type="button")
+                with tag('a'):
+                    doc.attr(href="../index.html")
                     text("Main Menu")
-                with tag('button'):
-                    doc.attr(onclick="location.href='../works.html'", type="button")
+                with tag('a'):
+                    doc.attr(href="../works.html")
                     text("Works")
 
             with tag('div'):

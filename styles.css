@@ -32,7 +32,7 @@ body {
 }
 
 figure {
-  margin: 20px 0px;
+  margin: 20px 0;
   width: fit-content;
   border: 1px solid var(--foreground-color);
   box-shadow: 0px 0px var(--foreground-color);
@@ -131,25 +131,17 @@ td {
 }
 
 h1 {
-  margin-top: 20px;
   padding: 20px;
-  border: 1px solid;
-  transition: box-shadow 0.1s ease-out;
   font-weight: lighter;
-  box-shadow: 0px 0px var(--foreground-color);
+  font-size: 48px;
+  border: 1px solid;
   text-align: center;
-}
-
-h1:hover {
-  box-shadow: 4px 4px var(--foreground-color);
 }
 
 h2 {
   border-bottom: 1px solid;
-  padding: 4px 0;
-  margin: 0;
-  margin-bottom: -7px;
   font-weight: lighter;
+  padding: 10px 0;
 }
 
 h3,
@@ -203,54 +195,36 @@ li {
 #header {
   display: flex;
   border-right: 1px solid;
-  transition: box-shadow 0.1s ease-out;
-}
-
-#header:hover {
-  box-shadow: 4px 4px var(--foreground-color);
 }
 
 #header button {
   font-family: "Libertinus Mono", serif;
   font-size: 16px;
   text-transform: uppercase;
+  text-decoration: underline;
   color: var(--foreground-color);
   flex-basis: 100%;
   background: none;
-  padding: 4px;
+  padding: 6px;
   border: none;
   border: 1px solid;
   border-right: none;
   cursor: pointer;
+  transition: box-shadow 0.05s ease-out, background 0.05s ease-out;
 }
 
 #header button:hover {
   background: var(--accent1);
   color: var(--background-color);
-  transition: box-shadow 0.05s ease-out, background 0.05s ease-out;
   border: 1px solid var(--foreground-color);
   border-right: none;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {
   #header {
     display: block;
     border-bottom: 1px solid;
-  }
-
-  #header button {
-    width: 100%;
-    border-bottom: none;
-    padding: 7px;
-  }
-
-  #header button:hover {
-    border: 1px solid var(--foreground-color);
-    border-bottom: none;
-  }
-
-  h1 {
-    padding: 50px;
   }
 }
 
@@ -263,6 +237,5 @@ li {
 }
 
 #header:hover~#content-container {
-  opacity: 0.85;
+  opacity: 0.75;
 }
-

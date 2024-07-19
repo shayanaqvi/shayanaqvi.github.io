@@ -175,6 +175,7 @@ li {
 
 .small-gif {
   border: none;
+  padding: 5px;
 }
 
 .small-gif-link:hover {
@@ -197,11 +198,12 @@ li {
   border-right: 1px solid;
 }
 
-#header button {
+#header a {
   font-family: "Libertinus Mono", serif;
   font-size: 16px;
   text-transform: uppercase;
   text-decoration: underline;
+  text-align: center;
   color: var(--foreground-color);
   flex-basis: 100%;
   background: none;
@@ -213,7 +215,7 @@ li {
   transition: box-shadow 0.05s ease-out, background 0.05s ease-out;
 }
 
-#header button:hover {
+#header a:hover {
   background: var(--accent1);
   color: var(--background-color);
   border: 1px solid var(--foreground-color);
@@ -223,17 +225,16 @@ li {
 
 @media only screen and (max-width: 600px) {
   #header {
-    display: block;
     border-bottom: 1px solid;
   }
 
-   #header button {
+   #header a {
     width: 100%;
     border-bottom: none;
     padding: 7px;
   }
 
-  #header button:hover {
+  #header a:hover {
     border: 1px solid var(--foreground-color);
     border-bottom: none;
   }

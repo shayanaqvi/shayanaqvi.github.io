@@ -226,6 +226,18 @@ li {
     display: block;
     border-bottom: 1px solid;
   }
+
+   #header button {
+    width: 100%;
+    border-bottom: none;
+    padding: 7px;
+  }
+
+  #header button:hover {
+    border: 1px solid var(--foreground-color);
+    border-bottom: none;
+  }
+
 }
 
 #content-container {

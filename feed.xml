@@ -1,13 +1,14 @@
 <?xml version="1.0" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>Shayan Naqvi</title>
-<link>https://shayanaqvi.github.io/</link>
-<description>Articles from the blog of this website</description>
-<item>
-  <title>Setting up DWM</title>  
-  <link>https://shayanaqvi.github.io/articles/24-setting-up-dwm.html</link>
-  <guid>https://shayanaqvi.github.io/articles/24-setting-up-dwm.html</guid>
-</item>
+  <atom:link href="https://shayanaqvi.github.io/" rel="self" type="application/rss+xml"/>
+  <title>Shayan Naqvi</title>
+  <link>https://shayanaqvi.github.io/</link>
+  <description>Articles from the blog of this website</description>
+  <item>
+    <title>Setting up DWM</title>  
+    <link>https://shayanaqvi.github.io/articles/24-setting-up-dwm.html</link>
+    <guid>https://shayanaqvi.github.io/articles/24-setting-up-dwm.html</guid>
+  </item>
 </channel>
 </rss>

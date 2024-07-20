@@ -5,14 +5,14 @@
   --accent1: #931F1D;
 }
 
-/* @media (prefers-color-scheme: dark) { */
-	/* :root { */
-	  /* --background-color: #000000; */
-	  /* --foreground-color: #ffffff; */
-	  /* --link: #ffffff; */
-	  /* --accent1: #ffff00; */
-	/* } */
-/* } */
+@media (prefers-color-scheme: dark) {
+	:root {
+	  --background-color: #000000;
+	  --foreground-color: #ffffff;
+	  --link: #ffffff;
+	  --accent1: #f4bf75;
+	}
+}
 
 @font-face {
   font-family: "Libertinus Mono";

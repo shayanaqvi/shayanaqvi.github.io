@@ -1,7 +1,6 @@
 :root {
   --background-color: #ffffff;
   --foreground-color: #092934;
-  --link: #092934;
   --accent1: #931F1D;
 }
 
@@ -19,6 +18,11 @@
   src: url(fonts/LibertinusMono-Regular.woff2);
 }
 
+@font-face {
+  font-family: "Zodiak";
+  src: url(fonts/Zodiak-Variable.woff2);
+}
+
 html {
   padding: 30px;
 }
@@ -27,7 +31,7 @@ body {
   background-color: var(--background-color);
   color: var(--foreground-color);
   max-width: 800px;
-  font-family: "Libertinus Mono", serif;
+  font-family: "Zodiak", serif;
   margin: 0 auto;
 }
 
@@ -71,8 +75,6 @@ pre code {
   min-width: 100px;
   padding: 10px;
   border: 1px solid;
-  font-family: monospace;
-  font-size: 16px;
   transition: border 0.1s ease-out;
 }
 
@@ -94,7 +96,7 @@ td {
 }
 
 .shout {
-  border-left: 1px solid var(--link);
+  border-left: 1px solid var(--accent1);
   padding: 0px 10px;
   font-style: italic;
   transition: border 0.1s ease-out;
@@ -115,19 +117,18 @@ td {
 .shout:hover h4,
 .shout:hover h5,
 .shout:hover h6 {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .closing {
   font-style: italic;
-  /* border: 1px solid; */
   opacity: 0.5;
 }
 
 h1 {
   padding: 20px;
-  font-weight: lighter;
-  font-size: 48px;
+  font-weight: 300;
+  font-size: 40px;
   border: 1px solid;
   text-align: center;
 }
@@ -135,7 +136,7 @@ h1 {
 h2 {
   border: 1px solid;
   text-align: center;
-  font-weight: lighter;
+  font-weight: 400;
   padding: 10px;
   margin: 30px 0;
 }
@@ -145,7 +146,7 @@ h4,
 h5,
 h6 {
   color: var(--accent1);
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 ul {
@@ -153,7 +154,7 @@ ul {
 }
 
 a {
-  color: var(--link);
+  color: var(--accent1);
   transition: background 0.05s ease-out, box-shadow 0.05s ease-out;
   padding: 1px;
 }
@@ -166,7 +167,7 @@ a:hover {
 }
 
 li {
-	margin: 10px 0;
+	margin: 5px 0;
 }
 
 .small-gif {

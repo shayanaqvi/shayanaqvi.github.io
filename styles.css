@@ -2,14 +2,15 @@
   --background-color: #ffffff;
   --foreground-color: #092934;
   --accent1: #931F1D;
+  --shadow: rgba(9, 41, 52, 0.5)
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 	  --background-color: #092934;
 	  --foreground-color: #ffffff;
-	  --link: #ffffff;
 	  --accent1: #ecff14;
+	  --shadow: rgba(255, 255, 255, 0.5)
 	}
 }
 
@@ -39,12 +40,12 @@ figure {
   margin: 20px 0;
   width: fit-content;
   border: 1px solid var(--foreground-color);
-  box-shadow: 0px 0px var(--foreground-color);
+  box-shadow: 0px 0px var(--shadow);
   transition: box-shadow 0.1s ease-out;
 }
 
 figure:hover {
-  box-shadow: 4px 4px var(--foreground-color);
+  box-shadow: 4px 4px var(--shadow);
 }
 
 figcaption {
@@ -187,7 +188,7 @@ li {
 }
 
 .embed:hover {
-  box-shadow: 4px 4px var(--foreground-color);
+  box-shadow: 4px 4px var(--shadow);
 }
 
 #header {
@@ -196,8 +197,7 @@ li {
 }
 
 #header a {
-  font-family: "Libertinus Mono", serif;
-  font-size: 16px;
+  font-size: 13px;
   text-transform: uppercase;
   text-decoration: underline;
   text-align: center;
@@ -220,6 +220,19 @@ li {
   text-decoration: none;
 }
 
+#article-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#article-list div {
+  flex-basis: 50%;
+}
+
+#latest {
+  border-right: none;
+}
+
 @media only screen and (max-width: 700px) {
   #header {
     display: grid;
@@ -239,6 +252,14 @@ li {
     border-bottom: 1px solid var(--foreground-color);
   }
 
+  #article-list {
+    display: grid;
+  }
+
+  #latest {
+    border-right: 1px solid;
+  }
+
 }
 
 #content-container {
@@ -252,3 +273,4 @@ li {
 #header:hover~#content-container {
   opacity: 0.75;
 }
+

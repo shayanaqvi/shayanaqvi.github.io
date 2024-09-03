@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="../favicon.svg"></link>
+    <link rel="stylesheet" href="../styles.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+      integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+      integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx"
+      crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+      integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <meta name="description" content="Finding a more intuitive approach to determining the acceleration of two objects attached to a pulley"></meta>
+    <title>Finding a more intuitive approach to determining the acceleration of two objects attached to a pulley | Shayan Naqvi</title>
+  </head>
+  <body>
+    <div id="header">
+      <a href="../index.html">Main Menu</a>
+      <a href="../works.html">Works</a>
+    </div>
+    <div id="content-container">
+      <h1>Finding a more intuitive approach to determining the acceleration of two objects attached to a pulley</h1>
+      <p>The title is a bit of a mouthful, but I'll explain what we're trying to do here. Consider the following:</p>
+
+      <div class="shout">
+        <p>Two particles A and B have masses \(0.35\) kg and \(0.45\) kg respectively. The particles are attached to the ends of a light inextensible string which passes over a small fixed smooth pulley which is \(1\) m above the horizontal ground. Initially particle A is held at rest on the ground vertically below the pulley, with the string taut. Particle B hangs vertically below the pulley at a height of \(0.64\) m above the ground. Particle A is released.</p>
+        <p>Find the speed of A at the instant B reaches the ground.</p>
+        <p>(Question from 9709, October/November Paper 43, 2017.)</p>
+      </div>
+
+      <p>I'm not going to solve the entire question but I'll go as far as calculating the acceleration of A and B.</p>
+      <p>This is the situation:</p>
+      <figure>
+        <img src="../images/intuitive-acceleration/diagram.jpg" alt="a diagram illustrating the situation in the question">
+      </figure>
+      <p>We know that for both A and B, their acceleration is of the same magnitude, but opposite in direction. The tension in the string (unknown) is the same for both. Typically, in such situations, where both \(a\) and \(T\) are unknown, you'd create two equations (in order to resolve the forces) and solve them simultaneously.</p>
+      <p>Let \(\Sigma F\) denote the resultant force, \(T\) denote the tension in the string, \(W\) denote the weight of either A or B, and \(m\) denote the masses of A or B.</p>
+      <p>\(\Sigma F_A = m_Aa = W_A - T\)</p>
+      <p>\(\Sigma F_B = m_Ba = T - W_B\)</p>
+      <p>These are the two equations you'd generally see. Most explanations I've seen tend to either neglect or barely explain why the second equation is that way. Why, now, are we subtracting weight from tension instead of the other way round?</p>
+      <p>A nice way too look at this: we know that the <em>magnitude</em> of the acceleration is the same for both A and B. In other words, \(|a|\) is the same for both. To illustrate this, let's set up an equation in terms of \(|a|\):</p>
+      <p>\(m_A|a| = W_A - T\)</p>
+      <p>\(|a| = \frac{W_A - T}{m_A}\)</p>
+      <p>We'll do the same for B:</p>
+      <p>\(m_B|a| = W_B - T\)</p>
+      <p>\(|a| = \frac{W_B - T}{m_B}\)</p>
+      <p>We now have four equations in \(a\):</p>
+      <ol>
+        <li>\(a=\frac{W_A-T}{m_A}\)</li>
+        <li>\(a=\frac{-W_A+T}{m_A}\) or \(a=\frac{T-W_A}{m_A}\)</li>
+        <li>\(a=\frac{W_B-T}{m_B}\)</li>
+        <li>\(a=\frac{-W_B+T}{m_B}\) or \(a=\frac{T-W_B}{m_B}\)</li>
+      </ol>
+      <p>All of these will yeild the same <em>magnitude</em> of acceleration. You can pick any two of these and solve for whatever you need.</p>
+
+      <p class="closing">This article was written on 2024-09-03. If you have any thoughts, feel free to send me an email with them. Have a nice day!</p>
+    </div>
+  </body>
+</html>

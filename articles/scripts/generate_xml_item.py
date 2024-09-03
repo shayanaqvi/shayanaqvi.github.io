@@ -54,7 +54,7 @@ rfc_822_date = now_utc.strftime('%a, %d %b %Y %H:%M:%S ') + utc_offset
 
 console.print("Article name:", style="blue")
 article_title = input("→ ")
-article_index = get_latest_article_index() + 1
+article_index = get_latest_article_index()
 filename = construct_filename(article_index)
 
 pyperclip.copy(generate_xml(filename, article_title))

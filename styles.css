@@ -163,6 +163,7 @@ a {
   color: var(--accent1);
   transition: background 0.05s ease-out, box-shadow 0.05s ease-out;
   padding: 1px;
+  text-decoration-style: dotted;
 }
 
 a:hover {
@@ -205,6 +206,7 @@ li {
   font-size: 13px;
   text-transform: uppercase;
   text-decoration: underline;
+  text-decoration-style: dotted;
   text-align: center;
   color: var(--foreground-color);
   flex-basis: 100%;

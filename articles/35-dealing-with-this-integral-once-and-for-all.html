@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="../favicon.svg"></link>
+    <link rel="stylesheet" href="../styles.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+      integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+      integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx"
+      crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+      integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <meta name="description" content="Consistent way to deal with this integral"></meta>
+    <title>Dealing with integrating this integral once and for all | Shayan Naqvi</title>
+  </head>
+  <body>
+    <div id="header">
+      <a href="../index.html">Main Menu</a>
+      <a href="../works.html">Works</a>
+    </div>
+    <div id="content-container">
+      <h1>Dealing with integrating \(\frac{1}{ax^2+b}\) once and for all</h1>
+      <p>The formula sheet Cambridge gives you during your exam tells you the following about this integral: \(\int \frac{1}{x^2+a^2} dx = \frac{1}{a}tan^{-1}(\frac{x}{a})\).</p>
+
+      <p>This form works for integrals of the form \(\frac{1}{x^2+a}\). You can still use this for integrals of the form \(\frac{1}{ax^2+b}\). You just have to modify it to fit those constraints. What we're looking for, in essense, is for the coefficient of \(x^2\) to be 1.</p>
+
+      <p>We'll deal with \(\frac{1}{4x^2+1}\) as an example.</p>
+      <p>\(\int \frac{1}{4x^2+1}dx\)</p>
+      <p>Taking 4 as common from the denominator:</p>
+      <p>\(\int \frac{1}{4(x^2+\frac{1}{4})}dx\)</p>
+      <p>Now we'll take the constant outside:</p>
+      <p>\(\frac{1}{4} \int \frac{1}{x^2+\frac{1}{4}}dx\)</p>
+      <p>Integrate as normal from here:</p>
+      <p>\( \frac{1}{4} \times [ \frac{1}{ \sqrt{\frac{1}{4}} } tan^{-1}(\frac{x}{ \sqrt{\frac{1}{4}} }) ] \)</p>
+      <p>\( \frac{1}{4} \times [2tan^{-1}(2x)]\)</p>
+      <p>And we'll end up with \(\frac{1}{2}tan^{-1}(2x)\).</p>
+
+      <p class="closing">This article was written on 2024-09-21. If you have any thoughts, feel free to send me an email with them. Have a nice day!</p>
+    </div>
+  </body>
+</html>

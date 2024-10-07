@@ -1,19 +1,21 @@
 :root {
-  --background-color: #ffffff;
+  --background-color: #dfdfdf;
   --foreground-color: #092934;
-  --accent1: #931F1D;
-  --shadow: rgba(9, 41, 52, 0.5)
+  --accent1: #9f192f;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 	  --background-color: #092934;
 	  --foreground-color: #ffffff;
-	  --accent1: #ecff14;
-	  --shadow: rgba(255, 255, 255, 0.5)
+	  --accent1: #e8ff64;
 	}
 
 	body {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%231c718e' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E") !important;
+  }
+
+  #header {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%231c718e' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E") !important;
   }
 }
@@ -28,29 +30,31 @@
   src: url(fonts/Zodiak-Variable.woff2);
 }
 
+@font-face {
+  font-family: "DM Sans";
+  src: url(fonts/DMSans-VariableFont_opsz,wght.ttf)
+}
+
 html {
-  padding: 30px;
+  padding: 10px;
 }
 
 body {
   background-color: var(--background-color);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239f9f9f' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   color: var(--foreground-color);
-  max-width: 800px;
-  font-family: "Zodiak", serif;
+  max-width: 600px;
   margin: 0 auto;
+  padding: 20px;
+  border: 1px solid;
+  border-top: 0;
+  font-family: "DM Sans", sans-serif;
 }
 
 figure {
   margin: 20px 0;
   width: fit-content;
   border: 1px solid var(--foreground-color);
-  box-shadow: 0px 0px var(--shadow);
-  transition: box-shadow 0.1s ease-out;
-}
-
-figure:hover {
-  box-shadow: 4px 4px var(--shadow);
 }
 
 figcaption {
@@ -129,6 +133,19 @@ td {
 .closing {
   font-style: italic;
   opacity: 0.5;
+  border: 1px solid;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Zodiak", serif;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -141,7 +158,7 @@ h1 {
 
 h2 {
   border: 1px solid;
-  text-align: center;
+  text-align: left;
   font-weight: 400;
   padding: 10px;
   margin: 30px 0;
@@ -190,21 +207,19 @@ li {
   border: 1px solid;
   width: 100%;
   aspect-ratio: 16 / 9;
-  transition: box-shadow 0.1s ease-out;
-}
-
-.embed:hover {
-  box-shadow: 4px 4px var(--shadow);
 }
 
 #header {
   display: flex;
-  border-right: 1px solid;
   position: sticky;
   top: 0px;
+  margin: -20px;
+  margin-bottom: 20px;
   background: var(--background-color);
   foreground: var(--foreground-color);
   z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239f9f9f' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  border-top: 1px solid;
 }
 
 #header a {
@@ -216,84 +231,39 @@ li {
   color: var(--foreground-color);
   flex-basis: 100%;
   background: none;
-  padding: 8px;
-  border: none;
-  border: 1px solid;
-  border-right: none;
+  padding: 4px;
+  border-bottom: 1px solid var(--foreground-color);
   cursor: pointer;
   transition: box-shadow 0.05s ease-out, background 0.05s ease-out;
+}
+
+#main-menu-link {
+  border-right: 1px solid var(--foreground-color);
 }
 
 #header a:hover {
   background: var(--accent1);
   color: var(--background-color);
-  border: 1px solid var(--foreground-color);
-  border-right: none;
   text-decoration: none;
-}
-
-#article-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#article-list div {
-  flex-basis: 50%;
-}
-
-#latest {
-  border-right: none;
-  margin: 0;
-  margin-top: 30px;
+  border-bottom: 1px solid var(--foreground-color);
 }
 
 .article-list-container {
-  max-height: 400px;
+  max-height: 600px;
   overflow-y: scroll;
   border: 1px solid;
   border-top: 0px;
 }
 
-#article-list-container-latest {
-  border-right: 0;
+#article-list {
+}
+
+#notes-list {
 }
 
 .container-heading {
   margin: 0;
   margin-top: 30px;
-}
-
-@media only screen and (max-width: 700px) {
-  #header {
-    display: grid;
-    border: none;
-    border: 1px solid;
-    border-bottom: none;
-  }
-
-   #header a {
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid;
-  }
-
-  #header a:hover {
-    border: none;
-    border-bottom: 1px solid var(--foreground-color);
-  }
-
-  #article-list {
-    display: grid;
-  }
-
-  #latest {
-    border-right: 1px solid;
-  }
-
-  #article-list-container-latest {
-    border-right: 1px solid;
-  }
-
 }
 
 #content-container {

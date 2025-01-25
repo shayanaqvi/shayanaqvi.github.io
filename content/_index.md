@@ -25,7 +25,6 @@ Currently, I'm a second-year A Level student studying chemistry, computer scienc
 - Cooking
 - Knitting (scarves, mostly)
 
-
 Feel free to say hello! [The only way to do that is through email](mailto:contact.shayanaqvi@icloud.com).
 
 If you're in the mood to read:

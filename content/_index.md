@@ -8,27 +8,26 @@ name = "Home"
 weight = 1
 +++
 
-# Hello!
-
-I'm Shayan Naqvi. Here, [you can read about my thoughts/ramblings about various interests/hobbies of mine]({{< ref "blog/_index.md" >}}), mostly revolving around computers, and as of recent, math. I've also curated some of my works/projects here.
+Hello! I'm Shayan Naqvi.
 
 {{<image
   float="right"
-  width="9em"
+  width="12em"
   frame="true"
   caption="This is what I happen to look like (I smile too!)"
   src="img/IMG_0689.jpg"
 >}}
 
-Other interests of mine include: 
+Currently, I'm a second-year A Level student studying chemistry, computer science, math and physics. *Vaguely* related to this is the content on my blog! I sometimes write about whatever I'm studying, but mostly [ramble about various interests/hobbies of mine]({{< ref "blog/_index.md" >}}), mostly revolving around computers. Other interests/hobbies of mine include: 
 - Linux (not that you asked)
 - Music (by the accounts of some of my friends, I have a weird taste in music, and apparently listen to a lot of "circus music")
 - Graphic/visual design (check out [my "works" page]({{< ref "/works/works.md" >}}) if you'd like to see some of my work). 
+- Cooking
+- Knitting (scarves, mostly)
 
-Currently, I'm a second-year A Level student studying chemistry, computer science, math and physics. Of these, I probably enjoy math and physics the most. 
 
 Feel free to say hello! [The only way to do that is through email](mailto:contact.shayanaqvi@icloud.com).
 
-If you're in the mood to read some licenses, check out "[About this website]({{< ref "info.md" >}})".
-
-[There is an RSS feed](index.xml)!
+If you're in the mood to read:
+1. licenses, check out "[About this website]({{< ref "info.md" >}})".
+2. the content here elsewhere, [there is an RSS feed](index.xml)!

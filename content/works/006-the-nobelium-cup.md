@@ -349,6 +349,6 @@ ID card concepts in the same vain:
 {{< image
   frame="true"
   src="img/nobelium/unused9.png"
-  caption="I really like these too. The I spent designing this with my co-director was honestly one of the most fruitful sessions I've had in recent memory. This came up without too much effort."
+  caption="I really like these too. The time I designing this with my co-director was honestly one of the most fruitful sessions I've had in recent memory. This came up without too much effort."
 >}}
 

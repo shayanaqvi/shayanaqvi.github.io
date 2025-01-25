@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Shayan Naqvi - Cool Math Question II </title>
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.min.9d17b517a672b11bb9eb6278dc9dfe539d77d8dcc020847dbed53844b6dbbbcf.css">
+    
+    
+    <meta charset="UTF-8">
+    <meta name="author" content="Shayan Naqvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+    
+</head>
+<body>
+<header class="page-header">
+    <div class="myname"> 
+        <h2><a href="http://localhost:1313/">Shayan Naqvi</a></h2> 
+    </div>
+    <nav>
+        <ul class="navbar">
+            <li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="dropdown activetab">
+                <a href ="/blog/">
+                    <span>Blog</span>
+                </a>
+                <div class=sub-menu>
+                    <a class="" href="/categories/">All Categories</a>
+                    <a class="" href="/archive/">Archive</a>
+                </div>
+            </li>
+            <li class="">
+                <a href="/works/works/">
+                    <span>Works</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="content">
+    <main>
+        <article>
+            
+            <h1 class="page-title blog">Cool Math Question II</h1>
+            
+                <p class="blog-post-info">Posted: <time>2024-07-26</time>
+                
+    <span class="blog-taxonomy-info"> &nbsp; | &nbsp; Categories:
+        
+        
+        
+        <a class="blog-taxonomy-info" href="/categories/math">Math</a>
+    </span>
+
+
+
+</p>
+
+                <div class="blog-post-content">
+                <blockquote>
+<p>$$f(x) = ax^2 = 4x + c$$
+In the given quadratic function, $a$ and $c$ are constants. The graph of $y=f(x)$ in the $xy$- plane is a parabola that opens upward and has a vetex at the point $(h, k)$, where $h$ and $k$ are constants. If $k&lt;0$ and $f(-9) = f(3)$, which of the following must be true?</p>
+<ol>
+<li>$c \gt 0$</li>
+<li>$a \geq 1$</li>
+</ol>
+</blockquote>
+<p>Let&rsquo;s start off with this piece of information: $$f(-9)=f(3)$$</p>
+<p>Note that:</p>
+<p>$$ f(-9) = 81a-36 + c $$</p>
+<p>and</p>
+<p>$$ f(3)=9a+12+c $$</p>
+<p>We can equate both of these and solve for $a$.</p>
+<p>$$ 81a-36+c=9a+12+c $$</p>
+<p>We can DESTROY the $c$ on both sides.</p>
+<p>$$ 81a-36=9a+12 $$</p>
+<p>Solving for $a$, we get $a=\frac{2}{3}$.</p>
+<p>We&rsquo;ve found that condition 2 is false.</p>
+<p>Now, we will simplify our expression for $f(x)$ by replacing the $a$ with $\frac{2}{3}$.</p>
+<p>$$ f(x) = \frac{2}{3}x^2+4x+c $$</p>
+<p>We are also given the coordinates of the vertex of this parabola: $(h, k)$. If we were to complete the square on our brand new $f(x)$, we may be able to obtain $h$ or $k$ (since you can read off the coordinates of the vertex of a quadratic in completed-square form).</p>
+<p>We&rsquo;ll do just that; we end up with:</p>
+<p>$$ f(x) = \frac{2}{3}(x+3)^2-6+c $$</p>
+<p>Since we have some extra information about $k$ ($k \lt 0$), we can equate it to $-6+c$.</p>
+<p>$$ -6+c = k$$</p>
+<p>Solving this, we find $c=k+6$. How does this help?</p>
+<p>Let&rsquo;s test this two ways. We&rsquo;ll asign $k$ any two values less than zero (remember $k \lt 0$): I&rsquo;ll choose $-2$ and $-10$. If we plug either value into our equation in $c$, we can see if the first condition holds.</p>
+<p>For $k=-2$, $c$ comes to $+4$. However, for $k=-10$, $c$ comes to $-4$. Thus, condition 1 isn&rsquo;t <em>always</em> true.</p>
+<p>We can conclude that both of the conditions are false.</p>
+
+                </div>
+                
+                    
+        </article>
+    </main>
+
+        </div><footer>
+    <span></span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Shayan Naqvi - Patching DWM </title>
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.min.9d17b517a672b11bb9eb6278dc9dfe539d77d8dcc020847dbed53844b6dbbbcf.css">
+    
+    
+    <meta charset="UTF-8">
+    <meta name="author" content="Shayan Naqvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+<header class="page-header">
+    <div class="myname"> 
+        <h2><a href="http://localhost:1313/">Shayan Naqvi</a></h2> 
+    </div>
+    <nav>
+        <ul class="navbar">
+            <li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="dropdown activetab">
+                <a href ="/blog/">
+                    <span>Blog</span>
+                </a>
+                <div class=sub-menu>
+                    <a class="" href="/categories/">All Categories</a>
+                    <a class="" href="/archive/">Archive</a>
+                </div>
+            </li>
+            <li class="">
+                <a href="/works/works/">
+                    <span>Works</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="content">
+    <main>
+        <article>
+            
+            <h1 class="page-title blog">Patching DWM</h1>
+            
+                <p class="blog-post-info">Posted: <time>2024-06-20</time>
+                
+    <span class="blog-taxonomy-info"> &nbsp; | &nbsp; Categories:
+        
+        
+        
+        <a class="blog-taxonomy-info" href="/categories/computers">Computers</a>, <a class="blog-taxonomy-info" href="/categories/linux">Linux</a>
+    </span>
+
+
+
+</p>
+
+                <div class="blog-post-content">
+                <p>Patching DWM is incredibly finicky if you choose to use auto-patching programs. Manual patching is the way to go!</p>
+<p>I&rsquo;m going to be applying this patch here: <a href="https://dwm.suckless.org/patches/focusonnetactive/">focusonnetactive</a>.</p>
+<p>Let&rsquo;s first acquire the patch itself. I&rsquo;ll save it to a &ldquo;patches&rdquo; directory where my DWM source code is located.</p>
+<p>The deal with patching manually is being able to read diff files. It&rsquo;s not too difficult, but any formatting is nice to have. I use the <em>bat</em> pager (an alternative to <em>cat</em>), and this gives me a good idea of what needs to be done.</p>
+<figure class="image-shortcode frame" 
+         style="">
+    <img src="/img/patching-dwm/patchingdwm1.png"/> 
+</figure>
+
+<p>The stuff in green is what we need to add. The stuff in red is what we need to remove. The file in which this needs to be done is also specified, in this case, <code>dwm.c</code>.</p>
+<p>If you look closely, they&rsquo;ve specified at which line things need to be added. In the first case, it&rsquo;s around line 514. Go there, then see what matches whatever they&rsquo;ve specified.</p>
+<figure class="image-shortcode frame" 
+         style="">
+    <img src="/img/patching-dwm/patchingdwm2.png"/> 
+</figure>
+
+<p>It&rsquo;s not an exact match, but we can see the region we need to change is just below it. I&rsquo;ve added the new line there.</p>
+<p>Rinse and repeat for the rest.</p>
+<p>When you&rsquo;re done, simply rebuild your <code>dwm.c</code> again. It&rsquo;ll tell you if you have any errors. If you do, they&rsquo;ll likely be minor syntax errors. Read through the output, it&rsquo;s pretty clear.</p>
+<figure class="image-shortcode frame" 
+         style="">
+    <img src="/img/patching-dwm/patchingdwm3.png"
+         alt="Don&rsquo;t you just love a unisigned integer?"/> <figcaption>
+            <p>Don&rsquo;t you just love a unisigned integer?</p>
+        </figcaption>
+</figure>
+
+<p>You might start to get an idea as to why auto-patching programs tend to get really finicky after a while, mostly after you&rsquo;ve applied patches. They just insert the code at whatever line is specified in the diff file, which may break syntax or logic, that sort of thing. Auto-patching works fine for the first few patches, but especially on excessively patched DWM configurations, they tend to just not work.</p>
+<p>Anyway, that&rsquo;s the first patch I&rsquo;ve applied since I went back to DWM. It&rsquo;s been about a month.</p>
+
+                </div>
+                
+                    
+        </article>
+    </main>
+
+        </div><footer>
+    <span></span>
+</footer>
+</body>
+</html>

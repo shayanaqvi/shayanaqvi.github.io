@@ -1,0 +1,25 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Shayan Naqvi'
+theme = 'notrack'
+
+[params]
+author = 'Shayan Naqvi'
+siteHeading = 'Shayan Naqvi'
+mainSections = ['blog']
+showBlogLatest = true
+blogLatestHeading = 'Recent Articles'
+nBlogLatest = 6
+rss = true
+
+[taxonomies]
+year = "year"
+month = "month"
+categories = "categories"
+
+[markup.tableOfContents]
+endLevel = 6
+startLevel = 1
+
+[outputs]
+home = ["HTML", "RSS"]

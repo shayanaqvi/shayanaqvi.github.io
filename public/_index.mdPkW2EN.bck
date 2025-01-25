@@ -1,0 +1,36 @@
++++
+date = '2025-01-19T16:50:17+05:00'
+draft = false
+title = ''
+
+[menu.main]
+identifier = 'home'
+name = "Home"
+weight = 1
++++
+
+{{<image
+  float="right"
+  width="12em"
+  frame="true"
+  caption="Picture of me"
+  src="img/IMG_0689.jpg"
+>}}
+
+Welcome to my website!
+
+I'm Shayan Naqvi. I'm currently in college; I'm studying Chemistry, Computer Science, Math and Physics. I write about a bunch of stuff here, mostly to do with whatever I'm currently studying and my hobbies/interests.
+
+Feel free to say hello! The only way to do that is through email.
+
+This is everything here:
+- A portfolio of sorts
+- A blog (below)
+
+# About this Website
+
+Code licensed under GNU GPLv3. Content licensed under CC BY-NC 4.0. Hosted on Github Pages.
+
+This website is written in plain HTML and CSS. Javascript isn't entirely absent here; I'm using it only for rendering Latex (Katex, in this case) wherever needed. Aside from that, you can use this site with Javascript disabled. The website's source code is here.
+
+The fonts used are Zodiak, Libertinus Mono and DM Sans.

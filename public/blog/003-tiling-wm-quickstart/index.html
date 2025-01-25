@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Shayan Naqvi - Tiling WM Quickstart </title>
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.min.9d17b517a672b11bb9eb6278dc9dfe539d77d8dcc020847dbed53844b6dbbbcf.css">
+    
+    
+    <meta charset="UTF-8">
+    <meta name="author" content="Shayan Naqvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+<header class="page-header">
+    <div class="myname"> 
+        <h2><a href="http://localhost:1313/">Shayan Naqvi</a></h2> 
+    </div>
+    <nav>
+        <ul class="navbar">
+            <li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="dropdown activetab">
+                <a href ="/blog/">
+                    <span>Blog</span>
+                </a>
+                <div class=sub-menu>
+                    <a class="" href="/categories/">All Categories</a>
+                    <a class="" href="/archive/">Archive</a>
+                </div>
+            </li>
+            <li class="">
+                <a href="/works/works/">
+                    <span>Works</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="content">
+    <main>
+        <article>
+            
+            <h1 class="page-title blog">Tiling WM Quickstart</h1>
+            
+                <p class="blog-post-info">Posted: <time>2023-08-05</time>
+                
+    <span class="blog-taxonomy-info"> &nbsp; | &nbsp; Categories:
+        
+        
+        
+        <a class="blog-taxonomy-info" href="/categories/computers">Computers</a>, <a class="blog-taxonomy-info" href="/categories/linux">Linux</a>
+    </span>
+
+
+
+</p>
+
+                <div class="blog-post-content">
+                <p>I’ve spent about the past year using window managers on-and-off. I have, however, gained an amount of experience with i3 and Qtile. I shall attempt to make getting started with these two WMs a bit easier here.</p>
+<p>Please do note that my configuration experience i3 and Qtile is nothing crazy. Everything in this article is just enough to begin getting around these WMs, something I had a bit of trouble with when I started out with this kind of desktop.</p>
+<p>Any documentation referenced in this article will be linked below.</p>
+<h1 id="contents">Contents</h1>
+<div>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#contents">Contents</a></li>
+    <li><a href="#i3">i3</a>
+      <ul>
+        <li><a href="#getting-function-keys-to-work">Getting function keys to work</a>
+          <ul>
+            <li><a href="#brightness-keys">Brightness keys</a></li>
+            <li><a href="#volume-keys">Volume keys</a></li>
+            <li><a href="#media-keys">Media keys</a></li>
+          </ul>
+        </li>
+        <li><a href="#modifier-keys">Modifier keys</a></li>
+        <li><a href="#creating-keybindings">Creating keybindings</a></li>
+        <li><a href="#i3bar">i3bar</a></li>
+        <li><a href="#autostart">Autostart</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </li>
+    <li><a href="#qtile">Qtile</a>
+      <ul>
+        <li><a href="#keybindings">Keybindings</a></li>
+        <li><a href="#function-keys">Function keys</a>
+          <ul>
+            <li><a href="#brightness-keys-1">Brightness keys</a></li>
+            <li><a href="#volume-keys-1">Volume keys</a></li>
+            <li><a href="#media-keys-1">Media keys</a></li>
+          </ul>
+        </li>
+        <li><a href="#layouts">Layouts</a></li>
+        <li><a href="#the-bar">The bar</a></li>
+        <li><a href="#conclusion-1">Conclusion</a></li>
+      </ul>
+    </li>
+    <li><a href="#a-few-more-things">A few more things</a></li>
+    <li><a href="#links">Links</a></li>
+  </ul>
+</nav>
+</div>
+
+<h1 id="i3">i3</h1>
+<p>Firstly, you’re going to have to install i3. I assume you can do whatever <code>apt install</code> or <code>pacman -S</code> or <code>xbps-install</code> you need to. Just in case, install Xterm too.</p>
+<p>Exit your current session and log into your i3 session through your display manager or TTY. You’ll see a prompt asking you to generate a configuration. Press enter here. Then it’ll ask you which key you want as your modifier key. I would suggest choosing the &lt;Win&gt; option (it maps the modifier key to your keyboard’s windows/command/meta/super key). If you’re particularly crazy, choose &lt;Alt&gt;.</p>
+<p>From this point, you’re going to have a black screen. The most important thing you need to access right now is your terminal. The default keybinding for that is your modifier key + enter.</p>
+<p>The configuration is probably located in ~/.config/i3/</p>
+<h2 id="getting-function-keys-to-work">Getting function keys to work</h2>
+<p>Bu default, your brightness, volume and media keys are not going to work.</p>
+<h3 id="brightness-keys">Brightness keys</h3>
+<p>Install a utility called <code>brightnessctl</code>. Test if its working in the terminal by executing a command like <code>brightnessctl set 10%-</code>. IF you don’t get a permissions error then you’re good to go. Otherwise, add your user to the video group as such: <code>usermod -aG video $USER</code>.</p>
+<p>Next, let’s bind the appropriate keys.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86MonBrightnessUp</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">brightnessctl</span> <span style="color:#728e00">set</span> <span style="color:#8a7b52">+1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86MonBrightnessDown</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">brightnessctl</span> <span style="color:#728e00">set</span> <span style="color:#8a7b52">1</span><span style="color:#728e00">-</span></span></span></code></pre></div>
+<p>You can change the increment amount by changing the integer at the end of the respective lines.</p>
+<h3 id="volume-keys">Volume keys</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86AudioRaiseVolume</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">pactl</span> <span style="color:#728e00">set-sink-volume</span> <span style="color:#a61717">@</span><span style="color:#728e00">DEFAULT_SINK</span><span style="color:#a61717">@</span> <span style="color:#8a7b52">+2</span><span style="color:#a61717">%</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86AudioLowerVolume</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">pactl</span> <span style="color:#728e00">set-sink-volume</span> <span style="color:#a61717">@</span><span style="color:#728e00">DEFAULT_SINK</span><span style="color:#a61717">@</span> <span style="color:#8a7b52">-2</span><span style="color:#a61717">%</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86AudioMute</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">pactl</span> <span style="color:#728e00">set-sink-mute</span> <span style="color:#a61717">@</span><span style="color:#728e00">DEFAULT_SINK</span><span style="color:#a61717">@</span> <span style="color:#728e00">toggle</span></span></span></code></pre></div>
+<p>These commands function for pulseaudio, but I&rsquo;m not aware of pipewire.</p>
+<h3 id="media-keys">Media keys</h3>
+<p>Install a utility called playerctl. The basic commands we are going to use here are <code>playerctl play-pause</code>, <code>playerctl next</code> and <code>playerctl previous</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86AudioPlay</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">playerctl</span> <span style="color:#728e00">play-pause</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86AudioNext</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">playerctl</span> <span style="color:#728e00">next</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86AudioPrev</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">playerctl</span> <span style="color:#728e00">previous</span></span></span></code></pre></div>
+<p>If you are a user of MPD, then install <code>mpc</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86AudioPlay</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">mpc</span> <span style="color:#728e00">toggle</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86AudioNext</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">mpc</span> <span style="color:#728e00">next</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#728e00">bindsym</span> <span style="color:#728e00">XF86AudioPrev</span> <span style="color:#728e00">exec</span> <span style="color:#728e00">mpc</span> <span style="color:#728e00">prev</span></span></span></code></pre></div>
+<h2 id="modifier-keys">Modifier keys</h2>
+<p>There are 5 modifier keys available. The ones we&rsquo;re probably going to deal with are:</p>
+<ul>
+<li><code>mod1</code> (left alt key)</li>
+<li><code>mod4</code> (meta/super/command/windows key)</li>
+</ul>
+<h2 id="creating-keybindings">Creating keybindings</h2>
+<p>The syntax for creating a keybinding is as such: <code>bindsym [key-combination] exec [action]</code>. For example, to open Firefox, you would do something like <code>bindsym $mod+w exec firefox</code>.</p>
+<p>If you want to use the shift or control keys in your keybindings, simply add it to the key combination, i.e. <code>bindsym $mod+Shift+a exec [action]</code> or <code>bindsym $mod+Control+b exec [action]</code>.</p>
+<h2 id="i3bar">i3bar</h2>
+<p>I have close to zero experience with i3bar. I generally use Polybar here instead.</p>
+<h2 id="autostart">Autostart</h2>
+<p>Simple add a line starting with <code>exec</code> followed by the command you want to execute: <code>exec [action]</code>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>You should now have a somewhat functional configuration of i3. However, i3 does come with some pretty strange default keybindings, so I would recommend changing those. The i3 documentation is excellent. Have a go through that for guidance.</p>
+<h1 id="qtile">Qtile</h1>
+<p>Firstly, install Qtile. It’ll probably be available in your distribution’s repositories; if not you can build it from <a href="https://docs.qtile.org/en/stable/manual/install/index.html#installing-from-source">source</a>. Just in case, also install Xterm.</p>
+<p>Once you’ve logged into a Qtile session, press windows/command/super/meta + enter to bring up a terminal.</p>
+<p>The default configuration file should be located in <code>~/.config/qtile/</code>. If it isn’t, <code>mkdir .config/qtile</code>, <code>cd .config/qtile</code>, <code>touch config.py</code>. Copy the default configuration from <a href="https://docs.qtile.org/en/stable/manual/config/default.html#default-config">here</a> and paste it into <code>config.py</code>.</p>
+<h2 id="keybindings">Keybindings</h2>
+<p>Keybindings are defined in the <code>keys</code> array towards the top of the file. They follow the syntax <code>Key([modifier], &quot;key&quot;, action)</code>.</p>
+<h2 id="function-keys">Function keys</h2>
+<p>Function keys probably won&rsquo;t work out of the box. Let&rsquo;s configure them.</p>
+<h3 id="brightness-keys-1">Brightness keys</h3>
+<p>Install <code>brightnessctl</code>. Make sure there are no issues with permissions, as detailed above.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86MonBrightnessUp&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;brightnessctl set +1&#34;</span>)),
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86MonBrightnessDown&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;brightnessctl set 1-&#34;</span>)),</span></span></code></pre></div>
+<h3 id="volume-keys-1">Volume keys</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86AudioRaiseVolume&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;pactl set-sink-volume @DEFAULT_SINK@ +2%&#34;</span>)),
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86AudioLowerVolume&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;pactl set-sink-volume @DEFAULT_SINK@ -2%&#34;</span>)),
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86AudioMute&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;pactl set-sink-mute @DEFAULT_SINK@ toggle&#34;</span>)),</span></span></code></pre></div>
+<h3 id="media-keys-1">Media keys</h3>
+<p>Install <code>playerctl</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86AudioPlay&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;playerctl play-pause&#34;</span>)),
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86AudioNext&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;playerctl next&#34;</span>)),
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86AudioPrev&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;playerctl previous&#34;</span>)),</span></span></code></pre></div>
+<p>If you are a user of MPD,</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86AudioPlay&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;mpc toggle&#34;</span>)),
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86AudioNext&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;mpc next&#34;</span>)),
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#434f54">Key</span>([], <span style="color:#7f8c8d">&#34;XF86AudioPrev&#34;</span>, <span style="color:#434f54">lazy</span><span style="color:#728e00">.</span><span style="color:#434f54">spawn</span>(<span style="color:#7f8c8d">&#34;mpc prev&#34;</span>)),</span></span></code></pre></div>
+<h2 id="layouts">Layouts</h2>
+<p>Absolutely take the time to go through the <a href="https://docs.qtile.org/en/stable/manual/ref/layouts.html">layouts</a> in the documentation. Some of these are a bit fiddly, but the ones I found most usable were ‘MonadTall’, ‘MonadWide’ and ‘TreeTab’. Your milage will vary.</p>
+<h2 id="the-bar">The bar</h2>
+<p>Qtile has a pretty capable bar. The built-in widgets are <a href="https://docs.qtile.org/en/stable/manual/ref/widgets.html">here</a>.</p>
+<h2 id="conclusion-1">Conclusion</h2>
+<p>You should have a somewhat functional system at this point. I would absolutely recommend checking out the documentation. It is very well written.</p>
+<h1 id="a-few-more-things">A few more things</h1>
+<p>You’re probably going to want to set a wallpaper. <em>Nitrogen</em> is a good utility for this.</p>
+<p>For compositing, <em>picom</em> or <em>xcompmgr</em>. There are others, but these are the only ones I’ve used.</p>
+<p>For tweaking GTK themes, <em>lxappearance</em>. QT theming is a bit more of a hassle. Install qt5ct and Kvantum-manager. Simply set the widget style to kvantum in qt5ct.</p>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="https://i3wm.org/">i3</a></li>
+<li><a href="https://i3wm.org/docs/userguide.html">i3 documentation</a></li>
+<li><a href="https://qtile.org/">Qtile</a></li>
+<li><a href="https://docs.qtile.org/en/stable/index.html">Qtile documentation</a></li>
+</ul>
+
+                </div>
+                
+                    
+        </article>
+    </main>
+
+        </div><footer>
+    <span></span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Shayan Naqvi - SSH and Android </title>
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.min.9d17b517a672b11bb9eb6278dc9dfe539d77d8dcc020847dbed53844b6dbbbcf.css">
+    
+    
+    <meta charset="UTF-8">
+    <meta name="author" content="Shayan Naqvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+<header class="page-header">
+    <div class="myname"> 
+        <h2><a href="http://localhost:1313/">Shayan Naqvi</a></h2> 
+    </div>
+    <nav>
+        <ul class="navbar">
+            <li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="dropdown activetab">
+                <a href ="/blog/">
+                    <span>Blog</span>
+                </a>
+                <div class=sub-menu>
+                    <a class="" href="/categories/">All Categories</a>
+                    <a class="" href="/archive/">Archive</a>
+                </div>
+            </li>
+            <li class="">
+                <a href="/works/works/">
+                    <span>Works</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="content">
+    <main>
+        <article>
+            
+            <h1 class="page-title blog">SSH and Android</h1>
+            
+                <p class="blog-post-info">Posted: <time>2023-08-16</time>
+                
+    <span class="blog-taxonomy-info"> &nbsp; | &nbsp; Categories:
+        
+        
+        
+        <a class="blog-taxonomy-info" href="/categories/computers">Computers</a>, <a class="blog-taxonomy-info" href="/categories/linux">Linux</a>
+    </span>
+
+
+
+</p>
+
+                <div class="blog-post-content">
+                <p>SSH is a pretty nifty tool. I don&rsquo;t have any servers (yet) or anything of the sorts, but it&rsquo;s a neat way for me to access my computer from my phone. It makes transferring files and stuff much easier (easier than KDE Connect at times). For some reason, my SSH setup thing stopped working, so I&rsquo;m going to fix it. I&rsquo;ll put the intstructions here so that I (and you) can reference it again in the future. This is for connecting to a computer from an Android device.</p>
+<p>I&rsquo;ll be using Termius on my (Android) phone.</p>
+<h1 id="installation">Installation</h1>
+<p>You&rsquo;ll need to install SSH. On Linux, the package generally goes by some variant of the name <code>openssh</code>.</p>
+<p>If you are a user of <em>systemd</em>, you can check if it&rsquo;s working through <code>sudo systemctl status ssh</code>. If not, I can only speak for <em>runit</em>. On Void Linux, for example, you&rsquo;re going to have to <code>ln -s /etc/sv/sshd /var/service</code>. Use root privelages as needed. Then, to enable it, either reboot or run <code>sv start sshd</code>. To check its status, <code>sv status sshd</code>. This is more of a how-to-use-runit thing, so I&rsquo;ll stop right here.</p>
+<h1 id="the-ip-address">The IP Address</h1>
+<p>The next thing is to get the IP address of what you are going to connect to. This can be found by running <code>ip address</code> in your terminal.</p>
+<p>This should be enough to now be able to log into your system from your phone. If you&rsquo;re fine with using your computer&rsquo;s password to log in, then this is it.</p>
+<h1 id="publicprivate-keys">Public/Private Keys</h1>
+<p>The sequence of steps is as follows:</p>
+<ol>
+<li>Open <code>/etc/ssh/sshd_config</code> in a text editor. Change the port number to 2222.</li>
+<li>On your phone, add your computer as a host (using the IP address we found above along with the new port number).</li>
+<li>Generate a pair of keys.</li>
+<li>Export the keys to your computer.</li>
+</ol>
+<p>Now, open <code>/etc/ssh/sshd_config</code> in a text editor. Search for &ldquo;PasswordAuthentication&rdquo;. Change the &ldquo;yes&rdquo; into a &ldquo;no&rdquo;.</p>
+<p>Now, we should have a working SSH setup.</p>
+<figure class="image-shortcode frame" 
+         style="">
+    <img src="/img/ssh-android/ssh_src1.png"
+         alt="Excessive practicality"/> <figcaption>
+            <p>Excessive practicality</p>
+        </figcaption>
+</figure>
+
+
+                </div>
+                
+                    
+        </article>
+    </main>
+
+        </div><footer>
+    <span></span>
+</footer>
+</body>
+</html>

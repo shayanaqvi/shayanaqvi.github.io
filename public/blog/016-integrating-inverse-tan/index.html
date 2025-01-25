@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Shayan Naqvi - Integrating Inverse Tan </title>
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.min.9d17b517a672b11bb9eb6278dc9dfe539d77d8dcc020847dbed53844b6dbbbcf.css">
+    
+    
+    <meta charset="UTF-8">
+    <meta name="author" content="Shayan Naqvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+    
+</head>
+<body>
+<header class="page-header">
+    <div class="myname"> 
+        <h2><a href="http://localhost:1313/">Shayan Naqvi</a></h2> 
+    </div>
+    <nav>
+        <ul class="navbar">
+            <li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="dropdown activetab">
+                <a href ="/blog/">
+                    <span>Blog</span>
+                </a>
+                <div class=sub-menu>
+                    <a class="" href="/categories/">All Categories</a>
+                    <a class="" href="/archive/">Archive</a>
+                </div>
+            </li>
+            <li class="">
+                <a href="/works/works/">
+                    <span>Works</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="content">
+    <main>
+        <article>
+            
+            <h1 class="page-title blog">Integrating Inverse Tan</h1>
+            
+                <p class="blog-post-info">Posted: <time>2023-12-30</time>
+                
+    <span class="blog-taxonomy-info"> &nbsp; | &nbsp; Categories:
+        
+        
+        
+        <a class="blog-taxonomy-info" href="/categories/math">Math</a>
+    </span>
+
+
+
+</p>
+
+                <div class="blog-post-content">
+                <p>We&rsquo;re going to do some integration by parts!</p>
+<p>The thing to realize is that <em>you can integrate singular terms by parts</em>. $tan^{-1}(x)$ is indeed a singular term, however it is the same thing as $tan^{-1}(x) \times 1$. There&rsquo;s nothing to stop us from integrating that expression by parts.</p>
+<p>Let&rsquo;s get started.</p>
+<p>$$tan^{-1}(x) \times 1$$</p>
+<p>For our purposes, we&rsquo;ll integrate 1 and derive $tan^{-1}(x)$. It may sound a bit stupid, but we can&rsquo;t integrate $tan^{-1}(x)$ at this moment since that&rsquo;s the whole point of this exercise! Anyways,</p>
+<p>The integral of 1 with respect to $x$ is just $x$.</p>
+<p>$$ tan^{-1}x \times \int(1)dx - \int(\frac{d}{dx}tan^{-1}(x) \times \int(1)dx) $$</p>
+<p>If this looks a bit crazy, try working the expression out yourself. It isn&rsquo;t as bad as it looks.</p>
+<p>Now, the derivative of $tan^{-1}(x)$ is $\frac{1}{1+x^2}$ (take this as a given for this purpose):</p>
+<p>$$ tan^{-1}(x) \times x - \int(\frac{1}{1+x^2} \times x)dx $$</p>
+<p>$$ xtan^{-1}(x) - \int(\frac{x}{1+x^2})dx $$</p>
+<p>From here, there are two routes we can go down. We could</p>
+<ol>
+<li>make a substitution</li>
+<li>use the $\frac{f&rsquo;(x)}{f(x)}$ property</li>
+</ol>
+<p>It might sound a bit redundant, but you&rsquo;ll need to be familiar with the $\frac{f&rsquo;(x)}{f(x)}$ property for both of these methods.</p>
+<p>We&rsquo;ll go through both of them, starting with a substitution.</p>
+<h1 id="substitution">Substitution</h1>
+<p>Let&rsquo;s define $u$ as $u=1+x^2$. Hence,</p>
+<p>$$ du = 2x dx $$</p>
+<p>$$ dx = \frac{du}{2x} $$</p>
+<p>Now that we have $u$ and $dx$, let&rsquo;s plug these values in:</p>
+<p>$$ xtan^{-1}(x) - \int(\frac{x}{u} \times \frac{du}{2x}) $$</p>
+<blockquote>
+<p><em>To clarify, we went from:</em></p>
+<p>$$ xtan^{-1}(x) - \int(\frac{x}{1+x^2})dx $$</p>
+<p><em>to</em></p>
+<p>$$ xtan^{-1}(x) - \int(\frac{x}{u} \times \frac{du}{2x}) $$</p>
+<p><em>by means of a substitution.</em></p>
+</blockquote>
+<p>Let&rsquo;s look at $\frac{x}{u} \times \frac{du}{x}$: we can rewrite it as $\frac{x}{2ux}du$. We can DESTROY and ANNIHILATE the $x$ in this fraction.</p>
+<p>$$ xtan^{-1}(x) - \int(\frac{1}{2u})du $$</p>
+<p>$$ xtan^{-1}(x) - \frac{1}{2} \int(\frac{1}{u})du $$</p>
+<p>Using the $\frac{f&rsquo;(x)}{f(x)}$ property, we know that $\frac{1}{u}du$ will integrate to $ln(u)$. Hence:</p>
+<p>$$ xtan^{-1}(x) - \frac{1}{2}[ln(u)] $$</p>
+<p>And since $u=1+x^2$</p>
+<p>$$ xtan^{-1}(x) - \frac{1}{2}ln(1+x^2) $$</p>
+<p>That&rsquo;s it!</p>
+<h1 id="using-fracfxfx">Using $\frac{f&rsquo;(x)}{f(x)}$</h1>
+<p>PLEASE make sure you&rsquo;re familiar with this property before continuing!</p>
+<p>Here&rsquo;s where we currently stand:</p>
+<p>$$ xtan^{-1} - \int(\frac{x}{1+x^2})dx $$</p>
+<p>Focus on $\frac{x}{1+x^2}$.</p>
+<p>We know that the derivative of the denominator of this fraction ($1+x^2$) with respect to $x$ is $2x$. It&rsquo;s a bit hard for me to put this into words, but using the $\frac{f&rsquo;(x)}{f(x)}$ property, we can &ldquo;morph&rdquo; this $2x$ into the numerator of the fraction if we multiply it by $\frac{1}{2}$.</p>
+<p>So, if we integrate $\frac{x}{1+x^2}$ like this, we&rsquo;ll end up with $\frac{1}{2}ln(1+x^2)$ by means of the $\frac{f&rsquo;(x)}{f(x)}$ property. If we plug this into the rest of our expression, we&rsquo;ll end up with</p>
+<p>$$ xtan^{-1}(x) - \frac{1}{2}ln(1+x^2) $$</p>
+<p>That was <em>a lot faster</em>, but I only used this method for exam purposes. Weird as it may sound, I found the substitution more fun to do.</p>
+
+                </div>
+                
+                    
+        </article>
+    </main>
+
+        </div><footer>
+    <span></span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Shayan Naqvi - Finding a more intuitive appoach to determining the acceleration of two obejcts attached to a pulley </title>
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.min.9d17b517a672b11bb9eb6278dc9dfe539d77d8dcc020847dbed53844b6dbbbcf.css">
+    
+    
+    <meta charset="UTF-8">
+    <meta name="author" content="Shayan Naqvi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+    
+</head>
+<body>
+<header class="page-header">
+    <div class="myname"> 
+        <h2><a href="http://localhost:1313/">Shayan Naqvi</a></h2> 
+    </div>
+    <nav>
+        <ul class="navbar">
+            <li class="">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="dropdown activetab">
+                <a href ="/blog/">
+                    <span>Blog</span>
+                </a>
+                <div class=sub-menu>
+                    <a class="" href="/categories/">All Categories</a>
+                    <a class="" href="/archive/">Archive</a>
+                </div>
+            </li>
+            <li class="">
+                <a href="/works/works/">
+                    <span>Works</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="content">
+    <main>
+        <article>
+            
+            <h1 class="page-title blog">Finding a more intuitive appoach to determining the acceleration of two obejcts attached to a pulley</h1>
+            
+                <p class="blog-post-info">Posted: <time>2024-09-03</time>
+                
+    <span class="blog-taxonomy-info"> &nbsp; | &nbsp; Categories:
+        
+        
+        
+        <a class="blog-taxonomy-info" href="/categories/math">Math</a>
+    </span>
+
+
+
+</p>
+
+                <div class="blog-post-content">
+                <p>The title is a bit of a mouthful, but I&rsquo;ll explain what we&rsquo;re trying to do here.</p>
+<p>Consider the following:</p>
+<blockquote>
+<p>Two particles $A$ and $B$ have masses $0.35$ kg and $0.45$ kg respectively. The particles are attached to the ends of a light inextensible string which passes over a small fixed smooth pulley which is 1 metre above the horizontal ground. Initially particle $A$ is held at rest on the ground vertically below the pulley, with the string taut. Particle $B$ hangs vertically below the pulley at a height of $0.64$ m above the ground. Particle $A$ is released.</p>
+<p>Find the speed of $A$ at the instant $B$ reaches the ground.</p>
+</blockquote>
+<p>I&rsquo;m not going to solve the entire question but I&rsquo;ll go as far as forming equations for the acceleration of $A$ and $B$.</p>
+<p>This is the situation:</p>
+<figure class="image-shortcode frame" 
+         style="">
+    <img src="/img/intuitive-acceleration/diagram.jpg"
+         alt="Levitating pulley"/> <figcaption>
+            <p>Levitating pulley</p>
+        </figcaption>
+</figure>
+
+<p>We know that for both $A$ and $B$, their acceleration is of the same magnitude, but opposite in direction. The tension ($T$) in the string (unknown) is the same for both. Typically, in such situations, where both $a$ and $T$ are unknown, you&rsquo;d create two equations (in order to resolve the forces) and solve them simultaneously.</p>
+<p>$$ \Sigma F_A = m_Aa = W_A-T $$
+$$ \Sigma F_B = m_Ba = W_B-T $$</p>
+<p>These are the two equations you&rsquo;d generally see. Most explanations I&rsquo;ve seen tend to either neglect or barely explain why the second equation is that way. Why, now, are we subtracting weight from tension instead of the other way round? Sure, these two equations are convenient to work with, but why are we doing that?</p>
+<p>A nice way to look at this: we know that the <em>magnitude</em> of the acceleration is the same for both $A$ and $B$. In other words, $|a|$ is the same for both. To illustrate this, let&rsquo;s set up equations in terms of $|a|$:</p>
+<p>$$ m_A|a| = W_A-T $$
+$$ |a|=\frac{W_A-T}{m_A} $$</p>
+<p>We&rsquo;ll do the same for B:</p>
+<p>$$ m_B|a| = W_B-T $$
+$$ |a|=\frac{W_B-T}{m_B} $$</p>
+<p>We now have <em>4</em> equations in $a$ (&ldquo;expand&rdquo; the modulus, if you will):</p>
+<ol>
+<li>
+<p>$ a = \frac{W_A-T}{m_A} $</p>
+</li>
+<li>
+<p>$ a = \frac{T-W_A}{m_A} $</p>
+</li>
+<li>
+<p>$ a = \frac{W_B-T}{m_B} $</p>
+</li>
+<li>
+<p>$ a = \frac{T-W_B}{m_B} $</p>
+</li>
+</ol>
+<p>All of these will yield the same <em>magnitude</em> of acceleration. You can pick any whichever of these are convenient and solve for whatever you need.</p>
+
+                </div>
+                
+                    
+        </article>
+    </main>
+
+        </div><footer>
+    <span></span>
+</footer>
+</body>
+</html>

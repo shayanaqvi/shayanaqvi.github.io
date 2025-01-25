@@ -15,7 +15,17 @@ weight = 2
   
   I've migrated this website to Hugo! Before, I managed this website in plain HTML! There are benefits to this, but there was a lot, and I mean a lot, of friction when it came to actually putting things on the website.
 
-  This is mostly due to the amount of pages I had to manually update. If I was writing a blog post, I had to update wherever I was listing the articles and the RSS feed manually.
+  This is mostly due to the amount of manual "labour" required. If I was writing a blog post, I had to update wherever I was listing the articles and the RSS feed manually. And, while I did write a script to generate a template HTML file for each article, it wasn't enough!
+
+  It might not sound like much, but it does compound! Do I want to write an article? Okay,
+  1. Create a HTML file
+  2. Write article in HTML
+  3. Update wherever articles are listed
+  4. Update RSS feed
+
+  Mind you, I've had this website since July of 2023, so I managed to stick with this system for about 1.5 years. Part of the reason for this was, weird as it may sound, I enjoyed writing articles in plain HTML! Alas, markdown is *a lot* nicer. Hence the switch to Hugo.
+
+  I don't have any specific reason for choosing Hugo. The only reason I knew of it was because of *Chris Titus Tech* on Youtube, otherwise I was aware of the existence of Jekyll. I'm not sure of the differences between these two and the jillion other static site generators out there.
   
 - [Potohar Model United Nations 2025](https://www.instagram.com/pmun.25?igsh=MWkxOWthOXozbXR3YQ==)
 
@@ -53,7 +63,7 @@ I'm not going through any particularly meaty games at the moment. I was going th
 
 > *Having played *Metal Gear Solid 2* before this, I found the lack of a first-person aiming view a particular challenge. I had to change the way I aimed weapons to cope with this. Instead of aiming your weapon with the analog stick, aim with the D-Pad and shoot whenever an enemy comes into your line of fire.*
 
-Aside from that, I've been dabbling in a few "non-story" games, or games that work without paying attention to their story. Those are:
+Aside from that, I've been dabbling in a few "non-story" games, or games that work just fine if you don't pay attention to their story. Those are:
 - Velocity 2X
 - Super Meat Boy
 - WipEout 2048

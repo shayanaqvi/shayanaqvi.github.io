@@ -77,28 +77,31 @@ body {
 /*largest screens*/
 main {
     display: block;
-    margin: 0;
+    margin: 0 auto;
     padding: 1em 1em;
 
-    @media #{$mq-small} {
-        margin: 0 15%;
-    }
+    /* @media #{$mq-small} { */
+        /* margin: 0 15%; */
+    /* } */
 
-    @media #{$mq-medium} {
-        margin: 0 17%;
-    }
+    /* @media #{$mq-medium} { */
+        /* margin: 0 17%; */
+    /* } */
 
-    @media #{$mq-large} {
-        margin: 0 21%;
-    }
+    /* @media #{$mq-large} { */
+        /* margin: 0 21%; */
+    /* } */
 
-    @media #{$mq-xlarge} {
-        margin: 0 24%;
-    }
+    /* @media #{$mq-xlarge} { */
+        /* margin: 0 24%; */
+    /* } */
 
-    @media #{$mq-xxlarge} {
-        margin: 0 27%;
-    }
+    /* @media #{$mq-xxlarge} { */
+        /* margin: 0 27%; */
+    /* } */
+
+    max-width: 800px;
+
 }
 
 a {
@@ -265,8 +268,9 @@ nav {
     justify-content: flex-end;
     flex-flow: row wrap;
     overflow: hidden;
-    margin: auto 2% .6em auto;
-    padding-left: 2em;
+    /* margin: auto 2% .6em auto; */
+    /* padding-left: 2em; */
+    margin-bottom: 10px;
 }
 
 nav ul {

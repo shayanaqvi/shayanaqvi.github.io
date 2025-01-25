@@ -3,8 +3,4 @@ date = '2025-01-19T19:21:38+05:00'
 draft = false
 title = 'Archive'
 layout = 'archives'
-
-[menu.main]
-parent = 'blog'
-name = 'Archive'
 +++

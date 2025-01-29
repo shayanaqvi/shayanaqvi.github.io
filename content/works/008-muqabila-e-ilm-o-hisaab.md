@@ -27,7 +27,6 @@ I also did a version with the colours flipped, and it was this one we ended up u
 
 # Question & Answer Sheets
 
-# TODO add link to PDF
 I'm only going to put one page of the question sheet below, but you can see [the full version as a PDF](/files/mioh/qs.pdf).
 
 {{< image

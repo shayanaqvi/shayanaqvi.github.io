@@ -26,7 +26,7 @@ This is the situation:
 We know that for both $A$ and $B$, their acceleration is of the same magnitude, but opposite in direction. The tension ($T$) in the string (unknown) is the same for both. Typically, in such situations, where both $a$ and $T$ are unknown, you'd create two equations (in order to resolve the forces) and solve them simultaneously.
 
 $$ \Sigma F_A = m_Aa = W_A-T $$
-$$ \Sigma F_B = m_Ba = W_B-T $$
+$$ \Sigma F_B = m_Ba = T-W_B $$
 
 These are the two equations you'd generally see. Most explanations I've seen tend to either neglect or barely explain why the second equation is that way. Why, now, are we subtracting weight from tension instead of the other way round? Sure, these two equations are convenient to work with, but why are we doing that?
 

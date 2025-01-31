@@ -249,7 +249,7 @@ figcaption {
 }
 
 .page-title {
-    text-align: left;
+    text-align: center;
     font-size: 52px;
     font-weight: 200;
     font-style: italic;
@@ -257,7 +257,6 @@ figcaption {
 }
 
 .page-title.blog {
-    text-align: left;
     margin-bottom: 0.5em;
 }
 
@@ -394,9 +393,9 @@ td {
         display: block;
     }
 
-    .page-title {
-        text-align: center;
-    }
+    /* .page-title { */
+        /* text-align: center; */
+    /* } */
 
     nav {
         display: block;

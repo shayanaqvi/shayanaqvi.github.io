@@ -3,9 +3,8 @@ date = '2025-01-25T19:56:11+05:00'
 title = 'What am I doing now?'
 
 [menu.main]
-identifier = "now"
+parent = "Misc"
 name = "Now"
-weight = 2
 +++
 
 *Last updated: 25/1/2025*

@@ -23,3 +23,10 @@ startLevel = 1
 
 [outputs]
 home = ["HTML", "RSS"]
+
+[menu]
+  [[menu.main]]
+    identifier = "misc"
+    name = "Misc"
+    pageRef = '#'
+    weight = 5

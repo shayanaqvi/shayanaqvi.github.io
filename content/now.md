@@ -3,7 +3,7 @@ date = '2025-01-25T19:56:11+05:00'
 title = 'What am I doing now?'
 
 [menu.main]
-parent = "Misc"
+parent = "misc"
 name = "Now"
 +++
 

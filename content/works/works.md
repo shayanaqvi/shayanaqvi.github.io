@@ -5,7 +5,7 @@ title = 'Works'
 [menu.main]
 identifier = 'works'
 name = 'Works'
-weight = 5
+weight = 10
 +++
 
 # Links

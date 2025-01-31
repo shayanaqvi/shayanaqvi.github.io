@@ -3,7 +3,7 @@ date = '2025-01-31T13:56:58+05:00'
 title = 'Snaps'
 
 [menu.main]
-parent = 'Misc'
+parent = 'misc'
 +++
 
 {{< image

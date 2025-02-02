@@ -89,3 +89,7 @@ parent = 'misc'
   src="img/snaps/001.jpg"
   width="20em"
 >}}
+
+# What is this page?
+
+Just photos of random things around me here. No professional photography here! I'm not editing any of the photos here.

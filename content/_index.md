@@ -25,8 +25,12 @@ Currently, I'm a second-year A Level student studying chemistry, computer scienc
 - Cooking
 - Knitting (scarves, mostly)
 
-Feel free to say hello! [The only way to do that is through email](mailto:contact.shayanaqvi@icloud.com).
-
 If you're in the mood to read:
-1. licenses, check out "[About this website]({{< ref "info.md" >}})".
-2. the content here elsewhere, [there is an RSS feed](index.xml)!
+- licenses, check out "[About this website]({{< ref "info.md" >}})".
+- the content here elsewhere, [there is an RSS feed](index.xml)!
+
+## Contact
+
+Feel free to say hello! You can do that two ways:
+1. Send me an email here: [contact.shayanaqvi@icloud.com](mailto:contact.shayanaqvi@icloud.com) 
+2. Message me via XMPP: [shayan.naqvi@07f.de](xmpp:shayan.naqvi@07f.de)

@@ -6,6 +6,7 @@ title = 'Snaps'
 parent = 'misc'
 +++
 
+
 {{< image
   frame="true"
   caption="Best friends"
@@ -92,4 +93,4 @@ parent = 'misc'
 
 # What is this page?
 
-Just photos of random things around me here. No professional photography here! I'm not editing any of the photos here.
+Random photos of things around me. No professional photography here!

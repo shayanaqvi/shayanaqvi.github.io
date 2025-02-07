@@ -1,7 +1,7 @@
 +++
 title = 'Playstation Vita as a Music Player'
 date = 2024-06-08T14:59:59+05:00
-Categories = ["Video Games", "Experiments"]
+Categories = ["Video Games", "Experiments", "Music"]
 +++
 
 I'm trying this out, and I haven't committed to it as of yet. There is a lot of jank here if you choose to go down this route. Benefits and drawbacks, all the rest.

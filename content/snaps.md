@@ -9,8 +9,15 @@ parent = 'misc'
 
 {{< image
   frame="true"
-  caption="Best friends"
-  src="img/snaps/012.jpg"
+  caption="Soft drink"
+  src="img/snaps/014.jpg"
+  width="20em"
+>}}
+
+{{< image
+  frame="true"
+  caption="Irony alert"
+  src="img/snaps/013.jpg"
   width="20em"
 >}}
 

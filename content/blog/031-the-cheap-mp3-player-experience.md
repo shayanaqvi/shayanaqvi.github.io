@@ -66,6 +66,10 @@ I tried obtaining a newer firmware in the hopes that it may solve these issues. 
 
 > As of the time of writing, though, the link is working now! I'll try flashing a newer firmware (soon), and IF that solves my issues then this whole section will become redundant!
 
+### 24/03/2025: Did flashing a new firmware solve these issues?
+
+It didn't!
+
 ## Minor issues
 
 - Volume control is rather odd. You have to hold down on the *VOL* button for a few seconds, then adjust. It's not that bad, but trying to adjust volume while the thing is in your pockets is a bit finicky.

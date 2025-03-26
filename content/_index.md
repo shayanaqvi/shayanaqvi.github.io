@@ -14,8 +14,8 @@ Hello! I'm Shayan Naqvi.
   float="right"
   width="12em"
   frame="true"
-  caption="This is what I happen to look like (I smile too!)"
-  src="img/IMG_0689.jpg"
+  caption="Accurate representation of me."
+  src="img/portrait.jpg"
 >}}
 
 Currently, I'm a second-year A Level student studying chemistry, computer science, math and physics. *Vaguely* related to this is the content on my blog! I sometimes write about whatever I'm studying, but mostly [ramble about various interests/hobbies of mine]({{< ref "blog/_index.md" >}}), mostly revolving around computers. Other interests/hobbies of mine include: 

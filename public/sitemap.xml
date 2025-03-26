@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/categories/video-games/</loc>
+    <lastmod>2025-03-25T21:24:15+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/032-ys-origin-review-ps-vita/</loc>
+    <lastmod>2025-03-25T21:24:15+05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/snaps/</loc>
     <lastmod>2025-01-31T13:56:58+05:00</lastmod>
   </url><url>
@@ -75,9 +81,6 @@
     <lastmod>2024-06-20T15:11:11+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/022-playstation-vita-as-a-music-player/</loc>
-    <lastmod>2024-06-08T14:59:59+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/video-games/</loc>
     <lastmod>2024-06-08T14:59:59+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/021-setting-up-dwm/</loc>

@@ -16,7 +16,7 @@
         
 
         
-        <lastBuildDate>Tue, 01 Apr 2025 14:32:04 +0500</lastBuildDate>
+        <lastBuildDate>Tue, 08 Apr 2025 13:18:28 +0500</lastBuildDate>
         
 
         
@@ -24,6 +24,16 @@
         
 
         
+            
+        <item>
+          <title>A question on linked lists: make it make sense!</title>
+          <link>http://localhost:1313/blog/034-make-it-make-sense-linked-lists-question/</link>
+          <pubDate>Tue, 08 Apr 2025 13:18:28 +0500</pubDate>
+          
+          <guid>http://localhost:1313/blog/034-make-it-make-sense-linked-lists-question/</guid>
+          <description><!-- raw HTML omitted -->
+</description>
+        </item>
             
         <item>
           <title>Quick-and-dirty random encounter mechanic in Godot</title>

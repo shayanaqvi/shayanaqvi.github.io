@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/works/</loc>
+    <lastmod>2025-04-26T14:53:25+05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/034-make-it-make-sense-linked-lists-question/</loc>
+    <lastmod>2025-04-08T13:18:28+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/computers/</loc>
     <lastmod>2025-04-08T13:18:28+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/programming/</loc>
@@ -34,9 +40,6 @@
   </url><url>
     <loc>http://localhost:1313/info/</loc>
     <lastmod>2025-01-25T11:29:15+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/works/</loc>
-    <lastmod>2025-01-22T20:17:19+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/works/works/</loc>
     <lastmod>2025-01-22T20:17:19+05:00</lastmod>
@@ -70,9 +73,6 @@
   </url><url>
     <loc>http://localhost:1313/blog/027-cool-math-question-2/</loc>
     <lastmod>2024-07-26T16:47:34+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/computers/</loc>
-    <lastmod>2024-07-07T16:37:04+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/026-setting-up-obsidian-with-syncthing/</loc>
     <lastmod>2024-07-07T16:37:04+05:00</lastmod>

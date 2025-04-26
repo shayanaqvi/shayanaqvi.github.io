@@ -16,6 +16,9 @@ weight = 10
 - [Potohar Model United Nations 2025](https://www.instagram.com/pmun.25?igsh=MWkxOWthOXozbXR3YQ==)
 - This website
 
+# 2025
+- [PONG]({{< ref "009-pong.md">}})
+
 # 2024
 - [Muqabila e Ilm o Hisaab]({{< ref "008-muqabila-e-ilm-o-hisaab.md" >}})
 - [Theshelf]({{< ref "007-theshelf.md" >}})

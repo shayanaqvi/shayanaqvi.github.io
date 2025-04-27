@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/works/010-pmun-2025/</loc>
+    <lastmod>2025-04-26T15:15:48+05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/works/</loc>
+    <lastmod>2025-04-26T15:15:48+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/works/009-pong/</loc>
     <lastmod>2025-04-26T14:53:25+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/034-make-it-make-sense-linked-lists-question/</loc>

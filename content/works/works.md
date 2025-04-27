@@ -12,12 +12,9 @@ weight = 10
 - I have a [page on Behance](https://www.behance.net/shayannaqvi), where I put some my smaller graphic design projects
 - I also have a [page on Github](https://github.com/shayanaqvi/), where you can see what I do with my encounters with programming
 
-# Current projects
-- [Potohar Model United Nations 2025](https://www.instagram.com/pmun.25?igsh=MWkxOWthOXozbXR3YQ==)
-- This website
-
 # 2025
 - [PONG]({{< ref "009-pong.md">}})
+- [Potohar Model United Nations 2025]({{< ref "010-pmun-2025.md">}})
 
 # 2024
 - [Muqabila e Ilm o Hisaab]({{< ref "008-muqabila-e-ilm-o-hisaab.md" >}})

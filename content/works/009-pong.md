@@ -12,7 +12,8 @@ This version of pong includes the following:
 - configurable end-game condition
 - menus (a main and pause menu)
 
-[Download link](/files/pong/pong.zip).
+[Download link (Linux)](/files/pong/pong.zip).
+> Contact if you'd like a version for a different OS!
 
 {{< image
   frame="true"

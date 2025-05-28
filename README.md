@@ -1,0 +1,1 @@
+Website moved to Neocities: shayanaqvi.neocities.org
